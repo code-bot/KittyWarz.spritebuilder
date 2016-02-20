@@ -11,22 +11,38 @@ import Darwin
 
 class NinjaKitty: Kitty {
     
-    override func setupKitty(name : String) {
-        super.init(name: name, baseHP : 110.0, attack : 1.2, defense : 0.05, level : 1, xp : 0, amtKills : 0)
+    func setupKitty(name : String) {
+        nameOfKitty = name
+        baseHP = 110.0
+        attack = 1.2
+        defense = 0.05
+        level = 1
+        xp = 0
+        amtKills = 0
+        alive = true
+        currentHP = baseHP
         abilitiesList = [FurrySwipes(), DeadlyStare(), KittyKlaws(), KatanaSlash(), Purrtect(),
             ShurikenStorm()];
         kittyType = "Ninja"
     }
     
-    override init(name : String, baseHP : Double, attack : Double, defense : Double,
+    func loadKitty(name : String, baseHP : Double, attack : Double, defense : Double,
         level: Int, xp : Int,  amtKills : Int) {
-            super.init(name: name, baseHP: baseHP, attack: attack, defense: defense, level: level, xp: xp, amtKills: amtKills)
+            nameOfKitty = name
+            self.baseHP = baseHP
+            self.attack = attack
+            self.defense = defense
+            self.level = level
+            self.xp = xp
+            self.amtKills = amtKills
+            alive = true
+            currentHP = baseHP
             abilitiesList = [FurrySwipes(), DeadlyStare(), KittyKlaws(), KatanaSlash(), Purrtect(),
                 ShurikenStorm()];
             kittyType = "Ninja"
     }
     
-    func performAbility(a : Ability, enemy : Kitty) {
+    override func performAbility(a : Ability, enemy : Kitty) {
         if a.abilityType == "Defense" {
             self.currentHP += a.amt
             if (currentHP > baseHP) {
@@ -45,7 +61,7 @@ class NinjaKitty: Kitty {
         }
     }
     
-    func enemyPerformAbility(hero : NinjaKitty) {
+    override func enemyPerformAbility(hero : Kitty) {
         var enemyAbilityList = [Purrley(), Catluss(), AhoyMeowy(), CatastrophicCannonballs(),
             ShiverMeWhiskers(), FelineFerocity()];
         var count = 0;
@@ -61,21 +77,21 @@ class NinjaKitty: Kitty {
         performAbility(a, enemy : hero)
     }
     
-    func createEnemy() -> PirateKitty {
-        var enemy : PirateKitty
-        if level < 2 {
-            enemy = PirateKitty(name : "Pirate Bobberman")
-        } else {
-            let rand = Int(arc4random_uniform(3)) + level - 1
-            enemy = PirateKitty(name : "Captain Blackwhiskers")
-            for index in 1...(level - 1) {
-                enemy.levelUp()
-            }
-        }
-        return enemy;
-    }
+//    override func createEnemy() -> Kitty {
+//        var enemy : PirateKitty
+//        if level < 2 {
+//            enemy = PirateKitty(name : "Pirate Bobberman")
+//        } else {
+//            let rand = Int(arc4random_uniform(3)) + level - 1
+//            enemy = PirateKitty(name : "Captain Blackwhiskers")
+//            for index in 1...(level - 1) {
+//                enemy.levelUp()
+//            }
+//        }
+//        return enemy;
+//    }
     
-    func displayMeleeAbilities() -> [Ability] {
+    override func displayMeleeAbilities() -> [Ability] {
         var meleeList = [Ability]();
         for a in abilitiesList {
             if a.abilityType == "Melee" && a.unlockLevel <= level {
@@ -85,7 +101,7 @@ class NinjaKitty: Kitty {
         return meleeList;
     }
     
-    func displayRangedAbilities() -> [Ability] {
+    override func displayRangedAbilities() -> [Ability] {
         var rangedList = [Ability]();
         for a in abilitiesList {
             if a.abilityType == "Ranged" && a.unlockLevel <= level {
@@ -95,7 +111,7 @@ class NinjaKitty: Kitty {
         return rangedList;
     }
     
-    func displayDefenseAbilities() -> [Ability] {
+    override func displayDefenseAbilities() -> [Ability] {
         var defenseList = [Ability]();
         for a in abilitiesList {
             if a.abilityType == "Defense" && a.unlockLevel <= level {

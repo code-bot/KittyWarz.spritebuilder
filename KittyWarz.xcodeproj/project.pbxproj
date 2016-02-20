@@ -526,6 +526,8 @@
 			isa = PBXGroup;
 			children = (
 				B73470451C78F31A000BD26C /* Kitty.swift */,
+				B73470401C78F31A000BD26C /* NinjaKitty.swift */,
+				B734703D1C78F31A000BD26C /* PirateKitty.swift */,
 				B734702A1C78F31A000BD26C /* Ability.swift */,
 				B734702B1C78F31A000BD26C /* ShurikenStorm.swift */,
 				B734702C1C78F31A000BD26C /* KittyKlaws.swift */,
@@ -545,10 +547,8 @@
 				B734703A1C78F31A000BD26C /* Purricane.swift */,
 				B734703B1C78F31A000BD26C /* VitaminC.swift */,
 				B734703C1C78F31A000BD26C /* Purrtect.swift */,
-				B734703D1C78F31A000BD26C /* PirateKitty.swift */,
 				B734703E1C78F31A000BD26C /* BattlePreviewController.swift */,
 				B734703F1C78F31A000BD26C /* CharInfoController.swift */,
-				B73470401C78F31A000BD26C /* NinjaKitty.swift */,
 				B73470411C78F31A000BD26C /* ClanInfoController.swift */,
 			);
 			name = Classes;

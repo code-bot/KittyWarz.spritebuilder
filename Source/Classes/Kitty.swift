@@ -29,7 +29,7 @@ class Kitty:CCSprite {
     
     func setupKitty(name : String, baseHP : Double, attack : Double, defense : Double,
         level: Int, xp : Int,  amtKills : Int) {
-            self.name = name
+            nameOfKitty = name
             self.baseHP = baseHP
             self.attack = attack
             self.defense = defense
@@ -70,5 +70,32 @@ class Kitty:CCSprite {
         alive = false;
     }
     
+    func performAbility(a : Ability, enemy : Kitty) {
+        print("Idk what kitty I am");
+    }
+    
+    func enemyPerformAbility(hero : Kitty) {
+        print("Idk what kitty I am");
+    }
+    
+//    func createEnemy() -> Kitty {
+//        print("Raceless kitties don't have enemies.");
+//        return self.createEnemy()
+//    }
+    
+    func displayMeleeAbilities() -> [Ability] {
+        print("No abilities")
+        return []
+    }
+    
+    func displayRangedAbilities() -> [Ability] {
+        print("No abilities")
+        return []
+    }
+    
+    func displayDefenseAbilities() -> [Ability] {
+        print("No abilities")
+        return []
+    }
     
 }
