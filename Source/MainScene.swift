@@ -15,4 +15,5 @@ class MainScene: CCNode {
         self.addChild(kitty)
     }
     
+    
 }
