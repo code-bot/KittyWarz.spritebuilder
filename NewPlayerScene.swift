@@ -62,7 +62,7 @@ class NewPlayerScene: CCScene {
         }
     }
     
-    @IBAction func choosePirate(sender: AnyObject) {
+    func choosePirate(sender: AnyObject) {
         if (catName.string != "") {
             print("not empty")
             var userExists = false
