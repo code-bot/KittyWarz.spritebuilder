@@ -14,11 +14,7 @@ var hero : Kitty!
 
 class StartScene: CCScene {
     
-    var button: CCButton!
-    var kitty: CCSprite!
-    
     func didLoadFromCCB() {
-        kitty.color = CCColor.redColor()
         print("hi")
         // Do any additional setup after loading the view, typically from a nib.
         let defaults = NSUserDefaults.standardUserDefaults()
@@ -52,9 +48,9 @@ class StartScene: CCScene {
         }
     }
     
-    func nextScene() {
-        CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("MainScene"))
-    }
+//    func nextScene() {
+//        CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("MainScene"))
+//    }
     
 //        override func viewDidLoad() {
 //            super.viewDidLoad()
