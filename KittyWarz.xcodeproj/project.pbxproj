@@ -222,6 +222,7 @@
 		87DE733C1C7904DD0007C95D /* CharacterInfoScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterInfoScene.swift; sourceTree = "<group>"; };
 		87DE733E1C7905AC0007C95D /* ClanInfoScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClanInfoScene.swift; sourceTree = "<group>"; };
 		87DE73401C7905E50007C95D /* PreviewBattleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewBattleScene.swift; sourceTree = "<group>"; };
+		87E075FE1C79080E00A1199F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		927F61BF196C771E000F43EF /* KittyWarz Android.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KittyWarz Android.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -573,6 +574,7 @@
 				87DE733E1C7905AC0007C95D /* ClanInfoScene.swift */,
 				87DE73401C7905E50007C95D /* PreviewBattleScene.swift */,
 				D352B48019EC608A00829775 /* MetalShaders */,
+				87E075FE1C79080E00A1199F /* Bridging-Header.h */,
 			);
 			name = Source;
 			sourceTree = "<group>";
