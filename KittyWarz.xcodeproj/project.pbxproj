@@ -45,6 +45,10 @@
 		7A97911719E631C6001FFC4D /* libcocos2d-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A97910419E62E40001FFC4D /* libcocos2d-mac.a */; };
 		7A97911819E631CD001FFC4D /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9790FE19E62E40001FFC4D /* libcocos2d.a */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
+		87DE73371C7904920007C95D /* NewPlayerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE73361C7904920007C95D /* NewPlayerScene.swift */; };
+		87DE733D1C7904DD0007C95D /* CharacterInfoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE733C1C7904DD0007C95D /* CharacterInfoScene.swift */; };
+		87DE733F1C7905AC0007C95D /* ClanInfoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE733E1C7905AC0007C95D /* ClanInfoScene.swift */; };
+		87DE73411C7905E50007C95D /* PreviewBattleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE73401C7905E50007C95D /* PreviewBattleScene.swift */; };
 		927F61A5196C771E000F43EF /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3517B978D7009739AE /* OpenAL.framework */; };
 		927F61A9196C771E000F43EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3D17B978D7009739AE /* Foundation.framework */; };
 		927F61AA196C771E000F43EF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3F17B978D7009739AE /* CoreGraphics.framework */; };
@@ -147,26 +151,12 @@
 			remoteGlobalIDString = D2FEB74F194F6C9E00FC0574;
 			remoteInfo = cocos2dAndroid;
 		};
-		7A97910119E62E40001FFC4D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B7378940180761A80076A88C /* cocos2d.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5BF3267A195F8D8800D9A51A;
-			remoteInfo = cocos2dJava;
-		};
 		7A97910319E62E40001FFC4D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B7378940180761A80076A88C /* cocos2d.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 7A4037A819E37038007B6E8F;
 			remoteInfo = "cocos2d-mac";
-		};
-		7A97910519E62E4C001FFC4D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B7378940180761A80076A88C /* cocos2d.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 5BF32679195F8D8800D9A51A;
-			remoteInfo = cocos2dJava;
 		};
 		7A97910F19E6319A001FFC4D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -182,19 +172,19 @@
 			remoteGlobalIDString = 7A4037A719E37038007B6E8F;
 			remoteInfo = "cocos2d-mac";
 		};
-		7A97911F19E63219001FFC4D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B7378940180761A80076A88C /* cocos2d.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 5BF32679195F8D8800D9A51A;
-			remoteInfo = cocos2dJava;
-		};
 		7A97912119E6321C001FFC4D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B7378940180761A80076A88C /* cocos2d.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = D2FEB60D194F6C9E00FC0574;
 			remoteInfo = cocos2dAndroid;
+		};
+		87DE733A1C7904930007C95D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7378940180761A80076A88C /* cocos2d.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B7E7DE341A76DB7D004234B7;
+			remoteInfo = cocos2dMacFramework;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -226,6 +216,10 @@
 		7AFCD5DD19E9BDC200BCCCDA /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Source/Bridging-Header.h"; sourceTree = "<group>"; };
 		7BF6AF9F1A425F9800FFF9BA /* JavaFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaFoundation.framework; path = "../../../../../../../Library/SBAndroid/Application Support/Developer/Shared/Xcode/Platforms/Android.platform/Developer/SDKs/SBAndroid.sdk/System/Library/Frameworks/JavaFoundation.framework"; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		87DE73361C7904920007C95D /* NewPlayerScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPlayerScene.swift; sourceTree = "<group>"; };
+		87DE733C1C7904DD0007C95D /* CharacterInfoScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterInfoScene.swift; sourceTree = "<group>"; };
+		87DE733E1C7905AC0007C95D /* ClanInfoScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClanInfoScene.swift; sourceTree = "<group>"; };
+		87DE73401C7905E50007C95D /* PreviewBattleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewBattleScene.swift; sourceTree = "<group>"; };
 		927F61BF196C771E000F43EF /* KittyWarz Android.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KittyWarz Android.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -499,8 +493,8 @@
 			children = (
 				7A9790FE19E62E40001FFC4D /* libcocos2d.a */,
 				7A97910019E62E40001FFC4D /* libcocos2dAndroid.a */,
-				7A97910219E62E40001FFC4D /* cocos2dJava.jar */,
 				7A97910419E62E40001FFC4D /* libcocos2d-mac.a */,
+				87DE733B1C7904930007C95D /* cocos2dMacFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -559,7 +553,11 @@
 			children = (
 				7A40362019DDEF0D007B6E8F /* Platforms */,
 				7A046D7519E84C36004C4763 /* MainScene.swift */,
+				87DE73361C7904920007C95D /* NewPlayerScene.swift */,
 				B73470261C78EFEC000BD26C /* StartScene.swift */,
+				87DE733C1C7904DD0007C95D /* CharacterInfoScene.swift */,
+				87DE733E1C7905AC0007C95D /* ClanInfoScene.swift */,
+				87DE73401C7905E50007C95D /* PreviewBattleScene.swift */,
 				D352B48019EC608A00829775 /* MetalShaders */,
 			);
 			name = Source;
@@ -678,7 +676,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7A97910619E62E4C001FFC4D /* PBXTargetDependency */,
 			);
 			name = "KittyWarz Java";
 			productName = "KittyWarz Java";
@@ -716,7 +713,6 @@
 			);
 			dependencies = (
 				7A97912219E6321C001FFC4D /* PBXTargetDependency */,
-				7A97912019E63219001FFC4D /* PBXTargetDependency */,
 				5B121032197485D1004C1E1D /* PBXTargetDependency */,
 			);
 			name = "KittyWarz Android";
@@ -808,18 +804,18 @@
 			remoteRef = 7A9790FF19E62E40001FFC4D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		7A97910219E62E40001FFC4D /* cocos2dJava.jar */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.jar;
-			path = cocos2dJava.jar;
-			remoteRef = 7A97910119E62E40001FFC4D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		7A97910419E62E40001FFC4D /* libcocos2d-mac.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libcocos2d-mac.a";
 			remoteRef = 7A97910319E62E40001FFC4D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		87DE733B1C7904930007C95D /* cocos2dMacFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = cocos2dMacFramework.framework;
+			remoteRef = 87DE733A1C7904930007C95D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -974,10 +970,12 @@
 				B73470471C78F31A000BD26C /* ShurikenStorm.swift in Sources */,
 				B73470481C78F31A000BD26C /* KittyKlaws.swift in Sources */,
 				B73470491C78F31A000BD26C /* DeadlyStare.swift in Sources */,
+				87DE73411C7905E50007C95D /* PreviewBattleScene.swift in Sources */,
 				B734704A1C78F31A000BD26C /* KatanaSlash.swift in Sources */,
 				B734704B1C78F31A000BD26C /* ShiverMeWhiskers.swift in Sources */,
 				B734704C1C78F31A000BD26C /* AhoyMeowy.swift in Sources */,
 				B734704D1C78F31A000BD26C /* CatastrophicCannonballs.swift in Sources */,
+				87DE733D1C7904DD0007C95D /* CharacterInfoScene.swift in Sources */,
 				B734704E1C78F31A000BD26C /* Purrley.swift in Sources */,
 				B734704F1C78F31A000BD26C /* FelineFerocity.swift in Sources */,
 				B73470501C78F31A000BD26C /* FurrySwipes.swift in Sources */,
@@ -990,6 +988,8 @@
 				B73470571C78F31A000BD26C /* VitaminC.swift in Sources */,
 				B73470581C78F31A000BD26C /* Purrtect.swift in Sources */,
 				B73470591C78F31A000BD26C /* PirateKitty.swift in Sources */,
+				87DE73371C7904920007C95D /* NewPlayerScene.swift in Sources */,
+				87DE733F1C7905AC0007C95D /* ClanInfoScene.swift in Sources */,
 				B734705A1C78F31A000BD26C /* BattlePreviewController.swift in Sources */,
 				B734705B1C78F31A000BD26C /* CharInfoController.swift in Sources */,
 				B734705C1C78F31A000BD26C /* NinjaKitty.swift in Sources */,
@@ -1012,11 +1012,6 @@
 			target = 5B121020197484A3004C1E1D /* KittyWarz Java */;
 			targetProxy = 5B121031197485D1004C1E1D /* PBXContainerItemProxy */;
 		};
-		7A97910619E62E4C001FFC4D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = cocos2dJava;
-			targetProxy = 7A97910519E62E4C001FFC4D /* PBXContainerItemProxy */;
-		};
 		7A97911019E6319A001FFC4D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "cocos2d-ios";
@@ -1026,11 +1021,6 @@
 			isa = PBXTargetDependency;
 			name = "cocos2d-mac";
 			targetProxy = 7A97911519E631A1001FFC4D /* PBXContainerItemProxy */;
-		};
-		7A97912019E63219001FFC4D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = cocos2dJava;
-			targetProxy = 7A97911F19E63219001FFC4D /* PBXContainerItemProxy */;
 		};
 		7A97912219E6321C001FFC4D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

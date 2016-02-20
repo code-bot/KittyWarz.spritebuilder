@@ -8,6 +8,8 @@
 
 #import "CCSprite.h"
 
+// not documented, effect "utils" are considered private
+
 typedef struct CCEffectBlurParams
 {
     NSUInteger trueRadius;
@@ -16,6 +18,9 @@ typedef struct CCEffectBlurParams
     GLfloat sigma;
 
 } CCEffectBlurParams;
+
+CCNode* CCEffectUtilsGetNodeParent(CCNode *node);
+CCScene* CCEffectUtilsGetNodeScene(CCNode *node);
 
 CCNode* CCEffectUtilsFindCommonAncestor(CCNode *first, CCNode *second);
 GLKMatrix4 CCEffectUtilsTransformFromNodeToAncestor(CCNode *descendant, CCNode *ancestor);
