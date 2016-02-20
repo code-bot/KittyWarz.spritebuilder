@@ -1,0 +1,1202 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		012A7E018F3D34F159894EBD7EACACF9 /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = C30DAF734CAAF2F494DE720B2386CFFF /* Empty.m */; };
+		0D9B1521BB2ECBC0B0471D39979E7F87 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9D15C39F200A631B2E8E63637CED6A /* Pods-dummy.m */; };
+		1867312BC77E700271978B53453378C4 /* Pods-KittyWarz iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BEB258B2BA5419CABED8BF80F958A1CB /* Pods-KittyWarz iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		191DE2EB9A35585AE0A88BA9F833A1F4 /* FTransactionResult.h in Headers */ = {isa = PBXBuildFile; fileRef = B9A06FFED058218134C702A407304A9F /* FTransactionResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C04A7CD5B70C4561F6D98C882731C65 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6204446BD9150A17B12E81B4A6F9CA8 /* Security.framework */; };
+		1C3EF85CD30E6FF2E51471BD5B3CEB29 /* Firebase.h in Headers */ = {isa = PBXBuildFile; fileRef = 99994D7C8CADD905BE2B9BBD61C5DAD8 /* Firebase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D925BB011B04DDED982C7946571A67A /* FAuthType.h in Headers */ = {isa = PBXBuildFile; fileRef = 891B0E2082543D26FADFA72F524E77AF /* FAuthType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D9D7FF5237C8CC91EF58DC45AC274FB /* Firebase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C0143DCE5A276FD546BC307BA6384A /* Firebase-dummy.m */; };
+		22C198A709D2CAD904E0E799AF687902 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 939049AE0A152A7771A3E10A10A3742D /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		239B10F388840841389B7F09648735B1 /* FEventType.h in Headers */ = {isa = PBXBuildFile; fileRef = 817BCDAD66E1493A462C3D125BB8A039 /* FEventType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F1496011DBBB75777645194AAAFE92D /* FirebaseApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CAA7C78DB3882A984A96D28F8AA2D41 /* FirebaseApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B0EFAAA29109D9A705A27EFFA10FAE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */; };
+		4B3C5E9476C437C991EDDDDD1887ED86 /* Pods-KittyWarz Android-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9244BED4F26C9C52EA8DC0DB9DF4EAD3 /* Pods-KittyWarz Android-dummy.m */; };
+		4D75CF0089B20355B17A851513C4A002 /* FQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = A2E2AC3209047C6550E8D065954966F5 /* FQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5454583FB0053FB4966C0E29C2BBC054 /* Pods-KittyWarz iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96094A2DD29B1366E71B5FD63743347C /* Pods-KittyWarz iOS-dummy.m */; };
+		60F9139BDD38565B78214C4FC5F5729D /* Firebase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A35E3E3F0CCA6B0B0A5E20810C135EA2 /* Firebase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6646DA26298257396C7FFE141BB84CC3 /* FirebaseServerValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 55000294CC62B92A597CC865BC53ECFC /* FirebaseServerValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		871D4F821C70B7BA171725A5F013E3AA /* Pods-KittyWarz Java-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B620CA6632930C9955ABD3D6EC651DBC /* Pods-KittyWarz Java-dummy.m */; };
+		A89C1DDFBB7ED48D759DF60226DEC25C /* Pods-KittyWarz Java-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C7B0AA9CD82A47F166053E394C4EF24 /* Pods-KittyWarz Java-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8D2B371A372B74A0CB339653AD6F212 /* Pods-KittyWarz Mac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FAB46A47CD1B0BFB6E2984EE61BDE63 /* Pods-KittyWarz Mac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B36C09E14F801E4A4D7D2EE832950EFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */; };
+		BC829020D75C8EA775AF5F6B70EBAB27 /* Pods-KittyWarz Mac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE90F8838DCECA7AA36D41D98B4702D /* Pods-KittyWarz Mac-dummy.m */; };
+		C0C4D4888D3A312186EA4236531356D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */; };
+		C23FCF31260D47CEC1494A292DAA1A1E /* FAuthData.h in Headers */ = {isa = PBXBuildFile; fileRef = CDBB06694A091085C1CDD755EBC4B578 /* FAuthData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9E6D952D2826F19023DB2F88128EE9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */; };
+		DB05A9DD8244D10C28B6915C514AE15F /* FMutableData.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E547A224BA2BD4DB4A5DB059D7F5898 /* FMutableData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1A883FEBDEED9B85D90D6BE2080F218 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6166BE40C18BC6BF0EED92CAB212EC33 /* SystemConfiguration.framework */; };
+		E3FBB5B462A14E8ACC9B340227DE4BE1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F85758B54CB0D843A3E97DFFB2F21F /* CFNetwork.framework */; };
+		E60FA42EEC3ECC48701DB55986D25D69 /* FConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 9726FDC67EF47C28FEC9A974D42B81B4 /* FConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8B534D15D2B25919ACD898217266891 /* FDataSnapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 85FE7BFEAA7B743553B973A7168CDD98 /* FDataSnapshot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9C3D34A5EA5946DEDC3B3AC14411B58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */; };
+		FD09B3FEC0B2E421BD19A6C238BBDF04 /* Pods-KittyWarz Android-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E6E21B5EB14E99318AF2A76128A2C4 /* Pods-KittyWarz Android-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FECE69021654D283CD9AC5D4E859C277 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E2A01FF3C0B071A5DE9C11C67080AE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7AC9326D819482593FE118E915409D7;
+			remoteInfo = Firebase;
+		};
+		629143BA795FEA388BD28A56E783B997 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7AC9326D819482593FE118E915409D7;
+			remoteInfo = Firebase;
+		};
+		8E529488D77F87806DD2D31EFC9C26B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7AC9326D819482593FE118E915409D7;
+			remoteInfo = Firebase;
+		};
+		C63B1B2E36C0DC699F2C15D7C5E7F813 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7AC9326D819482593FE118E915409D7;
+			remoteInfo = Firebase;
+		};
+		EA925C398F31B0E897D8D2A80C796870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7AC9326D819482593FE118E915409D7;
+			remoteInfo = Firebase;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0609513687D836729687287086BC06CB /* Pods-KittyWarz Android-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KittyWarz Android-frameworks.sh"; sourceTree = "<group>"; };
+		06592F2BC8EBBC38FE3A409B876695A4 /* Pods-KittyWarz Java.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-KittyWarz Java.modulemap"; sourceTree = "<group>"; };
+		0880C67B43787C4BECA55D27ACB3E030 /* Pods_KittyWarz_Java.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KittyWarz_Java.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		08EA9AD7C2CB6C42D057A5379AF63FA5 /* Pods-KittyWarz Android-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KittyWarz Android-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0BEF0EA502824CE078B3F037F065297B /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		0CD70F7A7F006F77C2BD152166C99E30 /* Pods-KittyWarz iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KittyWarz iOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		0D813680991FEBAD0960C024DE0FD9C7 /* Firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F6BD6ECFB66F6AE5041CA2050158871 /* Pods_KittyWarz_Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KittyWarz_Mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FD2162FF2EDEE82363ADBE84BFD4A40 /* Pods-KittyWarz iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KittyWarz iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		104481390B1098325AD2AFB70FC78878 /* Firebase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-prefix.pch"; sourceTree = "<group>"; };
+		144ECA27021EF74EB431FEFF4E791069 /* Pods-KittyWarz Java-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KittyWarz Java-acknowledgements.plist"; sourceTree = "<group>"; };
+		19BECC6F101586ED98E64B3B2695527A /* Pods-KittyWarz iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KittyWarz iOS-frameworks.sh"; sourceTree = "<group>"; };
+		21F6F267AAF1FF9C15A947600B3999AB /* Pods-KittyWarz Mac-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KittyWarz Mac-resources.sh"; sourceTree = "<group>"; };
+		224368C5EEC49D4D956B5B95BB215BFB /* libFirebaseStatic.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libFirebaseStatic.a; sourceTree = "<group>"; };
+		2640EC05024F523D225D0CFC62C64D57 /* Pods-KittyWarz Java-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KittyWarz Java-resources.sh"; sourceTree = "<group>"; };
+		282B7C680920072368EA309B28454854 /* Pods_KittyWarz_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KittyWarz_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A2AC9266AABE96EB852FE2DF6F7E1F6 /* Pods-KittyWarz Mac-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KittyWarz Mac-acknowledgements.plist"; sourceTree = "<group>"; };
+		2D10BE066C7D8473CD6E25BE6439D749 /* Pods-KittyWarz Android-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KittyWarz Android-acknowledgements.plist"; sourceTree = "<group>"; };
+		3565135D8E7165F26FD1B9B0C266B1FD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36DEA9E30D7B375DB6C7DCE2DC3A5794 /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
+		39F6E4F1B479DAF4B5BDECADDCA7C79F /* Pods-KittyWarz Android.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-KittyWarz Android.modulemap"; sourceTree = "<group>"; };
+		3B55266953022598D17FD2DD249B3A36 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BE1B323FCDA54AC74747DD9844E01AC /* Pods-KittyWarz Java.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KittyWarz Java.release.xcconfig"; sourceTree = "<group>"; };
+		3C7CA58E3DA234AA2574549CD49238A7 /* Firebase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Firebase.modulemap; sourceTree = "<group>"; };
+		4A9D15C39F200A631B2E8E63637CED6A /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		4C687361C434C8C653DDEDDD9A6B1DAB /* Pods-KittyWarz Mac-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KittyWarz Mac-frameworks.sh"; sourceTree = "<group>"; };
+		5420F8EED2015F3772B02F9B8E030AC6 /* Pods-KittyWarz Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KittyWarz Mac.release.xcconfig"; sourceTree = "<group>"; };
+		55000294CC62B92A597CC865BC53ECFC /* FirebaseServerValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseServerValue.h; sourceTree = "<group>"; };
+		5CF6F7D892F0CCA3A46AE9167792D4E1 /* Pods-KittyWarz Java.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KittyWarz Java.debug.xcconfig"; sourceTree = "<group>"; };
+		60F85758B54CB0D843A3E97DFFB2F21F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		6166BE40C18BC6BF0EED92CAB212EC33 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		6193F42BBADBC53C0DC7F6E1E8720916 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		6D80C3664DA830A8F41F50D8C87A4781 /* Pods_KittyWarz_Android.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KittyWarz_Android.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		736A13D3EEC939D939A775484EBEE7B7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74E6E21B5EB14E99318AF2A76128A2C4 /* Pods-KittyWarz Android-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KittyWarz Android-umbrella.h"; sourceTree = "<group>"; };
+		77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		784B6D725D362327E5AD238757451110 /* Pods-KittyWarz Mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KittyWarz Mac.debug.xcconfig"; sourceTree = "<group>"; };
+		7E547A224BA2BD4DB4A5DB059D7F5898 /* FMutableData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMutableData.h; sourceTree = "<group>"; };
+		817BCDAD66E1493A462C3D125BB8A039 /* FEventType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FEventType.h; sourceTree = "<group>"; };
+		85FE7BFEAA7B743553B973A7168CDD98 /* FDataSnapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FDataSnapshot.h; sourceTree = "<group>"; };
+		862601E551B9E5C8DEB0676B0EEDD60D /* Pods-KittyWarz Mac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-KittyWarz Mac.modulemap"; sourceTree = "<group>"; };
+		8772CACAB68E0327F83531C106637AFE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		891B0E2082543D26FADFA72F524E77AF /* FAuthType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthType.h; sourceTree = "<group>"; };
+		898FFA21158548523F27BE3C6F70AA6B /* Pods-KittyWarz Java-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KittyWarz Java-frameworks.sh"; sourceTree = "<group>"; };
+		8B37B6A5089AA95924C8BB6B9D5B2B37 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CAA7C78DB3882A984A96D28F8AA2D41 /* FirebaseApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseApp.h; sourceTree = "<group>"; };
+		8D895DA63FC16719731F94480E543FC4 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		91C0143DCE5A276FD546BC307BA6384A /* Firebase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Firebase-dummy.m"; sourceTree = "<group>"; };
+		9244BED4F26C9C52EA8DC0DB9DF4EAD3 /* Pods-KittyWarz Android-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KittyWarz Android-dummy.m"; sourceTree = "<group>"; };
+		939049AE0A152A7771A3E10A10A3742D /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
+		96094A2DD29B1366E71B5FD63743347C /* Pods-KittyWarz iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KittyWarz iOS-dummy.m"; sourceTree = "<group>"; };
+		9726FDC67EF47C28FEC9A974D42B81B4 /* FConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FConfig.h; sourceTree = "<group>"; };
+		99994D7C8CADD905BE2B9BBD61C5DAD8 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
+		9A0E3AFCB88E0D4A79D01B8E554C889B /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		9C7B0AA9CD82A47F166053E394C4EF24 /* Pods-KittyWarz Java-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KittyWarz Java-umbrella.h"; sourceTree = "<group>"; };
+		9F2A56634D8B34B3664A3AA31043A8C1 /* Pods-KittyWarz iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KittyWarz iOS-resources.sh"; sourceTree = "<group>"; };
+		9FAB46A47CD1B0BFB6E2984EE61BDE63 /* Pods-KittyWarz Mac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KittyWarz Mac-umbrella.h"; sourceTree = "<group>"; };
+		A0EE3E707A564AD597E57B2C764173FA /* Pods-KittyWarz iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-KittyWarz iOS.modulemap"; sourceTree = "<group>"; };
+		A29DB1DF62F6A33259E14773F742231E /* Pods-KittyWarz iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KittyWarz iOS.release.xcconfig"; sourceTree = "<group>"; };
+		A2E2AC3209047C6550E8D065954966F5 /* FQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FQuery.h; sourceTree = "<group>"; };
+		A35E3E3F0CCA6B0B0A5E20810C135EA2 /* Firebase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-umbrella.h"; sourceTree = "<group>"; };
+		AFE90F8838DCECA7AA36D41D98B4702D /* Pods-KittyWarz Mac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KittyWarz Mac-dummy.m"; sourceTree = "<group>"; };
+		B5F41B916CD16505BE6E55CAE1F5660B /* Pods-KittyWarz Android-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KittyWarz Android-resources.sh"; sourceTree = "<group>"; };
+		B620CA6632930C9955ABD3D6EC651DBC /* Pods-KittyWarz Java-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KittyWarz Java-dummy.m"; sourceTree = "<group>"; };
+		B8A3E022EEBF7EE421677F959588CBDA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9A06FFED058218134C702A407304A9F /* FTransactionResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FTransactionResult.h; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BEB258B2BA5419CABED8BF80F958A1CB /* Pods-KittyWarz iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KittyWarz iOS-umbrella.h"; sourceTree = "<group>"; };
+		C16668C46E5B137DBBDAAA3F0370AE01 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C30DAF734CAAF2F494DE720B2386CFFF /* Empty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
+		C6204446BD9150A17B12E81B4A6F9CA8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		CDBB06694A091085C1CDD755EBC4B578 /* FAuthData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthData.h; sourceTree = "<group>"; };
+		D4CD9E1DB2117B9CFD045DADDA2ED44E /* Pods-KittyWarz Mac-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KittyWarz Mac-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D8EC5026A702E538F6B8DEA9141A1CBA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6BB016D3ABEBF694D68538838DE8DA0 /* Firebase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Firebase.xcconfig; sourceTree = "<group>"; };
+		E71C4DCEFD28CD8EB904AB48F0965509 /* Pods-KittyWarz Java-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KittyWarz Java-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EC629612F9ED0954BBBC0491D50F455C /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		EEE8823644D1D7654B20E29BB4085996 /* Pods-KittyWarz Android.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KittyWarz Android.release.xcconfig"; sourceTree = "<group>"; };
+		F95F96744717B6AE16B3EEE3FC2A4863 /* Pods-KittyWarz Android.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KittyWarz Android.debug.xcconfig"; sourceTree = "<group>"; };
+		FC829D493F18BE2044AD7E446C2D485C /* Pods-KittyWarz iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KittyWarz iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		213AB2698B0E6136F0F23F9EADBF75E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FECE69021654D283CD9AC5D4E859C277 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CD9CB440636AD54A6E863B4CC0D1635 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0C4D4888D3A312186EA4236531356D2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7E10F383DCD59079712A57B50DCF88E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3FBB5B462A14E8ACC9B340227DE4BE1 /* CFNetwork.framework in Frameworks */,
+				4B0EFAAA29109D9A705A27EFFA10FAE2 /* Foundation.framework in Frameworks */,
+				1C04A7CD5B70C4561F6D98C882731C65 /* Security.framework in Frameworks */,
+				E1A883FEBDEED9B85D90D6BE2080F218 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B01FE89F5D970072DF7E9AE64BBC6A92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B36C09E14F801E4A4D7D2EE832950EFF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F475A02A42FF4C2E815328DE400156FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9E6D952D2826F19023DB2F88128EE9E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F932747D1B83E6FD99122CAAEE48F6E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9C3D34A5EA5946DEDC3B3AC14411B58 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A8274A6DA50D71639EF38A6FCF0E9A5 /* Pods-KittyWarz iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8B37B6A5089AA95924C8BB6B9D5B2B37 /* Info.plist */,
+				A0EE3E707A564AD597E57B2C764173FA /* Pods-KittyWarz iOS.modulemap */,
+				FC829D493F18BE2044AD7E446C2D485C /* Pods-KittyWarz iOS-acknowledgements.markdown */,
+				0CD70F7A7F006F77C2BD152166C99E30 /* Pods-KittyWarz iOS-acknowledgements.plist */,
+				96094A2DD29B1366E71B5FD63743347C /* Pods-KittyWarz iOS-dummy.m */,
+				19BECC6F101586ED98E64B3B2695527A /* Pods-KittyWarz iOS-frameworks.sh */,
+				9F2A56634D8B34B3664A3AA31043A8C1 /* Pods-KittyWarz iOS-resources.sh */,
+				BEB258B2BA5419CABED8BF80F958A1CB /* Pods-KittyWarz iOS-umbrella.h */,
+				0FD2162FF2EDEE82363ADBE84BFD4A40 /* Pods-KittyWarz iOS.debug.xcconfig */,
+				A29DB1DF62F6A33259E14773F742231E /* Pods-KittyWarz iOS.release.xcconfig */,
+			);
+			name = "Pods-KittyWarz iOS";
+			path = "Target Support Files/Pods-KittyWarz iOS";
+			sourceTree = "<group>";
+		};
+		0B3F0B181F5F59F363FAA9EE7A6FB96E /* Pods-KittyWarz Android */ = {
+			isa = PBXGroup;
+			children = (
+				3565135D8E7165F26FD1B9B0C266B1FD /* Info.plist */,
+				39F6E4F1B479DAF4B5BDECADDCA7C79F /* Pods-KittyWarz Android.modulemap */,
+				08EA9AD7C2CB6C42D057A5379AF63FA5 /* Pods-KittyWarz Android-acknowledgements.markdown */,
+				2D10BE066C7D8473CD6E25BE6439D749 /* Pods-KittyWarz Android-acknowledgements.plist */,
+				9244BED4F26C9C52EA8DC0DB9DF4EAD3 /* Pods-KittyWarz Android-dummy.m */,
+				0609513687D836729687287086BC06CB /* Pods-KittyWarz Android-frameworks.sh */,
+				B5F41B916CD16505BE6E55CAE1F5660B /* Pods-KittyWarz Android-resources.sh */,
+				74E6E21B5EB14E99318AF2A76128A2C4 /* Pods-KittyWarz Android-umbrella.h */,
+				F95F96744717B6AE16B3EEE3FC2A4863 /* Pods-KittyWarz Android.debug.xcconfig */,
+				EEE8823644D1D7654B20E29BB4085996 /* Pods-KittyWarz Android.release.xcconfig */,
+			);
+			name = "Pods-KittyWarz Android";
+			path = "Target Support Files/Pods-KittyWarz Android";
+			sourceTree = "<group>";
+		};
+		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				843A690C4A272ACCFA5202DC4499C74E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		261B031CB6FAFD6FFDFBF963CCF239BA /* Pods-KittyWarz Mac */ = {
+			isa = PBXGroup;
+			children = (
+				C16668C46E5B137DBBDAAA3F0370AE01 /* Info.plist */,
+				862601E551B9E5C8DEB0676B0EEDD60D /* Pods-KittyWarz Mac.modulemap */,
+				D4CD9E1DB2117B9CFD045DADDA2ED44E /* Pods-KittyWarz Mac-acknowledgements.markdown */,
+				2A2AC9266AABE96EB852FE2DF6F7E1F6 /* Pods-KittyWarz Mac-acknowledgements.plist */,
+				AFE90F8838DCECA7AA36D41D98B4702D /* Pods-KittyWarz Mac-dummy.m */,
+				4C687361C434C8C653DDEDDD9A6B1DAB /* Pods-KittyWarz Mac-frameworks.sh */,
+				21F6F267AAF1FF9C15A947600B3999AB /* Pods-KittyWarz Mac-resources.sh */,
+				9FAB46A47CD1B0BFB6E2984EE61BDE63 /* Pods-KittyWarz Mac-umbrella.h */,
+				784B6D725D362327E5AD238757451110 /* Pods-KittyWarz Mac.debug.xcconfig */,
+				5420F8EED2015F3772B02F9B8E030AC6 /* Pods-KittyWarz Mac.release.xcconfig */,
+			);
+			name = "Pods-KittyWarz Mac";
+			path = "Target Support Files/Pods-KittyWarz Mac";
+			sourceTree = "<group>";
+		};
+		4D504115FA0FA830525CD0F1E1CDF21A /* Pods-KittyWarz Java */ = {
+			isa = PBXGroup;
+			children = (
+				736A13D3EEC939D939A775484EBEE7B7 /* Info.plist */,
+				06592F2BC8EBBC38FE3A409B876695A4 /* Pods-KittyWarz Java.modulemap */,
+				E71C4DCEFD28CD8EB904AB48F0965509 /* Pods-KittyWarz Java-acknowledgements.markdown */,
+				144ECA27021EF74EB431FEFF4E791069 /* Pods-KittyWarz Java-acknowledgements.plist */,
+				B620CA6632930C9955ABD3D6EC651DBC /* Pods-KittyWarz Java-dummy.m */,
+				898FFA21158548523F27BE3C6F70AA6B /* Pods-KittyWarz Java-frameworks.sh */,
+				2640EC05024F523D225D0CFC62C64D57 /* Pods-KittyWarz Java-resources.sh */,
+				9C7B0AA9CD82A47F166053E394C4EF24 /* Pods-KittyWarz Java-umbrella.h */,
+				5CF6F7D892F0CCA3A46AE9167792D4E1 /* Pods-KittyWarz Java.debug.xcconfig */,
+				3BE1B323FCDA54AC74747DD9844E01AC /* Pods-KittyWarz Java.release.xcconfig */,
+			);
+			name = "Pods-KittyWarz Java";
+			path = "Target Support Files/Pods-KittyWarz Java";
+			sourceTree = "<group>";
+		};
+		4DB87E67C60986B3D88712EC6715FEE1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8EC5026A702E538F6B8DEA9141A1CBA /* Info.plist */,
+				36DEA9E30D7B375DB6C7DCE2DC3A5794 /* Pods.modulemap */,
+				8D895DA63FC16719731F94480E543FC4 /* Pods-acknowledgements.markdown */,
+				0BEF0EA502824CE078B3F037F065297B /* Pods-acknowledgements.plist */,
+				4A9D15C39F200A631B2E8E63637CED6A /* Pods-dummy.m */,
+				EC629612F9ED0954BBBC0491D50F455C /* Pods-frameworks.sh */,
+				9A0E3AFCB88E0D4A79D01B8E554C889B /* Pods-resources.sh */,
+				939049AE0A152A7771A3E10A10A3742D /* Pods-umbrella.h */,
+				8772CACAB68E0327F83531C106637AFE /* Pods.debug.xcconfig */,
+				6193F42BBADBC53C0DC7F6E1E8720916 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		5883428897D1426E6EB96D7E36556192 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				224368C5EEC49D4D956B5B95BB215BFB /* libFirebaseStatic.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72BAAA130D470512DFA5107FD295A2D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0D813680991FEBAD0960C024DE0FD9C7 /* Firebase.framework */,
+				3B55266953022598D17FD2DD249B3A36 /* Pods.framework */,
+				6D80C3664DA830A8F41F50D8C87A4781 /* Pods_KittyWarz_Android.framework */,
+				282B7C680920072368EA309B28454854 /* Pods_KittyWarz_iOS.framework */,
+				0880C67B43787C4BECA55D27ACB3E030 /* Pods_KittyWarz_Java.framework */,
+				0F6BD6ECFB66F6AE5041CA2050158871 /* Pods_KittyWarz_Mac.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
+				F56CE447D2542B744EB0DA47C71E6EDD /* Pods */,
+				72BAAA130D470512DFA5107FD295A2D6 /* Products */,
+				9A31E4C6FA2DC4C885633F6DFD7247ED /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		843A690C4A272ACCFA5202DC4499C74E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				60F85758B54CB0D843A3E97DFFB2F21F /* CFNetwork.framework */,
+				77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */,
+				C6204446BD9150A17B12E81B4A6F9CA8 /* Security.framework */,
+				6166BE40C18BC6BF0EED92CAB212EC33 /* SystemConfiguration.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		9A31E4C6FA2DC4C885633F6DFD7247ED /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4DB87E67C60986B3D88712EC6715FEE1 /* Pods */,
+				0B3F0B181F5F59F363FAA9EE7A6FB96E /* Pods-KittyWarz Android */,
+				0A8274A6DA50D71639EF38A6FCF0E9A5 /* Pods-KittyWarz iOS */,
+				4D504115FA0FA830525CD0F1E1CDF21A /* Pods-KittyWarz Java */,
+				261B031CB6FAFD6FFDFBF963CCF239BA /* Pods-KittyWarz Mac */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B870B24C59D78DF34E50CD8E9DB3800F /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				C30DAF734CAAF2F494DE720B2386CFFF /* Empty.m */,
+				CDBB06694A091085C1CDD755EBC4B578 /* FAuthData.h */,
+				891B0E2082543D26FADFA72F524E77AF /* FAuthType.h */,
+				9726FDC67EF47C28FEC9A974D42B81B4 /* FConfig.h */,
+				85FE7BFEAA7B743553B973A7168CDD98 /* FDataSnapshot.h */,
+				817BCDAD66E1493A462C3D125BB8A039 /* FEventType.h */,
+				99994D7C8CADD905BE2B9BBD61C5DAD8 /* Firebase.h */,
+				8CAA7C78DB3882A984A96D28F8AA2D41 /* FirebaseApp.h */,
+				55000294CC62B92A597CC865BC53ECFC /* FirebaseServerValue.h */,
+				7E547A224BA2BD4DB4A5DB059D7F5898 /* FMutableData.h */,
+				A2E2AC3209047C6550E8D065954966F5 /* FQuery.h */,
+				B9A06FFED058218134C702A407304A9F /* FTransactionResult.h */,
+				5883428897D1426E6EB96D7E36556192 /* Frameworks */,
+				FCDF2535463133900325F78E576B07E8 /* Support Files */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		F56CE447D2542B744EB0DA47C71E6EDD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B870B24C59D78DF34E50CD8E9DB3800F /* Firebase */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FCDF2535463133900325F78E576B07E8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3C7CA58E3DA234AA2574549CD49238A7 /* Firebase.modulemap */,
+				E6BB016D3ABEBF694D68538838DE8DA0 /* Firebase.xcconfig */,
+				91C0143DCE5A276FD546BC307BA6384A /* Firebase-dummy.m */,
+				104481390B1098325AD2AFB70FC78878 /* Firebase-prefix.pch */,
+				A35E3E3F0CCA6B0B0A5E20810C135EA2 /* Firebase-umbrella.h */,
+				B8A3E022EEBF7EE421677F959588CBDA /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Firebase";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		02865E0688DC73FC330B143B8CDAF748 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD09B3FEC0B2E421BD19A6C238BBDF04 /* Pods-KittyWarz Android-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FDCAAB615C287D16BF7F1F2AA978246 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C23FCF31260D47CEC1494A292DAA1A1E /* FAuthData.h in Headers */,
+				1D925BB011B04DDED982C7946571A67A /* FAuthType.h in Headers */,
+				E60FA42EEC3ECC48701DB55986D25D69 /* FConfig.h in Headers */,
+				E8B534D15D2B25919ACD898217266891 /* FDataSnapshot.h in Headers */,
+				239B10F388840841389B7F09648735B1 /* FEventType.h in Headers */,
+				60F9139BDD38565B78214C4FC5F5729D /* Firebase-umbrella.h in Headers */,
+				1C3EF85CD30E6FF2E51471BD5B3CEB29 /* Firebase.h in Headers */,
+				2F1496011DBBB75777645194AAAFE92D /* FirebaseApp.h in Headers */,
+				6646DA26298257396C7FFE141BB84CC3 /* FirebaseServerValue.h in Headers */,
+				DB05A9DD8244D10C28B6915C514AE15F /* FMutableData.h in Headers */,
+				4D75CF0089B20355B17A851513C4A002 /* FQuery.h in Headers */,
+				191DE2EB9A35585AE0A88BA9F833A1F4 /* FTransactionResult.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3527E3397205B5CC768DEAD9AFC6CE21 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1867312BC77E700271978B53453378C4 /* Pods-KittyWarz iOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC54EB02EF3C0E898E7B14E2C2F39AD9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22C198A709D2CAD904E0E799AF687902 /* Pods-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3A44E3FA5B4BC7E2F77BBA421A4338B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A89C1DDFBB7ED48D759DF60226DEC25C /* Pods-KittyWarz Java-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD3205E64B7A0F8261EAA047D24F1900 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8D2B371A372B74A0CB339653AD6F212 /* Pods-KittyWarz Mac-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2253A2E42325C38B2E299125F0D70C15 /* Pods-KittyWarz Java */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2F5D090746E2B6CC435D0F970E205A3 /* Build configuration list for PBXNativeTarget "Pods-KittyWarz Java" */;
+			buildPhases = (
+				6FF1A7FF9BD3ABDDEE693C062E01ABF0 /* Sources */,
+				B01FE89F5D970072DF7E9AE64BBC6A92 /* Frameworks */,
+				D3A44E3FA5B4BC7E2F77BBA421A4338B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8D3DF3ECA84DD996C23CEA49D3FBBDC /* PBXTargetDependency */,
+			);
+			name = "Pods-KittyWarz Java";
+			productName = "Pods-KittyWarz Java";
+			productReference = 0880C67B43787C4BECA55D27ACB3E030 /* Pods_KittyWarz_Java.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		47DECE86A1741C0E8372A6DCACEB4340 /* Pods-KittyWarz Android */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A19577C95D197141BB79C6562BEB5447 /* Build configuration list for PBXNativeTarget "Pods-KittyWarz Android" */;
+			buildPhases = (
+				D9A48D15D7E0C2206684CEF06FCE02EE /* Sources */,
+				213AB2698B0E6136F0F23F9EADBF75E5 /* Frameworks */,
+				02865E0688DC73FC330B143B8CDAF748 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8176E66441A454DBB0C99832934EE62D /* PBXTargetDependency */,
+			);
+			name = "Pods-KittyWarz Android";
+			productName = "Pods-KittyWarz Android";
+			productReference = 6D80C3664DA830A8F41F50D8C87A4781 /* Pods_KittyWarz_Android.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		968EB47D0E024B3754463AA2EDF9A30A /* Pods-KittyWarz Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2E43B1213041C162F93595610251F60 /* Build configuration list for PBXNativeTarget "Pods-KittyWarz Mac" */;
+			buildPhases = (
+				66A9806A5D0FFC1B64E59ABDA6821B99 /* Sources */,
+				3CD9CB440636AD54A6E863B4CC0D1635 /* Frameworks */,
+				DD3205E64B7A0F8261EAA047D24F1900 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB82994F2D0E57C1577B43C8C7B4FD83 /* PBXTargetDependency */,
+			);
+			name = "Pods-KittyWarz Mac";
+			productName = "Pods-KittyWarz Mac";
+			productReference = 0F6BD6ECFB66F6AE5041CA2050158871 /* Pods_KittyWarz_Mac.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A2F6E21B670DC565238510DE02DEA9F1 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D916E953BD63A5308099C784B2DCE87 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				12B00D9538E716441276B2C82449FBA8 /* Sources */,
+				F932747D1B83E6FD99122CAAEE48F6E9 /* Frameworks */,
+				BC54EB02EF3C0E898E7B14E2C2F39AD9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				12BBDF56243AA10E90D9242CE7D2913D /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 3B55266953022598D17FD2DD249B3A36 /* Pods.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B7AC9326D819482593FE118E915409D7 /* Firebase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49B346C14D532324DCD14D0FA1347BC6 /* Build configuration list for PBXNativeTarget "Firebase" */;
+			buildPhases = (
+				46E052D320E3B778B76D8393E0BAFE0F /* Sources */,
+				A7E10F383DCD59079712A57B50DCF88E /* Frameworks */,
+				2FDCAAB615C287D16BF7F1F2AA978246 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Firebase;
+			productName = Firebase;
+			productReference = 0D813680991FEBAD0960C024DE0FD9C7 /* Firebase.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DD7C00315C5153D6FFC14242ACD866F4 /* Pods-KittyWarz iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75F20629F548FADA3C8584C920B7F1A1 /* Build configuration list for PBXNativeTarget "Pods-KittyWarz iOS" */;
+			buildPhases = (
+				08B08418C10689394C3B90582EF60AF8 /* Sources */,
+				F475A02A42FF4C2E815328DE400156FA /* Frameworks */,
+				3527E3397205B5CC768DEAD9AFC6CE21 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A99D38769D54A5DEB1A45C5EA0C09DCF /* PBXTargetDependency */,
+			);
+			name = "Pods-KittyWarz iOS";
+			productName = "Pods-KittyWarz iOS";
+			productReference = 282B7C680920072368EA309B28454854 /* Pods_KittyWarz_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 72BAAA130D470512DFA5107FD295A2D6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B7AC9326D819482593FE118E915409D7 /* Firebase */,
+				A2F6E21B670DC565238510DE02DEA9F1 /* Pods */,
+				47DECE86A1741C0E8372A6DCACEB4340 /* Pods-KittyWarz Android */,
+				DD7C00315C5153D6FFC14242ACD866F4 /* Pods-KittyWarz iOS */,
+				2253A2E42325C38B2E299125F0D70C15 /* Pods-KittyWarz Java */,
+				968EB47D0E024B3754463AA2EDF9A30A /* Pods-KittyWarz Mac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		08B08418C10689394C3B90582EF60AF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5454583FB0053FB4966C0E29C2BBC054 /* Pods-KittyWarz iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12B00D9538E716441276B2C82449FBA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D9B1521BB2ECBC0B0471D39979E7F87 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46E052D320E3B778B76D8393E0BAFE0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				012A7E018F3D34F159894EBD7EACACF9 /* Empty.m in Sources */,
+				1D9D7FF5237C8CC91EF58DC45AC274FB /* Firebase-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66A9806A5D0FFC1B64E59ABDA6821B99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC829020D75C8EA775AF5F6B70EBAB27 /* Pods-KittyWarz Mac-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FF1A7FF9BD3ABDDEE693C062E01ABF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				871D4F821C70B7BA171725A5F013E3AA /* Pods-KittyWarz Java-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9A48D15D7E0C2206684CEF06FCE02EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B3C5E9476C437C991EDDDDD1887ED86 /* Pods-KittyWarz Android-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		12BBDF56243AA10E90D9242CE7D2913D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Firebase;
+			target = B7AC9326D819482593FE118E915409D7 /* Firebase */;
+			targetProxy = 8E529488D77F87806DD2D31EFC9C26B8 /* PBXContainerItemProxy */;
+		};
+		8176E66441A454DBB0C99832934EE62D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Firebase;
+			target = B7AC9326D819482593FE118E915409D7 /* Firebase */;
+			targetProxy = 629143BA795FEA388BD28A56E783B997 /* PBXContainerItemProxy */;
+		};
+		A99D38769D54A5DEB1A45C5EA0C09DCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Firebase;
+			target = B7AC9326D819482593FE118E915409D7 /* Firebase */;
+			targetProxy = EA925C398F31B0E897D8D2A80C796870 /* PBXContainerItemProxy */;
+		};
+		EB82994F2D0E57C1577B43C8C7B4FD83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Firebase;
+			target = B7AC9326D819482593FE118E915409D7 /* Firebase */;
+			targetProxy = C63B1B2E36C0DC699F2C15D7C5E7F813 /* PBXContainerItemProxy */;
+		};
+		F8D3DF3ECA84DD996C23CEA49D3FBBDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Firebase;
+			target = B7AC9326D819482593FE118E915409D7 /* Firebase */;
+			targetProxy = 2E2A01FF3C0B071A5DE9C11C67080AE6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		239EEAB6A9866AB1A37D808DD23D677A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6193F42BBADBC53C0DC7F6E1E8720916 /* Pods.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5ABA46A30CA78F093742F1AE07DEF49F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F95F96744717B6AE16B3EEE3FC2A4863 /* Pods-KittyWarz Android.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-KittyWarz Android/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KittyWarz Android/Pods-KittyWarz Android.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_KittyWarz_Android;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6A12C1AE4F4CCA35BC0F38AE90629255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6BB016D3ABEBF694D68538838DE8DA0 /* Firebase.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Firebase/Firebase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Firebase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Firebase/Firebase.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Firebase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7224AD649174A88C25AF79BCC0C24B68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6BB016D3ABEBF694D68538838DE8DA0 /* Firebase.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Firebase/Firebase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Firebase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Firebase/Firebase.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Firebase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7252CD3E7DF14826E037E0F737786ECB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CF6F7D892F0CCA3A46AE9167792D4E1 /* Pods-KittyWarz Java.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-KittyWarz Java/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KittyWarz Java/Pods-KittyWarz Java.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_KittyWarz_Java;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8C07E52C0DBF802AD6D3F185B39186A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8772CACAB68E0327F83531C106637AFE /* Pods.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		ACD5ED86F8620C50ED4FC23BFC69AD60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A29DB1DF62F6A33259E14773F742231E /* Pods-KittyWarz iOS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-KittyWarz iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KittyWarz iOS/Pods-KittyWarz iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_KittyWarz_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C4CDCEAB31654262FC88A8904D50BC36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BE1B323FCDA54AC74747DD9844E01AC /* Pods-KittyWarz Java.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-KittyWarz Java/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KittyWarz Java/Pods-KittyWarz Java.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_KittyWarz_Java;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F090D8DF90D061FEFE640C633F8F8662 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FD2162FF2EDEE82363ADBE84BFD4A40 /* Pods-KittyWarz iOS.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-KittyWarz iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KittyWarz iOS/Pods-KittyWarz iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_KittyWarz_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F0E24BBCE7D0CC4617049031433E77BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEE8823644D1D7654B20E29BB4085996 /* Pods-KittyWarz Android.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-KittyWarz Android/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KittyWarz Android/Pods-KittyWarz Android.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_KittyWarz_Android;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F4FF9DC970E11A8FF735AEEC960EB896 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 784B6D725D362327E5AD238757451110 /* Pods-KittyWarz Mac.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-KittyWarz Mac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KittyWarz Mac/Pods-KittyWarz Mac.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_KittyWarz_Mac;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F97E4FA8469F783DBA19BA430C551E71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5420F8EED2015F3772B02F9B8E030AC6 /* Pods-KittyWarz Mac.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-KittyWarz Mac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KittyWarz Mac/Pods-KittyWarz Mac.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_KittyWarz_Mac;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
+				FB45FFD90572718D82AB9092B750F0CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49B346C14D532324DCD14D0FA1347BC6 /* Build configuration list for PBXNativeTarget "Firebase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A12C1AE4F4CCA35BC0F38AE90629255 /* Debug */,
+				7224AD649174A88C25AF79BCC0C24B68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75F20629F548FADA3C8584C920B7F1A1 /* Build configuration list for PBXNativeTarget "Pods-KittyWarz iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F090D8DF90D061FEFE640C633F8F8662 /* Debug */,
+				ACD5ED86F8620C50ED4FC23BFC69AD60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D916E953BD63A5308099C784B2DCE87 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C07E52C0DBF802AD6D3F185B39186A8 /* Debug */,
+				239EEAB6A9866AB1A37D808DD23D677A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A19577C95D197141BB79C6562BEB5447 /* Build configuration list for PBXNativeTarget "Pods-KittyWarz Android" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ABA46A30CA78F093742F1AE07DEF49F /* Debug */,
+				F0E24BBCE7D0CC4617049031433E77BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2E43B1213041C162F93595610251F60 /* Build configuration list for PBXNativeTarget "Pods-KittyWarz Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4FF9DC970E11A8FF735AEEC960EB896 /* Debug */,
+				F97E4FA8469F783DBA19BA430C551E71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2F5D090746E2B6CC435D0F970E205A3 /* Build configuration list for PBXNativeTarget "Pods-KittyWarz Java" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7252CD3E7DF14826E037E0F737786ECB /* Debug */,
+				C4CDCEAB31654262FC88A8904D50BC36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
