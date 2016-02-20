@@ -6,13 +6,13 @@
 //  Copyright © 2016 Apportable. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import Firebase
 
 var myRootRef = Firebase(url: "https://kittywarsios.firebaseio.com")
 var hero : Kitty!
 
-class StartScene: CCScene {
+class StartScene: CCNode {
     
     func didLoadFromCCB() {
         print("hi")
@@ -28,10 +28,10 @@ class StartScene: CCScene {
                 snapshot in
                 if let userData = snapshot.value as? [String : AnyObject] {
                     if (userData["type"] as! String == "Ninja") {
-                        hero = CCBReader.load("NinjaKitty") as! NinjaKitty
+                        hero = (NinjaKitty)(imageNamed: CCBReader.load("NinjaKitty"))
                         hero.setupKitty(user, baseHP: userData["baseHP"] as! Double, attack: userData["attack"] as! Double, defense: userData["defense"] as! Double, level: userData["level"] as! Int, xp: userData["xp"] as! Int, amtKills: userData["amtKills"] as! Int)
                     } else {
-                        hero = CCBReader.load("PirateKitty") as! PirateKitty
+                        hero = (PirateKitty)(imageNamed: CCBReader.load("PirateKitty"))
                         hero.setupKitty(user, baseHP: userData["baseHP"] as! Double, attack: userData["attack"] as! Double, defense: userData["defense"] as! Double, level: userData["level"] as! Int, xp: userData["xp"] as! Int, amtKills: userData["amtKills"] as! Int)
                     }
                 }
@@ -41,11 +41,13 @@ class StartScene: CCScene {
     }
     
     func playGame() {
+        print("play")
         if (hero != nil) {
             CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("PreviewBattleScene"))
         } else {
             CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("NewPlayerScene"))
         }
+        
     }
     
 //    func nextScene() {

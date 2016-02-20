@@ -6,10 +6,10 @@
 //  Copyright © 2016 Apportable. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import Firebase
 
-class NewPlayerScene: CCScene {
+class NewPlayerScene: CCNode {
     weak var miscInfo: CCLabelTTF!
     weak var catName: CCTextField!
     
@@ -18,7 +18,7 @@ class NewPlayerScene: CCScene {
         miscInfo.color = CCColor.redColor()
     }
     
-    func chooseNinja(sender: AnyObject) {
+    func chooseNinja() {
         if (catName.string != "") {
             print("not empty")
             var userExists = false
@@ -52,7 +52,8 @@ class NewPlayerScene: CCScene {
                     defaults.synchronize()
                     print("save on phone")
                     
-                    hero = CCBReader.load("NinjaKitty") as! NinjaKitty
+                    hero = CCBReader.load("NinjaKitty") as! PirateKitty
+                    //as! NinjaKitty
                     hero.setupKitty(self.catName.string, baseHP: userData!["baseHP"] as! Double, attack: userData!["attack"] as! Double, defense: userData!["defense"] as! Double, level: userData!["level"] as! Int, xp: userData!["xp"] as! Int, amtKills: userData!["amtKills"] as! Int)
                     CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("PreviewBattleScene"))
                 } else {
@@ -66,7 +67,7 @@ class NewPlayerScene: CCScene {
         }
     }
     
-    func choosePirate(sender: AnyObject) {
+    func choosePirate() {
         if (catName.string != "") {
             print("not empty")
             var userExists = false
@@ -100,7 +101,7 @@ class NewPlayerScene: CCScene {
                     defaults.synchronize()
                     print("save on phone")
                     
-                    hero = CCBReader.load("PirateKitty") as!PirateKitty
+                    hero = CCBReader.load("PirateKitty") as! PirateKitty
                     hero.setupKitty(self.catName.string, baseHP: userData!["baseHP"] as! Double, attack: userData!["attack"] as! Double, defense: userData!["defense"] as! Double, level: userData!["level"] as! Int, xp: userData!["xp"] as! Int, amtKills: userData!["amtKills"] as! Int)
                     CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("PreviewBattleScene"))
                 } else {
@@ -111,6 +112,7 @@ class NewPlayerScene: CCScene {
             
         } else {
             miscInfo.string = "Please enter a name for your cat"
-        }    }
+        }    
+    }
 
 }

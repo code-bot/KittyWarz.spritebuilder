@@ -6,8 +6,8 @@
 //  Copyright © 2016 Apportable. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class CharacterInfoScene: CCScene {
+class CharacterInfoScene: CCNode {
     
 }
