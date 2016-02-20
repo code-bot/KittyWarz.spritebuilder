@@ -9,7 +9,7 @@
 import Foundation
 import Darwin
 
-class Kitty:CCSprite {
+class Kitty: CCSprite {
     
     var nameOfKitty : String = ""
     var currentHP : Double = 0
