@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import Firebase
 
+var myRootRef = Firebase(url: "https://kittywarsios.firebaseio.com")
 var hero : Kitty!
 
 class StartScene: CCScene {
@@ -31,10 +33,10 @@ class StartScene: CCScene {
                 if let userData = snapshot.value as? [String : AnyObject] {
                     if (userData["type"] as! String == "Ninja") {
                         hero = CCBReader.load("NinjaKitty") as! NinjaKitty
-                        hero.setupKitty(name: user, baseHP: userData["baseHP"] as! Double, attack: userData["attack"] as! Double, defense: userData["defense"] as! Double, level: userData["level"] as! Int, xp: userData["xp"] as! Int, amtKills: userData["amtKills"] as! Int)
+                        hero.setupKitty(user, baseHP: userData["baseHP"] as! Double, attack: userData["attack"] as! Double, defense: userData["defense"] as! Double, level: userData["level"] as! Int, xp: userData["xp"] as! Int, amtKills: userData["amtKills"] as! Int)
                     } else {
                         hero = CCBReader.load("PirateKitty") as! PirateKitty
-                        hero.setupKitty(name: user, baseHP: userData["baseHP"] as! Double, attack: userData["attack"] as! Double, defense: userData["defense"] as! Double, level: userData["level"] as! Int, xp: userData["xp"] as! Int, amtKills: userData["amtKills"] as! Int)
+                        hero.setupKitty(user, baseHP: userData["baseHP"] as! Double, attack: userData["attack"] as! Double, defense: userData["defense"] as! Double, level: userData["level"] as! Int, xp: userData["xp"] as! Int, amtKills: userData["amtKills"] as! Int)
                     }
                 }
             })

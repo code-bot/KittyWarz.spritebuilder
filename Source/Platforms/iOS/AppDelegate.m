@@ -27,7 +27,6 @@
 
 #import "AppDelegate.h"
 #import "CCBuilderReader.h"
-#import <Firebase/Firebase.h>
 
 @implementation AppController
 

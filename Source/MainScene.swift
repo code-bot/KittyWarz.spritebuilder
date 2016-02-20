@@ -9,10 +9,10 @@ class MainScene: CCNode {
 //        object.color = CCColor.blackColor()
 //        object.position = ccp(100, 100)
         
-        var kitty:Kitty = CCBReader.load("Kitty") as! Kitty
-        kitty.positionType = CCPositionTypeNormalized
-        kitty.position = ccp(0.5, 0.5)
-        self.addChild(kitty)
+//        var kitty:Kitty = CCBReader.load("Kitty") as! Kitty
+//        kitty.positionType = CCPositionTypeNormalized
+//        kitty.position = ccp(0.5, 0.5)
+//        self.addChild(kitty)
     }
     
     
