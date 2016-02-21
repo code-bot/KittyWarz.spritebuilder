@@ -1743,49 +1743,6 @@
 									<integer>2</integer>
 								</dict>
 							</dict>
-							<key>4</key>
-							<dict>
-								<key>opacity</key>
-								<dict>
-									<key>keyframes</key>
-									<array>
-										<dict>
-											<key>easing</key>
-											<dict>
-												<key>type</key>
-												<integer>1</integer>
-											</dict>
-											<key>name</key>
-											<string>opacity</string>
-											<key>time</key>
-											<real>0.0</real>
-											<key>type</key>
-											<integer>10</integer>
-											<key>value</key>
-											<real>0.0</real>
-										</dict>
-										<dict>
-											<key>easing</key>
-											<dict>
-												<key>type</key>
-												<integer>1</integer>
-											</dict>
-											<key>name</key>
-											<string>opacity</string>
-											<key>time</key>
-											<real>1</real>
-											<key>type</key>
-											<integer>10</integer>
-											<key>value</key>
-											<real>0.0</real>
-										</dict>
-									</array>
-									<key>name</key>
-									<string>opacity</string>
-									<key>type</key>
-									<integer>10</integer>
-								</dict>
-							</dict>
 						</dict>
 						<key>baseClass</key>
 						<string>CCSprite</string>
@@ -1807,7 +1764,7 @@
 								<key>type</key>
 								<string>StringSimple</string>
 								<key>value</key>
-								<string>katana</string>
+								<string></string>
 							</dict>
 							<dict>
 								<key>baseValue</key>
@@ -1821,8 +1778,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>11.73589038848877</real>
-									<real>16.311080932617188</real>
+									<real>75.891548156738281</real>
+									<real>22.925065994262695</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -1860,11 +1817,7 @@
 								<key>type</key>
 								<string>Degrees</string>
 								<key>value</key>
-<<<<<<< HEAD
 								<real>-120</real>
-=======
-								<real>-65</real>
->>>>>>> origin/master
 							</dict>
 							<dict>
 								<key>baseValue</key>
@@ -1930,7 +1883,7 @@
 					</dict>
 				</array>
 				<key>customClass</key>
-				<string></string>
+				<string>NinjaKitty</string>
 				<key>displayName</key>
 				<string>ninjakittyrest</string>
 				<key>memberVarAssignmentName</key>
@@ -1960,7 +1913,7 @@
 						<key>value</key>
 						<array>
 							<real>0.0</real>
-							<real>25</real>
+							<real>0.0</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1989,8 +1942,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.8571428656578064</real>
-							<real>1.1071428060531616</real>
+							<real>1</real>
+							<real>1</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -2003,7 +1956,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>8.5714292526245117</real>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>baseValue</key>
@@ -2225,7 +2178,7 @@
 			<key>length</key>
 			<real>1</real>
 			<key>name</key>
-			<string>dying</string>
+			<string>Rainbow</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
@@ -2248,7 +2201,7 @@
 		</dict>
 		<dict>
 			<key>autoPlay</key>
-			<false/>
+			<true/>
 			<key>callbackChannel</key>
 			<dict>
 				<key>keyframes</key>
@@ -2265,11 +2218,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-<<<<<<< HEAD
 			<real>0.60000002384185791</real>
-=======
-			<real>1</real>
->>>>>>> origin/master
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
@@ -2360,7 +2309,7 @@
 		</dict>
 		<dict>
 			<key>autoPlay</key>
-			<true/>
+			<false/>
 			<key>callbackChannel</key>
 			<dict>
 				<key>keyframes</key>
@@ -2371,9 +2320,9 @@
 			<key>chainedSequenceId</key>
 			<integer>-1</integer>
 			<key>length</key>
-			<real>1</real>
+			<real>10</real>
 			<key>name</key>
-			<string>Default</string>
+			<string>dying</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
@@ -2449,7 +2398,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.13333334028720856</real>
+			<real>0.066666670143604279</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
