@@ -25,6 +25,7 @@ class PreviewBattleScene: CCNode {
     weak var menu : CCNode!
     var spriteHero : CCSprite!
     var spriteEnemy : CCSprite!
+    var done = true
     
     func didLoadFromCCB() {
         print("add child")
@@ -50,226 +51,258 @@ class PreviewBattleScene: CCNode {
     
     //spriteHero.runAnimationSequenceNamed...
     func useAbility(sender: CCButton!) {
-        var map = hero.displayAbilities()
-        let rand = Int(arc4random_uniform(UInt32(2)))
-        var ended = false
-        var win = false
-        var enemyAbility = Ability()
-        var heroAbility = Ability()
-        if (rand == 0) {
-            enemyAbility = enemy.enemyPerformAbility(hero)
-            switch (enemyAbility.abilityType) {
-            case "Melee":
-                if (enemy.kittyType == "Ninja") {
-                    spriteEnemy.animationManager.runAnimationsForSequenceNamed("katanaAttackReverse");
-                } else {
-                    spriteEnemy.animationManager.runAnimationsForSequenceNamed("cutlassAttackReverse")
-                }
-                break
-            case "Ranged":
-                if (enemy.kittyType == "Ninja") {
-                    spriteEnemy.animationManager.runAnimationsForSequenceNamed("shurikenAttackReverse");
-                } else {
-                    spriteEnemy.animationManager.runAnimationsForSequenceNamed("gunAttackReverse")
-                }
-                break
-            default :
-                break
-            }
-            infoText.string = enemy.name + " used " + enemyAbility.name
-            if (hero.currentHP <= 0) {
-                yourHP.string = String(0)
-                infoText.string = infoText.string + "\n" + "YOU LOSE"
-                hero.lose()
-                ended = true
-            } else {
-                yourHP.string = String(hero.currentHP)
-                oppHP.string = String(enemy.currentHP)
-                heroAbility = hero.performAbility(map[sender.title]!, enemy: enemy)
-                switch (heroAbility.abilityType) {
-                case "Melee":
-                    if (hero.kittyType == "Ninja") {
-                        spriteHero.animationManager.runAnimationsForSequenceNamed("katanaAttack");
-                    } else {
-                        spriteHero.animationManager.runAnimationsForSequenceNamed("CutlassAttack")
-                    }
-                    break
-                case "Ranged":
-                    if (hero.kittyType == "Ninja") {
-                        spriteHero.animationManager.runAnimationsForSequenceNamed("shurikenAttack");
-                    } else {
-                        spriteHero.animationManager.runAnimationsForSequenceNamed("gunAttack")
-                    }
-                    break
-                default :
-                    break
-                }
-
-                infoText.string = infoText.string + "\n" + hero.name + " used " + heroAbility.name
-                yourHP.string = String(hero.currentHP)
-                if (enemy.currentHP <= 0) {
-                    oppHP.string = String(0)
-                    infoText.string = infoText.string + "\n" + "YOU WON"
-                    win = true
-                    hero.win()
-                    ended = true
-                } else {
-                    oppHP.string = String(enemy.currentHP)
-                }
-            }
-        } else {
-            heroAbility = hero.performAbility(map[sender.title]!, enemy: enemy)
-            switch (heroAbility.abilityType) {
-            case "Melee":
-                if (hero.kittyType == "Ninja") {
-                    spriteHero.animationManager.runAnimationsForSequenceNamed("katanaAttack");
-                } else {
-                    spriteHero.animationManager.runAnimationsForSequenceNamed("CutlassAttack")
-                }
-                break
-            case "Ranged":
-                if (hero.kittyType == "Ninja") {
-                    spriteHero.animationManager.runAnimationsForSequenceNamed("shurikenAttack");
-                } else {
-                    spriteHero.animationManager.runAnimationsForSequenceNamed("gunAttack")
-                }
-                break
-            default :
-                break
-            }
-            infoText.string = hero.name + " used " + heroAbility.name
-            if (enemy.currentHP <= 0) {
-                oppHP.string = String(0)
-                infoText.string = infoText.string + "\n" + "YOU WON"
-                win = true
-                hero.win()
-                ended = true
-            } else {
-                oppHP.string = String(enemy.currentHP)
-                yourHP.string = String(hero.currentHP)
+        if (done) {
+            var map = hero.displayAbilities()
+            let rand = Int(arc4random_uniform(UInt32(2)))
+            var ended = false
+            var win = false
+            var enemyAbility = Ability()
+            var heroAbility = Ability()
+            infoText.string = ""
+            done = false
+            if (rand == 0) {
+                //Perform Enemy Ability
                 enemyAbility = enemy.enemyPerformAbility(hero)
-                switch (enemyAbility.abilityType) {
-                case "Melee":
-                    if (enemy.kittyType == "Ninja") {
-                        spriteEnemy.animationManager.runAnimationsForSequenceNamed("katanaAttackReverse");
-                    } else {
-                        spriteEnemy.animationManager.runAnimationsForSequenceNamed("cutlassAttackReverse")
-                    }
-                    break
-                case "Ranged":
-                    if (enemy.kittyType == "Ninja") {
-                        spriteEnemy.animationManager.runAnimationsForSequenceNamed("shurikenAttackReverse");
-                    } else {
-                        spriteEnemy.animationManager.runAnimationsForSequenceNamed("gunAttackReverse")
-                    }
-                    break
-                default :
-                    break
-                }
-                infoText.string = infoText.string + "\n" + enemy.name + " used " + enemyAbility.name
+                //Enemy Animation
+                NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("enemyAnimation:"), userInfo: enemyAbility, repeats: false)
+                //Update Text
+                NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("updateText:"), userInfo: enemy.name + " used " + enemyAbility.name, repeats: false)
+                //Update Enemy Label
                 oppHP.string = String(enemy.currentHP)
+                //Hero dead?
                 if (hero.currentHP <= 0) {
+                    //Update Text
+                    NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("updateText:"), userInfo: "\n" + "YOU LOSE", repeats: false)
+                    //Update Your Label
                     yourHP.string = String(0)
-                    infoText.string = infoText.string + "\n" + "YOU LOSE"
-                    hero.lose()
-                    ended = true
+                    //End Battle as Lose
+                    NSTimer.scheduledTimerWithTimeInterval(5.5, target: self, selector: Selector("endBattle:"), userInfo: false, repeats: false)
+                    NSTimer.scheduledTimerWithTimeInterval(5.6, target: self, selector: Selector("allowToContinue:"), userInfo: nil, repeats: false)
                 } else {
+                    //Update Your Label
                     yourHP.string = String(hero.currentHP)
-                }
-            }
-            
-        }
-        if (ended) {
-            hero.sprite.removeFromParent()
-            enemy.sprite.removeFromParent()
-            abilities.removeAllChildren()
-            if (hero.kittyType == "Ninja") {
-                enemy = PirateKitty(name: "Pirate", sprite: CCBReader.load("PirateKitty") as! CCSprite)
-                let newNinja = [
-                    "type" : "Ninja",
-                    "attack" : hero.attack,
-                    "baseHP" : hero.baseHP,
-                    "defense" : hero.defense,
-                    "level" : hero.level,
-                    "xp" : hero.xp,
-                    "amtKills" : hero.amtKills
-                ]
-                myRootRef.childByAppendingPath("users").childByAppendingPath(hero.name).setValue(newNinja)
-                if (win) {
-                    myRootRef.childByAppendingPath("ninjasKillCount").observeSingleEventOfType(.Value, withBlock: {
-                        snapshot in
-                        myRootRef.childByAppendingPath("ninjasKillCount").setValue(snapshot.value as! Int + 1)
-                    })
+                    //Perform Hero Ability
+                    heroAbility = hero.performAbility(map[sender.title]!, enemy: enemy)
+                    //Hero Animation
+                    NSTimer.scheduledTimerWithTimeInterval(1.6, target: self, selector: Selector("heroAnimation:"), userInfo: heroAbility, repeats: false)
+                    //Update Text
+                    NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("updateText:"), userInfo: "\n" + hero.name + " used " + heroAbility.name, repeats: false)
+                    //Update Your Label
+                    yourHP.string = String(hero.currentHP)
+                    //Enemy dead?
+                    if (enemy.currentHP <= 0) {
+                        //Update Text
+                        NSTimer.scheduledTimerWithTimeInterval(3.5, target: self, selector: Selector("updateText:"), userInfo: "\n" + "YOU WIN", repeats: false)
+                        //Update Enemy Label
+                        oppHP.string = String(0)
+                        //End Battle as Win
+                        NSTimer.scheduledTimerWithTimeInterval(7.0, target: self, selector: Selector("endBattle:"), userInfo: true, repeats: false)
+                        NSTimer.scheduledTimerWithTimeInterval(7.1, target: self, selector: Selector("allowToContinue:"), userInfo: nil, repeats: false)
+                    } else {
+                        //Update Enemy Label
+                        oppHP.string = String(enemy.currentHP)
+                        NSTimer.scheduledTimerWithTimeInterval(3.1, target: self, selector: Selector("allowToContinue:"), userInfo: nil, repeats: false)
+                    }
                     
                 }
             } else {
-                enemy = NinjaKitty(name: "Ninja", sprite: CCBReader.load("NinjaKitty") as! CCSprite)
-                let newPirate = [
-                    "type" : "Pirate",
-                    "attack" : hero.attack,
-                    "baseHP" : hero.baseHP,
-                    "defense" : hero.defense,
-                    "level" : hero.level,
-                    "xp" : hero.xp,
-                    "amtKills" : hero.amtKills
-                ]
-                myRootRef.childByAppendingPath("users").childByAppendingPath(hero.name).setValue(newPirate)
-                if (win) {
-                    myRootRef.childByAppendingPath("piratesKillCount").observeSingleEventOfType(.Value, withBlock: {
-                        snapshot in
-                        myRootRef.childByAppendingPath("piratesKillCount").setValue(snapshot.value as! Int + 1)
-                    })
+                //Perform Hero Ability
+                heroAbility = hero.performAbility(map[sender.title]!, enemy: enemy)
+                //Hero Animation
+                NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("heroAnimation:"), userInfo: heroAbility, repeats: false)
+                //Update Text
+                NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("updateText:"), userInfo: hero.name + " used " + heroAbility.name, repeats: false)
+                //Update Your Label
+                yourHP.string = String(hero.currentHP)
+                //Enemy dead?
+                if (enemy.currentHP <= 0) {
+                    //Update Text
+                    NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("updateText:"), userInfo: "\n" + "YOU WIN", repeats: false)
+                    //Update Enemy Label
+                    oppHP.string = String(0)
+                    //End Battle as Win
+                    NSTimer.scheduledTimerWithTimeInterval(5.5, target: self, selector: Selector("endBattle:"), userInfo: true, repeats: false)
+                    NSTimer.scheduledTimerWithTimeInterval(5.6, target: self, selector: Selector("allowToContinue:"), userInfo: nil, repeats: false)
+                } else {
+                    //Update Enemy Label
+                    oppHP.string = String(enemy.currentHP)
+                    //Perform Enemy Ability
+                    enemyAbility = enemy.enemyPerformAbility(hero)
+                    //Enemy Animation
+                    NSTimer.scheduledTimerWithTimeInterval(1.6, target: self, selector: Selector("enemyAnimation:"), userInfo: enemyAbility, repeats: false)
+                    //Update Text
+                    NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("updateText:"), userInfo: "\n" + enemy.name + " used " + enemyAbility.name, repeats: false)
+                    //Update Enemy Label
+                    oppHP.string = String(enemy.currentHP)
+                    //Hero dead?
+                    if (hero.currentHP <= 0) {
+                        //Update Text
+                        NSTimer.scheduledTimerWithTimeInterval(3.5, target: self, selector: Selector("updateText:"), userInfo: "\n" + "YOU LOSE", repeats: false)
+                        //Update Your Label
+                        yourHP.string = String(0)
+                        //End Battle as Lose
+                        NSTimer.scheduledTimerWithTimeInterval(7.0, target: self, selector: Selector("endBattle:"), userInfo: false, repeats: false)
+                        NSTimer.scheduledTimerWithTimeInterval(7.1, target: self, selector: Selector("allowToContinue:"), userInfo: nil, repeats: false)
+                    } else {
+                        //Update Your Label
+                        yourHP.string = String(hero.currentHP)
+                        NSTimer.scheduledTimerWithTimeInterval(3.1, target: self, selector: Selector("allowToContinue:"), userInfo: nil, repeats: false)
+                    }
                     
                 }
             }
-            CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("CharacterInfoScene"))
-        }
         
+        //self.performSelector(Selector("checkEnd"), withObject: self, afterDelay: 1)
+//        let arr = [ended, win]
+//        NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("checkEnd:"), userInfo: arr, repeats: false)
+        }
+    }
+    
+    func allowToContinue(timer: NSTimer) {
+        done = true;
+    }
+    
+    func updateText(timer: NSTimer) {
+        let text = timer.userInfo as! String
+        infoText.string = infoText.string + text
+    }
+    
+    func heroAnimation(timer: NSTimer) {
+        let heroAbility = timer.userInfo as! Ability
+        switch (heroAbility.abilityType) {
+        case "Melee":
+            if (hero.kittyType == "Ninja") {
+                spriteHero.animationManager.runAnimationsForSequenceNamed("katanaAttack");
+            } else {
+                spriteHero.animationManager.runAnimationsForSequenceNamed("CutlassAttack")
+            }
+            break
+        case "Ranged":
+            if (hero.kittyType == "Ninja") {
+                spriteHero.animationManager.runAnimationsForSequenceNamed("shurikenAttack");
+            } else {
+                spriteHero.animationManager.runAnimationsForSequenceNamed("gunAttack")
+            }
+            break
+        default :
+            break
+        }
+    }
+    
+    func enemyAnimation(timer: NSTimer) {
+        let enemyAbility = timer.userInfo as! Ability
+        switch (enemyAbility.abilityType) {
+        case "Melee":
+            if (enemy.kittyType == "Ninja") {
+                spriteEnemy.animationManager.runAnimationsForSequenceNamed("katanaAttackReverse");
+            } else {
+                spriteEnemy.animationManager.runAnimationsForSequenceNamed("cutlassAttackReverse")
+            }
+            break
+        case "Ranged":
+            if (enemy.kittyType == "Ninja") {
+                spriteEnemy.animationManager.runAnimationsForSequenceNamed("shurikenAttackReverse");
+            } else {
+                spriteEnemy.animationManager.runAnimationsForSequenceNamed("gunAttackReverse")
+            }
+            break
+        default :
+            break
+        }
+    }
+    
+    func endBattle(timer: NSTimer) {
+        let win = timer.userInfo as! Bool
+        hero.sprite.removeFromParent()
+        enemy.sprite.removeFromParent()
+        abilities.removeAllChildren()
+        if (win) {
+            hero.win()
+            myRootRef.childByAppendingPath("piratesKillCount").observeSingleEventOfType(.Value, withBlock: {
+                snapshot in
+                myRootRef.childByAppendingPath("piratesKillCount").setValue(snapshot.value as! Int + 1)
+            })
+        } else {
+            hero.lose()
+        }
+        if (hero.kittyType == "Ninja") {
+            enemy = PirateKitty(name: "Pirate", sprite: CCBReader.load("PirateKitty") as! CCSprite)
+            let newNinja = [
+                "type" : "Ninja",
+                "attack" : hero.attack,
+                "baseHP" : hero.baseHP,
+                "defense" : hero.defense,
+                "level" : hero.level,
+                "xp" : hero.xp,
+                "amtKills" : hero.amtKills
+            ]
+            myRootRef.childByAppendingPath("users").childByAppendingPath(hero.name).setValue(newNinja)
+            
+        } else {
+            enemy = NinjaKitty(name: "Ninja", sprite: CCBReader.load("NinjaKitty") as! CCSprite)
+            let newPirate = [
+                "type" : "Pirate",
+                "attack" : hero.attack,
+                "baseHP" : hero.baseHP,
+                "defense" : hero.defense,
+                "level" : hero.level,
+                "xp" : hero.xp,
+                "amtKills" : hero.amtKills
+            ]
+            myRootRef.childByAppendingPath("users").childByAppendingPath(hero.name).setValue(newPirate)
+        }
+        CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("CharacterInfoScene"))
     }
     
     func getRanged() {
-        abilities.removeAllChildren()
-        let map = hero.displayRangedAbilities()
-        var index = 0.0
-        for ability in map.values {
-            let button = CCButton(title: ability.name)
-            button.name = ability.name
-            button.positionType = CCPositionTypeNormalized
-            button.position.x = 0.50
-            button.position.y = CGFloat(Float(0.90 - (0.20 * index)))
-            button.setTarget(self, selector: "useAbility:")
-            abilities.addChild(button)
-            index = index + 1.0
+        if (done) {
+            abilities.removeAllChildren()
+            let map = hero.displayRangedAbilities()
+            var index = 0.0
+            for ability in map.values {
+                let button = CCButton(title: ability.name)
+                button.name = ability.name
+                button.positionType = CCPositionTypeNormalized
+                button.position.x = 0.50
+                button.position.y = CGFloat(Float(0.90 - (0.20 * index)))
+                button.setTarget(self, selector: "useAbility:")
+                abilities.addChild(button)
+                index = index + 1.0
+            }
         }
     }
     
     func getMelee() {
-        abilities.removeAllChildren()
-        let map = hero.displayMeleeAbilities()
-        var index = 0.0
-        for ability in map.values {
-            let button = CCButton(title: ability.name)
-            button.positionType = CCPositionTypeNormalized
-            button.position.x = 0.50
-            button.position.y = CGFloat(Float(0.90 - (0.20 * index)))
-            button.setTarget(self, selector: "useAbility:")
-            abilities.addChild(button)
-            index = index + 1.0
+        if (done) {
+            abilities.removeAllChildren()
+            let map = hero.displayMeleeAbilities()
+            var index = 0.0
+            for ability in map.values {
+                let button = CCButton(title: ability.name)
+                button.positionType = CCPositionTypeNormalized
+                button.position.x = 0.50
+                button.position.y = CGFloat(Float(0.90 - (0.20 * index)))
+                button.setTarget(self, selector: "useAbility:")
+                abilities.addChild(button)
+                index = index + 1.0
+            }
         }
     }
     
     func getDefense() {
-        abilities.removeAllChildren()
-        let map = hero.displayDefenseAbilities()
-        var index = 0.0
-        for ability in map.values {
-            let button = CCButton(title: ability.name)
-            button.positionType = CCPositionTypeNormalized
-            button.position.x = 0.50
-            button.position.y = CGFloat(Float(0.90 - (0.20 * index)))
-            button.setTarget(self, selector: "useAbility:")
-            abilities.addChild(button)
-            index = index + 1.0
+        if (done) {
+            abilities.removeAllChildren()
+            let map = hero.displayDefenseAbilities()
+            var index = 0.0
+            for ability in map.values {
+                let button = CCButton(title: ability.name)
+                button.positionType = CCPositionTypeNormalized
+                button.position.x = 0.50
+                button.position.y = CGFloat(Float(0.90 - (0.20 * index)))
+                button.setTarget(self, selector: "useAbility:")
+                abilities.addChild(button)
+                index = index + 1.0
+            }
         }
     }
 }
