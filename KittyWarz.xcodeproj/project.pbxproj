@@ -131,6 +131,8 @@
 		BCD00A8C1A44E83400DA5AD0 /* CoreJava.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5399D41A44DCC90063F482 /* CoreJava.framework */; };
 		EF943F8D1C79D0BC00FCFA9C /* CatFight.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF943F8C1C79D0BC00FCFA9C /* CatFight.swift */; };
 		EF943F8F1C79D14800FCFA9C /* Yarrrrgn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF943F8E1C79D14800FCFA9C /* Yarrrrgn.swift */; };
+		EF943F911C79EFBC00FCFA9C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF943F901C79EFBC00FCFA9C /* MapKit.framework */; };
+		EF943F931C79EFC700FCFA9C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF943F921C79EFC700FCFA9C /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -296,6 +298,8 @@
 		E1F2CE322F3AE66B8F2B820D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EF943F8C1C79D0BC00FCFA9C /* CatFight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatFight.swift; sourceTree = "<group>"; };
 		EF943F8E1C79D14800FCFA9C /* Yarrrrgn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yarrrrgn.swift; sourceTree = "<group>"; };
+		EF943F901C79EFBC00FCFA9C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EF943F921C79EFC700FCFA9C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F248AAB604A9033B4BEA9758 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -348,6 +352,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF943F931C79EFC700FCFA9C /* CoreLocation.framework in Frameworks */,
+				EF943F911C79EFBC00FCFA9C /* MapKit.framework in Frameworks */,
 				7A97911819E631CD001FFC4D /* libcocos2d.a in Frameworks */,
 				8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */,
 				B77F1B3217B978D7009739AE /* QuartzCore.framework in Frameworks */,
@@ -637,6 +643,8 @@
 		B77F1B3017B978D7009739AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EF943F921C79EFC700FCFA9C /* CoreLocation.framework */,
+				EF943F901C79EFBC00FCFA9C /* MapKit.framework */,
 				BC5399D31A44DCC90063F482 /* AndroidKit.framework */,
 				BC5399D41A44DCC90063F482 /* CoreJava.framework */,
 				BC5399D51A44DCC90063F482 /* GLActivityKit.framework */,
@@ -1467,6 +1475,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
