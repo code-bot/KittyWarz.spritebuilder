@@ -12,10 +12,19 @@ class VitaminC: Ability {
     
     override init() {
         super.init()
-        amt = 85.0
+        //amt = 85.0
         unlockLevel = 10
         abilityType = "Defense"
         typeOfKitty = "PirateKitty"
         name = "Vitamin C"
+        msg = "Didn't run"
+    }
+    
+    override func run(hero: Kitty, enemy: Kitty) {
+        var heal = Double(arc4random_uniform(15)) + (Double(hero.level) * 10.0)
+        hero.currentDefense += 0.05
+        heal += (heal * (hero.currentDefense))
+        hero.currentHP += heal
+        msg = hero.name + " cures its own scurvy."
     }
 }

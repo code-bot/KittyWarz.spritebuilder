@@ -12,10 +12,19 @@ class ShiverMeWhiskers: Ability {
     
     override init() {
         super.init()
-        amt = 50.0
-        unlockLevel = 7
+        //amt = 50.0
+        unlockLevel = 8
         abilityType = "Defense"
         typeOfKitty = "PirateKitty"
         name = "Shiver Me Whiskers"
+        msg = "Didn't run"
+    }
+    
+    override func run(hero: Kitty, enemy: Kitty) {
+        var heal = Double(arc4random_uniform(15)) + (Double(hero.level) * 10.0)
+        enemy.currentDefense -= 0.04
+        heal += (heal * (hero.currentDefense) * 2)
+        hero.currentHP += heal
+        msg = hero.name + " starts playing with its whiskers.\nThis intimidates the enemy."
     }
 }
