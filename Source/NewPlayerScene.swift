@@ -52,7 +52,7 @@ class NewPlayerScene: CCNode {
                     defaults.synchronize()
                     print("save on phone")
                     hero = NinjaKitty(name: self.catName.string, baseHP: userData!["baseHP"] as! Double, attack: userData!["attack"] as! Double, defense: userData!["defense"] as! Double, level: userData!["level"] as! Int, xp: userData!["xp"] as! Int, amtKills: userData!["amtKills"] as! Int, sprite : CCBReader.load("NinjaKitty") as! CCSprite)
-                    CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("PreviewBattleScene"))
+                    CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("CharacterInfoScene"))
                 } else {
                     self.miscInfo.string = "Username taken"
                 }
@@ -99,7 +99,7 @@ class NewPlayerScene: CCNode {
                     print("save on phone")
                     
                     hero = PirateKitty(name: self.catName.string, baseHP: userData!["baseHP"] as! Double, attack: userData!["attack"] as! Double, defense: userData!["defense"] as! Double, level: userData!["level"] as! Int, xp: userData!["xp"] as! Int, amtKills: userData!["amtKills"] as! Int, sprite : CCBReader.load("PirateKitty") as! CCSprite)
-                    CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("PreviewBattleScene"))
+                    CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("CharacterInfoScene"))
                 } else {
                     self.miscInfo.string = "Username taken"
                 }

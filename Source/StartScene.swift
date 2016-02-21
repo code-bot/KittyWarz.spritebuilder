@@ -41,7 +41,7 @@ class StartScene: CCNode {
     func playGame() {
         print("play")
         if (hero != nil) {
-            CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("PreviewBattleScene"))
+            CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("CharacterInfoScene"))
         } else {
             CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("NewPlayerScene"))
         }
