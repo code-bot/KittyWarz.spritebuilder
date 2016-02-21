@@ -89,9 +89,9 @@ class NewPlayerScene: CCNode {
                     userExists = false
                     let newPirate = [
                         "type" : "Pirate",
-                        "attack" : 1.2,
-                        "baseHP" : 110.0,
-                        "defense" : 0.05,
+                        "attack" : 1.0,
+                        "baseHP" : 120.0,
+                        "defense" : 0.08,
                         "level" : 1,
                         "xp" : 0,
                         "amtKills" : 0

@@ -47,7 +47,7 @@
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
-				<string>PirateKitty</string>
+				<string></string>
 				<key>displayName</key>
 				<string>piratekittyrest</string>
 				<key>memberVarAssignmentName</key>
@@ -146,8 +146,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

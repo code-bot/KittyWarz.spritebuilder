@@ -76,10 +76,9 @@ class Kitty {
         print("Idk what kitty I am");
     }
     
-//    func createEnemy() -> Kitty {
-//        print("Raceless kitties don't have enemies.");
-//        return self.createEnemy()
-//    }
+    func createEnemy() {
+        //Create enemy
+    }
     
     func displayMeleeAbilities() -> [Ability] {
         print("No abilities")

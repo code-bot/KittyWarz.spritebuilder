@@ -32,10 +32,14 @@ class CharacterInfoScene: CCNode {
     }
     
     func goToBattle() {
+        hero.sprite.removeFromParent()
         CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("PreviewBattleScene"))
+        
     }
     
     func goToClan() {
+        hero.sprite.removeFromParent()
         CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("ClanInfoScene"))
+        
     }
 }

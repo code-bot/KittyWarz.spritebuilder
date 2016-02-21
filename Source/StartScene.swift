@@ -11,6 +11,7 @@ import Firebase
 
 var myRootRef = Firebase(url: "https://kittywarsios.firebaseio.com")
 var hero : Kitty!
+var enemy : Kitty!
 
 class StartScene: CCNode {
     
@@ -29,10 +30,14 @@ class StartScene: CCNode {
                 if let userData = snapshot.value as? [String : AnyObject] {
                     if (userData["type"] as! String == "Ninja") {
                         hero = NinjaKitty(name: user, baseHP: userData["baseHP"] as! Double, attack: userData["attack"] as! Double, defense: userData["defense"] as! Double, level: userData["level"] as! Int, xp: userData["xp"] as! Int, amtKills: userData["amtKills"] as! Int, sprite: CCBReader.load("NinjaKitty") as! CCSprite)
+                        enemy = PirateKitty(name: "pirate", sprite: CCBReader.load("PirateKitty") as! CCSprite)
+                        
                     } else {
                         hero = PirateKitty(name: user, baseHP: userData["baseHP"] as! Double, attack: userData["attack"] as! Double, defense: userData["defense"] as! Double, level: userData["level"] as! Int, xp: userData["xp"] as! Int, amtKills: userData["amtKills"] as! Int, sprite: CCBReader.load("PirateKitty") as! CCSprite)
+                        enemy = NinjaKitty(name: "pirate", sprite: CCBReader.load("NinjaKitty") as! CCSprite)
                     }
                 }
+                print(hero.sprite)
             })
         }
         print("done")
@@ -41,7 +46,7 @@ class StartScene: CCNode {
     func playGame() {
         print("play")
         if (hero != nil) {
-            CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("NewPlayerScene"))
+            CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("CharacterInfoScene"))
         } else {
             CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("NewPlayerScene"))
         }

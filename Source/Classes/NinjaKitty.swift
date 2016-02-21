@@ -61,19 +61,17 @@ class NinjaKitty: Kitty {
         performAbility(a, enemy : hero)
     }
     
-//    override func createEnemy() -> Kitty {
-//        var enemy : PirateKitty
-//        if level < 2 {
-//            enemy = PirateKitty(name : "Pirate Bobberman")
-//        } else {
-//            let rand = Int(arc4random_uniform(3)) + level - 1
-//            enemy = PirateKitty(name : "Captain Blackwhiskers")
-//            for index in 1...(level - 1) {
-//                enemy.levelUp()
-//            }
-//        }
-//        return enemy;
-//    }
+    override func createEnemy(){
+        if level < 2 {
+            enemy.name = "Pirate Bobberman"
+        } else {
+            let rand = Int(arc4random_uniform(3)) + level - 1
+            enemy.name = "Captain Blackwhiskers"
+            for index in 1...(level - 1) {
+                enemy.levelUp()
+            }
+        }
+    }
     
     override func displayMeleeAbilities() -> [Ability] {
         var meleeList = [Ability]();

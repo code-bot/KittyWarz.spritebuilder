@@ -47,7 +47,7 @@
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
-				<string>NinjaKitty</string>
+				<string></string>
 				<key>displayName</key>
 				<string>ninjakittyrest</string>
 				<key>memberVarAssignmentName</key>
