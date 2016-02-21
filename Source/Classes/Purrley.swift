@@ -12,7 +12,7 @@ class Purrley: Ability {
     
     override init() {
         super.init()
-        amt = 15.0
+        amt = 20.0
         unlockLevel = 1
         abilityType = "Melee"
         typeOfKitty = "PirateKitty"

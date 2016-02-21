@@ -1883,7 +1883,7 @@
 					</dict>
 				</array>
 				<key>customClass</key>
-				<string>NinjaKitty</string>
+				<string></string>
 				<key>displayName</key>
 				<string>ninjakittyrest</string>
 				<key>memberVarAssignmentName</key>
@@ -2023,6 +2023,8 @@
 						<array/>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>
