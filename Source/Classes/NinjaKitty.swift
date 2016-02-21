@@ -11,34 +11,18 @@ import Darwin
 
 class NinjaKitty: Kitty {
     
-    func setupKitty(name : String) {
-        nameOfKitty = name
-        baseHP = 110.0
-        attack = 1.2
-        defense = 0.05
-        level = 1
-        xp = 0
-        amtKills = 0
-        alive = true
-        currentHP = baseHP
+    init(name : String, sprite: CCSprite) {
+        super.init(name : name, baseHP : 110.0, attack : 1.2, defense : 0.05, level : 1, xp : 0, amtKills : 0, sprite : sprite)
         abilitiesList = [FurrySwipes(), DeadlyStare(), KittyKlaws(), KatanaSlash(), Purrtect(),
-            ShurikenStorm()];
+            ShurikenStorm()]
         kittyType = "Ninja"
     }
     
-    func loadKitty(name : String, baseHP : Double, attack : Double, defense : Double,
-        level: Int, xp : Int,  amtKills : Int) {
-            nameOfKitty = name
-            self.baseHP = baseHP
-            self.attack = attack
-            self.defense = defense
-            self.level = level
-            self.xp = xp
-            self.amtKills = amtKills
-            alive = true
-            currentHP = baseHP
+    override init(name : String, baseHP : Double, attack : Double, defense : Double,
+        level: Int, xp : Int,  amtKills : Int, sprite: CCSprite) {
+            super.init(name : name, baseHP : baseHP, attack : attack, defense : defense, level : level, xp : xp, amtKills : amtKills, sprite: sprite)
             abilitiesList = [FurrySwipes(), DeadlyStare(), KittyKlaws(), KatanaSlash(), Purrtect(),
-                ShurikenStorm()];
+                ShurikenStorm()]
             kittyType = "Ninja"
     }
     

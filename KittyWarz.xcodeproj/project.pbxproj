@@ -218,7 +218,6 @@
 		7AFCD5DD19E9BDC200BCCCDA /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Source/Bridging-Header.h"; sourceTree = "<group>"; };
 		7BF6AF9F1A425F9800FFF9BA /* JavaFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaFoundation.framework; path = "../../../../../../../Library/SBAndroid/Application Support/Developer/Shared/Xcode/Platforms/Android.platform/Developer/SDKs/SBAndroid.sdk/System/Library/Frameworks/JavaFoundation.framework"; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
-		87E075FE1C79080E00A1199F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		87E0760B1C79150500A1199F /* CharacterInfoScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterInfoScene.swift; path = Source/CharacterInfoScene.swift; sourceTree = "<group>"; };
 		87E0760C1C79150500A1199F /* ClanInfoScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClanInfoScene.swift; path = Source/ClanInfoScene.swift; sourceTree = "<group>"; };
 		87E0760D1C79150500A1199F /* NewPlayerScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewPlayerScene.swift; path = Source/NewPlayerScene.swift; sourceTree = "<group>"; };
@@ -534,6 +533,18 @@
 		B73470621C78F337000BD26C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B73470351C78F31A000BD26C /* LaunchMenu.swift */,
+				B73470361C78F31A000BD26C /* NewPlayerController.swift */,
+				B734703E1C78F31A000BD26C /* BattlePreviewController.swift */,
+				B734703F1C78F31A000BD26C /* CharInfoController.swift */,
+				B73470411C78F31A000BD26C /* ClanInfoController.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		B737893C1807616C0076A88C /* Source */ = {
+			isa = PBXGroup;
+			children = (
 				B73470451C78F31A000BD26C /* Kitty.swift */,
 				B73470401C78F31A000BD26C /* NinjaKitty.swift */,
 				B734703D1C78F31A000BD26C /* PirateKitty.swift */,
@@ -554,18 +565,6 @@
 				B734703A1C78F31A000BD26C /* Purricane.swift */,
 				B734703B1C78F31A000BD26C /* VitaminC.swift */,
 				B734703C1C78F31A000BD26C /* Purrtect.swift */,
-				B73470351C78F31A000BD26C /* LaunchMenu.swift */,
-				B73470361C78F31A000BD26C /* NewPlayerController.swift */,
-				B734703E1C78F31A000BD26C /* BattlePreviewController.swift */,
-				B734703F1C78F31A000BD26C /* CharInfoController.swift */,
-				B73470411C78F31A000BD26C /* ClanInfoController.swift */,
-			);
-			name = Classes;
-			sourceTree = "<group>";
-		};
-		B737893C1807616C0076A88C /* Source */ = {
-			isa = PBXGroup;
-			children = (
 				7A40362019DDEF0D007B6E8F /* Platforms */,
 				7A046D7519E84C36004C4763 /* MainScene.swift */,
 				87E0760B1C79150500A1199F /* CharacterInfoScene.swift */,
@@ -574,7 +573,6 @@
 				87E0760E1C79150500A1199F /* PreviewBattleScene.swift */,
 				B73470261C78EFEC000BD26C /* StartScene.swift */,
 				D352B48019EC608A00829775 /* MetalShaders */,
-				87E075FE1C79080E00A1199F /* Bridging-Header.h */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -775,7 +773,7 @@
 						CreatedOnToolsVersion = 6.0.1;
 					};
 					B77F1B2D17B978D7009739AE = {
-						DevelopmentTeam = XG82C2KF4T;
+						DevelopmentTeam = U9X42PLV7V;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;

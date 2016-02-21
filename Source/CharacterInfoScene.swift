@@ -6,8 +6,16 @@
 //  Copyright © 2016 Apportable. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class CharacterInfoScene: CCScene {
+class CharacterInfoScene: CCNode {
+    
+    var test : CCLabelTTF!
+    
+    func didLoadFromCCB() {
+        print(hero.name)
+        test.string = hero.name
+        
+    }
     
 }

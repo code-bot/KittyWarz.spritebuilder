@@ -5,6 +5,7 @@ class MainScene: CCNode {
 //    weak var object:CCLabelTTF!
     
     func didLoadFromCCB() {
+        print("hi")
 //        object.string = "lol"
 //        object.color = CCColor.blackColor()
 //        object.position = ccp(100, 100)
