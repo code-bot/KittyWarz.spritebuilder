@@ -23,6 +23,7 @@ class PreviewBattleScene: CCNode {
     weak var info : CCNode!
     weak var infoText : CCLabelTTF!
     weak var menu : CCNode!
+    weak var winLabel : CCLabelTTF!
     var spriteHero : CCSprite!
     var spriteEnemy : CCSprite!
     var done = true
@@ -50,6 +51,7 @@ class PreviewBattleScene: CCNode {
         yourHP.string = String(hero.baseHP)
         oppHP.string = String(enemy.baseHP)
         infoText.string = hero.name + " challenges " + enemy.name
+        winLabel.string = ""
     }
     
     //spriteHero.runAnimationSequenceNamed...
@@ -63,48 +65,51 @@ class PreviewBattleScene: CCNode {
             var heroAbility = Ability()
             infoText.string = ""
             done = false
+            var animationLength = 1.5
+            var textTime = 2.5
+            var winTime = 2.5
             if (rand == 0) {
                 //Perform Enemy Ability
                 enemyAbility = enemy.enemyPerformAbility(hero)
                 //Enemy Animation
                 NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("enemyAnimation:"), userInfo: enemyAbility, repeats: false)
                 //Update Text
-                NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("updateText:"), userInfo: enemy.name + " used " + enemyAbility.name, repeats: false)
+                NSTimer.scheduledTimerWithTimeInterval(animationLength, target: self, selector: Selector("updateText:"), userInfo: enemyAbility.msg, repeats: false)
                 //Update Enemy Label
                 oppHP.string = String(enemy.currentHP)
                 //Hero dead?
                 if (hero.currentHP <= 0) {
                     //Update Text
-                    NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("updateText:"), userInfo: "\n" + "YOU LOSE", repeats: false)
+                    NSTimer.scheduledTimerWithTimeInterval(animationLength + textTime, target: self, selector: Selector("updateWin:"), userInfo: "YOU LOSE", repeats: false)
                     //Update Your Label
                     yourHP.string = String(0)
                     //End Battle as Lose
-                    NSTimer.scheduledTimerWithTimeInterval(5.5, target: self, selector: Selector("endBattle:"), userInfo: false, repeats: false)
-                    NSTimer.scheduledTimerWithTimeInterval(5.6, target: self, selector: Selector("allowToContinue:"), userInfo: nil, repeats: false)
+                    NSTimer.scheduledTimerWithTimeInterval(animationLength + textTime + winTime, target: self, selector: Selector("endBattle:"), userInfo: false, repeats: false)
+                    NSTimer.scheduledTimerWithTimeInterval(animationLength + textTime + winTime + 0.1, target: self, selector: Selector("allowToContinue:"), userInfo: nil, repeats: false)
                 } else {
                     //Update Your Label
                     yourHP.string = String(hero.currentHP)
                     //Perform Hero Ability
                     heroAbility = hero.performAbility(map[sender.title]!, enemy: enemy)
                     //Hero Animation
-                    NSTimer.scheduledTimerWithTimeInterval(1.6, target: self, selector: Selector("heroAnimation:"), userInfo: heroAbility, repeats: false)
+                    NSTimer.scheduledTimerWithTimeInterval(animationLength + textTime, target: self, selector: Selector("heroAnimation:"), userInfo: heroAbility, repeats: false)
                     //Update Text
-                    NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("updateText:"), userInfo: "\n" + hero.name + " used " + heroAbility.name, repeats: false)
+                    NSTimer.scheduledTimerWithTimeInterval((animationLength * 2) + textTime, target: self, selector: Selector("updateText:"), userInfo: "\n" + heroAbility.msg, repeats: false)
                     //Update Your Label
                     yourHP.string = String(hero.currentHP)
                     //Enemy dead?
                     if (enemy.currentHP <= 0) {
                         //Update Text
-                        NSTimer.scheduledTimerWithTimeInterval(3.5, target: self, selector: Selector("updateText:"), userInfo: "\n" + "YOU WIN", repeats: false)
+                        NSTimer.scheduledTimerWithTimeInterval((animationLength * 2) + (textTime * 2), target: self, selector: Selector("updateWin:"), userInfo: "YOU WIN", repeats: false)
                         //Update Enemy Label
                         oppHP.string = String(0)
                         //End Battle as Win
-                        NSTimer.scheduledTimerWithTimeInterval(7.0, target: self, selector: Selector("endBattle:"), userInfo: true, repeats: false)
-                        NSTimer.scheduledTimerWithTimeInterval(7.1, target: self, selector: Selector("allowToContinue:"), userInfo: nil, repeats: false)
+                        NSTimer.scheduledTimerWithTimeInterval((animationLength * 2) + (textTime * 2) + winTime, target: self, selector: Selector("endBattle:"), userInfo: true, repeats: false)
+                        NSTimer.scheduledTimerWithTimeInterval((animationLength * 2) + (textTime * 2) + winTime + 0.1, target: self, selector: Selector("allowToContinue:"), userInfo: nil, repeats: false)
                     } else {
                         //Update Enemy Label
                         oppHP.string = String(enemy.currentHP)
-                        NSTimer.scheduledTimerWithTimeInterval(3.1, target: self, selector: Selector("allowToContinue:"), userInfo: nil, repeats: false)
+                        NSTimer.scheduledTimerWithTimeInterval((animationLength * 2) + (textTime * 2), target: self, selector: Selector("allowToContinue:"), userInfo: nil, repeats: false)
                     }
                     
                 }
@@ -114,42 +119,42 @@ class PreviewBattleScene: CCNode {
                 //Hero Animation
                 NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("heroAnimation:"), userInfo: heroAbility, repeats: false)
                 //Update Text
-                NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("updateText:"), userInfo: hero.name + " used " + heroAbility.name, repeats: false)
+                NSTimer.scheduledTimerWithTimeInterval(animationLength, target: self, selector: Selector("updateText:"), userInfo: heroAbility.msg, repeats: false)
                 //Update Your Label
                 yourHP.string = String(hero.currentHP)
                 //Enemy dead?
                 if (enemy.currentHP <= 0) {
                     //Update Text
-                    NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("updateText:"), userInfo: "\n" + "YOU WIN", repeats: false)
+                    NSTimer.scheduledTimerWithTimeInterval(animationLength + textTime, target: self, selector: Selector("updateWin:"), userInfo: "YOU WIN", repeats: false)
                     //Update Enemy Label
                     oppHP.string = String(0)
                     //End Battle as Win
-                    NSTimer.scheduledTimerWithTimeInterval(5.5, target: self, selector: Selector("endBattle:"), userInfo: true, repeats: false)
-                    NSTimer.scheduledTimerWithTimeInterval(5.6, target: self, selector: Selector("allowToContinue:"), userInfo: nil, repeats: false)
+                    NSTimer.scheduledTimerWithTimeInterval(animationLength + textTime + winTime, target: self, selector: Selector("endBattle:"), userInfo: true, repeats: false)
+                    NSTimer.scheduledTimerWithTimeInterval(animationLength + textTime + winTime + 0.1, target: self, selector: Selector("allowToContinue:"), userInfo: nil, repeats: false)
                 } else {
                     //Update Enemy Label
                     oppHP.string = String(enemy.currentHP)
                     //Perform Enemy Ability
                     enemyAbility = enemy.enemyPerformAbility(hero)
                     //Enemy Animation
-                    NSTimer.scheduledTimerWithTimeInterval(1.6, target: self, selector: Selector("enemyAnimation:"), userInfo: enemyAbility, repeats: false)
+                    NSTimer.scheduledTimerWithTimeInterval(animationLength + textTime, target: self, selector: Selector("enemyAnimation:"), userInfo: enemyAbility, repeats: false)
                     //Update Text
-                    NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("updateText:"), userInfo: "\n" + enemy.name + " used " + enemyAbility.name, repeats: false)
+                    NSTimer.scheduledTimerWithTimeInterval((animationLength * 2) + textTime, target: self, selector: Selector("updateText:"), userInfo: "\n" + enemyAbility.msg, repeats: false)
                     //Update Enemy Label
                     oppHP.string = String(enemy.currentHP)
                     //Hero dead?
                     if (hero.currentHP <= 0) {
                         //Update Text
-                        NSTimer.scheduledTimerWithTimeInterval(3.5, target: self, selector: Selector("updateText:"), userInfo: "\n" + "YOU LOSE", repeats: false)
+                        NSTimer.scheduledTimerWithTimeInterval((animationLength * 2) + (textTime * 2), target: self, selector: Selector("updateWin:"), userInfo: "YOU LOSE", repeats: false)
                         //Update Your Label
                         yourHP.string = String(0)
                         //End Battle as Lose
-                        NSTimer.scheduledTimerWithTimeInterval(7.0, target: self, selector: Selector("endBattle:"), userInfo: false, repeats: false)
-                        NSTimer.scheduledTimerWithTimeInterval(7.1, target: self, selector: Selector("allowToContinue:"), userInfo: nil, repeats: false)
+                        NSTimer.scheduledTimerWithTimeInterval((animationLength * 2) + (textTime * 2) + winTime, target: self, selector: Selector("endBattle:"), userInfo: false, repeats: false)
+                        NSTimer.scheduledTimerWithTimeInterval((animationLength * 2) + (textTime * 2) + winTime + 0.1, target: self, selector: Selector("allowToContinue:"), userInfo: nil, repeats: false)
                     } else {
                         //Update Your Label
                         yourHP.string = String(hero.currentHP)
-                        NSTimer.scheduledTimerWithTimeInterval(3.1, target: self, selector: Selector("allowToContinue:"), userInfo: nil, repeats: false)
+                        NSTimer.scheduledTimerWithTimeInterval((animationLength * 2) + (textTime * 2), target: self, selector: Selector("allowToContinue:"), userInfo: nil, repeats: false)
                     }
                     
                 }
@@ -163,6 +168,11 @@ class PreviewBattleScene: CCNode {
     
     func allowToContinue(timer: NSTimer) {
         done = true;
+    }
+    
+    func updateWin(timer: NSTimer) {
+        let text = timer.userInfo as! String
+        winLabel.string = text
     }
     
     func updateText(timer: NSTimer) {

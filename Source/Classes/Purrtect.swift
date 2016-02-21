@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Darwin
 
 class Purrtect: Ability {
     
@@ -25,6 +26,9 @@ class Purrtect: Ability {
         hero.currentDefense += 0.04
         heal += (heal * (hero.currentDefense * 2))
         hero.currentHP += heal
+        if hero.currentHP > hero.baseHP {
+            hero.currentHP = hero.baseHP
+        }
         msg = "Lonely cat lovers hear " + hero.name + "\n's purrs and come running to nurture the kitty."
     }
 }

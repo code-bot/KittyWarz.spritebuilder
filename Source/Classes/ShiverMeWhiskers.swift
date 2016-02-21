@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Darwin
 
 class ShiverMeWhiskers: Ability {
     
@@ -25,6 +26,9 @@ class ShiverMeWhiskers: Ability {
         enemy.currentDefense -= 0.04
         heal += (heal * (hero.currentDefense) * 2)
         hero.currentHP += heal
+        if hero.currentHP > hero.baseHP {
+            hero.currentHP = hero.baseHP
+        }
         msg = hero.name + " starts playing with its whiskers.\nThis intimidates the enemy."
     }
 }

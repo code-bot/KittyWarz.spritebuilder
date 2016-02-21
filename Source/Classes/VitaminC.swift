@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Darwin
 
 class VitaminC: Ability {
     
@@ -25,6 +26,9 @@ class VitaminC: Ability {
         hero.currentDefense += 0.05
         heal += (heal * (hero.currentDefense))
         hero.currentHP += heal
+        if hero.currentHP > hero.baseHP {
+            hero.currentHP = hero.baseHP
+        }
         msg = hero.name + " cures its own scurvy."
     }
 }

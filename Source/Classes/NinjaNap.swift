@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Darwin
 
 class NinjaNap: Ability {
     
@@ -26,6 +27,9 @@ class NinjaNap: Ability {
         hero.currentAttack += 0.2
         heal += (heal * (hero.currentDefense))
         hero.currentHP += heal
+        if hero.currentHP > hero.baseHP {
+            hero.currentHP = hero.baseHP
+        }
         msg = "Snorlax uses rest."
     }
 }

@@ -53,15 +53,15 @@ class Kitty {
     func levelUp() {
         xp -= 100
         level++
-        attack += 0.05 + (0.01 * Double(level))
-        defense += 0.03 + (0.008 * Double(level))
-        baseHP += 20.0 + (1.5 * Double(level))
+        attack += 0.05 + (0.02 * Double(level))
+        defense += 0.03 + (0.01 * Double(level))
+        baseHP += 20.0 + (6.00 * Double(level))
     }
     
     func win() {
         amtKills++
         let rand = Int(arc4random_uniform(21) + 50)
-        xp += rand / level
+        xp += rand + 60
         if xp >= 100 {
             levelUp()
         }
@@ -98,7 +98,7 @@ class Kitty {
     }
     
     func createEnemy() {
-        //Create enemy
+        print("Not a real kitty")
     }
     
     func displayMeleeAbilities() -> [String : Ability] {

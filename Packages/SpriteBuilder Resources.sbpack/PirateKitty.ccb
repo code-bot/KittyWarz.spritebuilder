@@ -16,7 +16,7 @@
 	<key>currentResolution</key>
 	<integer>0</integer>
 	<key>currentSequenceId</key>
-	<integer>2</integer>
+	<integer>5</integer>
 	<key>docDimensionsType</key>
 	<integer>1</integer>
 	<key>fileType</key>
@@ -2044,7 +2044,7 @@
 											<integer>4</integer>
 											<key>value</key>
 											<array>
-												<real>-1</real>
+												<real>1</real>
 												<real>1</real>
 											</array>
 										</dict>
@@ -2290,8 +2290,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.7733500599861145</real>
-									<real>0.22581382095813751</real>
+									<real>0.24884471297264099</real>
+									<real>0.14948704838752747</real>
 									<integer>0</integer>
 									<integer>2</integer>
 									<integer>2</integer>
@@ -2320,7 +2320,7 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>-1</real>
+									<real>1</real>
 									<real>1</real>
 									<false/>
 									<integer>0</integer>
@@ -2334,7 +2334,7 @@
 								<key>type</key>
 								<string>Degrees</string>
 								<key>value</key>
-								<real>-10</real>
+								<real>0.0</real>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -2382,7 +2382,7 @@
 								<key>type</key>
 								<string>Float</string>
 								<key>value</key>
-								<real>0.0</real>
+								<real>1</real>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -2394,7 +2394,7 @@
 									<real>1</real>
 									<real>1</real>
 									<real>1</real>
-									<real>0.0</real>
+									<real>1</real>
 								</array>
 							</dict>
 							<dict>
@@ -2551,8 +2551,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>
@@ -2710,7 +2708,7 @@
 			<key>name</key>
 			<string>gunAttack</string>
 			<key>offset</key>
-			<real>0.0</real>
+			<real>0.14203739166259766</real>
 			<key>position</key>
 			<real>0.0</real>
 			<key>resolution</key>
@@ -2892,7 +2890,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>1</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

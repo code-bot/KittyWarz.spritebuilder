@@ -12,7 +12,7 @@ import Darwin
 class PirateKitty: Kitty {
     
     init(name : String, sprite : CCSprite) {
-        super.init(name : name, baseHP : 150.0, attack : 1.0, defense : 0.10, level : 1, xp : 0, amtKills : 0, sprite : sprite)
+        super.init(name : name, baseHP : 140.0, attack : 1.0, defense : 0.10, level : 1, xp : 0, amtKills : 0, sprite : sprite)
         abilitiesList = [Purrley(), Catlass(), AhoyMeowy(), CatastrophicCannonballs(),
             ShiverMeWhiskers(), FelineFerocity()];
         kittyType = "Pirate"
@@ -27,7 +27,7 @@ class PirateKitty: Kitty {
     }
     
     override func resetStats() {
-        baseHP = 150.0
+        baseHP = 140.0
         attack = 1.0
         defense = 0.10
         level = 1
@@ -39,6 +39,18 @@ class PirateKitty: Kitty {
     
     override func performAbility(a : Ability, enemy : Kitty) -> Ability {
         a.run(self, enemy: enemy)
+        if self.currentDefense < 0.02 || self.currentDefense > 0.50 {
+            self.currentDefense = 0.45
+        }
+        if enemy.currentDefense < 0.02 || enemy.currentDefense > 0.50 {
+            enemy.currentDefense = 0.45
+        }
+        if self.currentAttack > 2.00 || self.currentAttack < 0.50 {
+            self.currentAttack = 1.00
+        }
+        if enemy.currentAttack > 2.00 || enemy.currentAttack < 0.50 {
+            enemy.currentAttack = 1.00
+        }
         return a
     }
     
@@ -86,8 +98,10 @@ class PirateKitty: Kitty {
         } else {
             let rand = Int(arc4random_uniform(3)) + level - 1
             enemy.name = "Sensei Meow-Chan"
-            for index in 1...(level - 1) {
+            var i = 1
+            while i < level {
                 enemy.levelUp()
+                i++
             }
         }
     }

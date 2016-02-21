@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Darwin
 
 class KatanaSlash: Ability {
     

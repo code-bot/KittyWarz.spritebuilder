@@ -69,8 +69,13 @@ class NinjaKitty: Kitty {
         } else {
             let rand = Int(arc4random_uniform(3)) + level - 1
             enemy.name = "Captain Blackwhiskers"
-            for index in 1...(level - 1) {
+//            for index in 1...(level - 1) {
+//                enemy.levelUp()
+//            }
+            var i = 1
+            while i < level {
                 enemy.levelUp()
+                i++
             }
         }
     }

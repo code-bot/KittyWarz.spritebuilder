@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Darwin
 
 class AhoyMeowy: Ability {
     
@@ -25,6 +26,9 @@ class AhoyMeowy: Ability {
         enemy.currentAttack -= 0.2
         heal += (heal * (hero.currentDefense) * 2)
         hero.currentHP += heal
+        if hero.currentHP > hero.baseHP {
+            hero.currentHP = hero.baseHP
+        }
         msg = hero.name + " yells 'Ahoy Meowy!'. It's super effective!!"
     }
 }

@@ -23,10 +23,15 @@ class FurrySwipes: Ability {
     
     override func run(hero: Kitty, enemy: Kitty) {
         var dmg = Double(arc4random_uniform(10)) + (Double(hero.level) * 10.0)
-        hero.currentAttack += 0.2
+        hero.currentAttack += 0.1
         hero.currentDefense -= 0.02
         dmg = (hero.currentAttack * dmg) - (enemy.currentDefense * dmg)
         enemy.currentHP -= dmg
         msg = self.name + " increases " + hero.name + "'s\nattack power. In its own madness,\nits defenses are lowered."
+        print(hero.currentAttack)
+        print(hero.currentDefense)
+        print(enemy.currentAttack)
+        print(enemy.currentDefense)
+        print(dmg)
     }
 }

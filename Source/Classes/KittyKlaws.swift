@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Darwin
 
 class KittyKlaws: Ability {
     
@@ -26,6 +27,9 @@ class KittyKlaws: Ability {
         enemy.currentDefense -= 0.01
         heal += (heal * (hero.currentDefense * 2))
         hero.currentHP += heal
+        if hero.currentHP > hero.baseHP {
+            hero.currentHP = hero.baseHP
+        }
         msg = hero.name + " sharpen its claws by using\n" + self.name + ". Scared of sharp things,\n" + enemy.name + "'s defense decreases."
     }
 }
