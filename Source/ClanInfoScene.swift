@@ -10,4 +10,12 @@ import Foundation
 
 class ClanInfoScene: CCNode {
     
+    
+    func goToBattle() {
+        CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("PreviewBattleScene"))
+    }
+    
+    func goToCharacter() {
+        CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("CharacterInfoScene"))
+    }
 }
