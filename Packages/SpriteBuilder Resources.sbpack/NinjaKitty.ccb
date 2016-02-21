@@ -1247,7 +1247,7 @@
 								<key>type</key>
 								<string>StringSimple</string>
 								<key>value</key>
-								<string></string>
+								<string>katana</string>
 							</dict>
 							<dict>
 								<key>baseValue</key>
@@ -1361,12 +1361,14 @@
 								<array/>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 						<key>seqExpanded</key>
 						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
-				<string>NinjaKitty</string>
+				<string></string>
 				<key>displayName</key>
 				<string>ninjakittyrest</string>
 				<key>memberVarAssignmentName</key>
@@ -1663,7 +1665,7 @@
 			<key>name</key>
 			<string>Rainbow</string>
 			<key>offset</key>
-			<real>0.0</real>
+			<real>0.412109375</real>
 			<key>position</key>
 			<real>1</real>
 			<key>resolution</key>
@@ -1701,7 +1703,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.43333333730697632</real>
+			<real>1</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
@@ -1803,13 +1805,13 @@
 			<key>chainedSequenceId</key>
 			<integer>-1</integer>
 			<key>length</key>
-			<real>10</real>
+			<real>1</real>
 			<key>name</key>
 			<string>dying</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>1</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
