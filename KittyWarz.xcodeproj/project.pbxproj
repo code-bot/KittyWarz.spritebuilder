@@ -775,6 +775,7 @@
 						CreatedOnToolsVersion = 6.0.1;
 					};
 					B77F1B2D17B978D7009739AE = {
+						DevelopmentTeam = XG82C2KF4T;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
@@ -1299,7 +1300,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.cocos2d.KittyWarz;
 				PRODUCT_MODULE_NAME = KittyWarz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				SDKROOT = sbandroid;
 				WRAPPER_EXTENSION = app;
 				opengles2 = YES;
@@ -1347,7 +1347,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.cocos2d.KittyWarz;
 				PRODUCT_MODULE_NAME = KittyWarz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				SDKROOT = sbandroid;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -1455,7 +1454,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocos2d.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = KittyWarz;
-				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
@@ -1490,7 +1488,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocos2d.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = KittyWarz;
-				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;

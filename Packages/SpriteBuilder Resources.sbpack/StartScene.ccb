@@ -110,8 +110,8 @@
 						<key>value</key>
 						<array>
 							<real>5.6797704696655273</real>
-							<real>3.1921265125274658</real>
-							<false/>
+							<real>5.6797704696655273</real>
+							<true/>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -153,8 +153,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -589,6 +587,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -734,7 +734,7 @@
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
-			<real>128</real>
+			<real>512</real>
 			<key>sequenceId</key>
 			<integer>0</integer>
 			<key>soundChannel</key>
