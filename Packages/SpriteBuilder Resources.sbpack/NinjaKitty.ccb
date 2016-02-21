@@ -16,7 +16,7 @@
 	<key>currentResolution</key>
 	<integer>0</integer>
 	<key>currentSequenceId</key>
-	<integer>0</integer>
+	<integer>5</integer>
 	<key>docDimensionsType</key>
 	<integer>1</integer>
 	<key>fileType</key>
@@ -1778,8 +1778,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>75.891548156738281</real>
-									<real>22.925065994262695</real>
+									<real>-79.896080017089844</real>
+									<real>21.276649475097656</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -1854,7 +1854,7 @@
 								<key>type</key>
 								<string>Float</string>
 								<key>value</key>
-								<real>0.0</real>
+								<real>0.14285725355148315</real>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -1866,7 +1866,7 @@
 									<real>1</real>
 									<real>1</real>
 									<real>1</real>
-									<real>0.0</real>
+									<real>0.14285725355148315</real>
 								</array>
 							</dict>
 							<dict>
@@ -2364,7 +2364,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.66666668653488159</real>
+			<real>0.96666663885116577</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

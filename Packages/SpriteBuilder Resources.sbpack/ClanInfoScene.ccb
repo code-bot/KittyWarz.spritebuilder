@@ -1434,7 +1434,7 @@
 				<key>displayName</key>
 				<string>ninjakittyattacked@3x</string>
 				<key>memberVarAssignmentName</key>
-				<string>nKitty</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -2921,7 +2921,7 @@
 				<key>displayName</key>
 				<string>ninjakittyattacked@3x</string>
 				<key>memberVarAssignmentName</key>
-				<string>nKitty</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -3041,7 +3041,7 @@
 				<key>displayName</key>
 				<string>ninjakittyattacked@3x</string>
 				<key>memberVarAssignmentName</key>
-				<string>nKitty</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -4974,6 +4974,8 @@
 						<array/>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
