@@ -34,8 +34,10 @@ class PreviewBattleScene: CCNode {
         spriteEnemy = enemy.sprite
         if (enemy.kittyType == "Ninja") {
             (spriteEnemy.getChildByName("NinjaKitty", recursively: false) as! CCSprite).flipX = true
+            (spriteEnemy.getChildByName("NinjaKitty", recursively: false) as! CCSprite).scale = 0.002 * Float(self.contentSize.height)
         } else {
             (spriteEnemy.getChildByName("PirateKitty", recursively: false) as! CCSprite).flipX = true
+            (spriteEnemy.getChildByName("PirateKitty", recursively: false) as! CCSprite).scale = 0.002 * Float(self.contentSize.height)
         }
         //(spriteEnemy.getChildByName("NinjaKitty", recursively: false).getChildByName("katana", recursively: false) as! CCSprite).flipX = true
         spriteHero.scale = 0.002 * Float(self.contentSize.height)
@@ -187,6 +189,9 @@ class PreviewBattleScene: CCNode {
         default :
             break
         }
+        if (heroAbility.abilityType != "Defense") {
+            spriteEnemy.animationManager.runAnimationsForSequenceNamed("injured")
+        }
     }
     
     func enemyAnimation(timer: NSTimer) {
@@ -209,6 +214,9 @@ class PreviewBattleScene: CCNode {
         default :
             break
         }
+        if (enemyAbility.abilityType != "Defense") {
+            spriteHero.animationManager.runAnimationsForSequenceNamed("injured")
+        }
     }
     
     func endBattle(timer: NSTimer) {
@@ -218,15 +226,29 @@ class PreviewBattleScene: CCNode {
         abilities.removeAllChildren()
         if (win) {
             hero.win()
+            print("win")
+            spriteEnemy.animationManager.runAnimationsForSequenceNamed("dying")
+            spriteHero.animationManager.runAnimationsForSequenceNamed("dying")
             myRootRef.childByAppendingPath("piratesKillCount").observeSingleEventOfType(.Value, withBlock: {
                 snapshot in
                 myRootRef.childByAppendingPath("piratesKillCount").setValue(snapshot.value as! Int + 1)
             })
         } else {
             hero.lose()
+            print("lose")
+            spriteHero.animationManager.runAnimationsForSequenceNamed("dying")
         }
         if (hero.kittyType == "Ninja") {
             enemy = PirateKitty(name: "Pirate", sprite: CCBReader.load("PirateKitty") as! CCSprite)
+            //
+//            func resetStats() {
+//                baseHP = 150.0
+//                attack = 1.0
+//                defense = 0.08
+//                level = 1
+//                xp = 0
+//                amtKills = 0
+//            }
             let newNinja = [
                 "type" : "Ninja",
                 "attack" : hero.attack,
@@ -264,7 +286,7 @@ class PreviewBattleScene: CCNode {
                 button.name = ability.name
                 button.positionType = CCPositionTypeNormalized
                 button.position.x = 0.50
-                button.position.y = CGFloat(Float(0.90 - (0.20 * index)))
+                button.position.y = CGFloat(Float(0.80 - (0.30 * index)))
                 button.setTarget(self, selector: "useAbility:")
                 abilities.addChild(button)
                 index = index + 1.0
@@ -281,7 +303,7 @@ class PreviewBattleScene: CCNode {
                 let button = CCButton(title: ability.name)
                 button.positionType = CCPositionTypeNormalized
                 button.position.x = 0.50
-                button.position.y = CGFloat(Float(0.90 - (0.20 * index)))
+                button.position.y = CGFloat(Float(0.80 - (0.30 * index)))
                 button.setTarget(self, selector: "useAbility:")
                 abilities.addChild(button)
                 index = index + 1.0
@@ -298,7 +320,7 @@ class PreviewBattleScene: CCNode {
                 let button = CCButton(title: ability.name)
                 button.positionType = CCPositionTypeNormalized
                 button.position.x = 0.50
-                button.position.y = CGFloat(Float(0.90 - (0.20 * index)))
+                button.position.y = CGFloat(Float(0.80 - (0.30 * index)))
                 button.setTarget(self, selector: "useAbility:")
                 abilities.addChild(button)
                 index = index + 1.0

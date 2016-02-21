@@ -21,6 +21,12 @@ class CharacterInfoScene: CCNode {
     
     func didLoadFromCCB() {
         sprite.addChild(hero.sprite)
+        if (hero.kittyType == "Ninja") {
+            hero.sprite.animationManager.runAnimationsForSequenceNamed("katanaAttack")
+        } else {
+            hero.sprite.animationManager.runAnimationsForSequenceNamed("gunAttack")
+        }
+        
         test.string = hero.name
         test2.string = hero.kittyType
         test3.string = String(hero.baseHP)
