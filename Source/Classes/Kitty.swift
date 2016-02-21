@@ -48,7 +48,6 @@ class Kitty {
         attack += 0.05 + (0.01 * Double(level))
         defense += 0.03 + (0.008 * Double(level))
         baseHP += 20.0 + (1.5 * Double(level))
-        currentHP = baseHP
     }
     
     func win() {
@@ -58,6 +57,8 @@ class Kitty {
         if xp >= 100 {
             levelUp()
         }
+        currentHP = baseHP
+        enemy.currentHP = enemy.baseHP
     }
     
     func lose() {
@@ -65,7 +66,9 @@ class Kitty {
         if xp < 0 {
             xp = 0
         }
-        alive = false;
+        currentHP = baseHP
+        enemy.currentHP = enemy.baseHP
+        alive = true;
     }
     
     func performAbility(a : Ability, enemy : Kitty) -> Ability {
