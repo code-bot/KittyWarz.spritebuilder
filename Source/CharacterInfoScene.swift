@@ -31,4 +31,11 @@ class CharacterInfoScene: CCNode {
         test8.string = String(hero.amtKills)
     }
     
+    func goToBattle() {
+        CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("PreviewBattleScene"))
+    }
+    
+    func goToClan() {
+        CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("ClanInfoScene"))
+    }
 }
