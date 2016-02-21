@@ -41,12 +41,15 @@ class PreviewBattleScene: CCNode {
     
     //spriteHero.runAnimationSequenceNamed...
     func useAbility(sender: CCButton!) {
-        var map = hero.displayRangedAbilities()
-        hero.performAbility(map[sender.title]!, enemy: enemy)
-        yourHP.string = String(hero.baseHP)
-        oppHP.string = String(enemy.baseHP)
-        enemy.ab
-        enemy.performAbility(<#T##a: Ability##Ability#>, enemy: <#T##Kitty#>)
+        print(sender)
+        var map = hero.displayAbilities()
+        print(sender.title)
+        print(hero.performAbility(map[sender.title]!, enemy: enemy))
+        yourHP.string = String(hero.currentHP)
+        oppHP.string = String(enemy.currentHP)
+        print(enemy.enemyPerformAbility(hero))
+        yourHP.string = String(hero.currentHP)
+        oppHP.string = String(enemy.currentHP)
     }
     
     func getRanged() {
@@ -55,6 +58,7 @@ class PreviewBattleScene: CCNode {
         var index = 0.0
         for ability in map.values {
             let button = CCButton(title: ability.name)
+            button.name = ability.name
             button.positionType = CCPositionTypeNormalized
             button.position.x = 0.50
             button.position.y = CGFloat(Float(0.90 - (0.20 * index)))

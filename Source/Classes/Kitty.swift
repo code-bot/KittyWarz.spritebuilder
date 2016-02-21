@@ -68,12 +68,14 @@ class Kitty {
         alive = false;
     }
     
-    func performAbility(a : Ability, enemy : Kitty) {
+    func performAbility(a : Ability, enemy : Kitty) -> String {
         print("Idk what kitty I am");
+        return ""
     }
     
-    func enemyPerformAbility(hero : Kitty) {
+    func enemyPerformAbility(hero : Kitty) -> String {
         print("Idk what kitty I am");
+        return ""
     }
     
     func createEnemy() {

@@ -26,7 +26,7 @@ class NinjaKitty: Kitty {
             kittyType = "Ninja"
     }
     
-    override func performAbility(a : Ability, enemy : Kitty) {
+    override func performAbility(a : Ability, enemy : Kitty) -> String{
         if a.abilityType == "Defense" {
             self.currentHP += a.amt
             if (currentHP > baseHP) {
@@ -43,15 +43,16 @@ class NinjaKitty: Kitty {
             }
             attack += 0.004
         }
+        return a.name
     }
     
-    override func enemyPerformAbility(hero : Kitty) {
+    override func enemyPerformAbility(hero : Kitty) -> String {
         
-        var enemyAbilityList = (self.displayAbilities().values)
+        var enemyAbilityList = (self.displayAbilities().values).reverse()
         let rand = Int(arc4random_uniform(UInt32(enemyAbilityList.count)))
         let a = enemyAbilityList[rand]
         //randomly pick ability
-        performAbility(a, enemy : hero)
+        return performAbility(a, enemy : hero)
     }
     
     override func createEnemy(){
