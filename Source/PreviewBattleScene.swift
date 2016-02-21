@@ -43,13 +43,52 @@ class PreviewBattleScene: CCNode {
     func useAbility(sender: CCButton!) {
         print(sender)
         var map = hero.displayAbilities()
-        print(sender.title)
-        print(hero.performAbility(map[sender.title]!, enemy: enemy))
-        yourHP.string = String(hero.currentHP)
-        oppHP.string = String(enemy.currentHP)
-        print(enemy.enemyPerformAbility(hero))
-        yourHP.string = String(hero.currentHP)
-        oppHP.string = String(enemy.currentHP)
+        let rand = Int(arc4random_uniform(UInt32(2)))
+        var ended = false
+        if (rand == 0) {
+            print(enemy.name + " used " + enemy.enemyPerformAbility(hero))
+            if (hero.currentHP <= 0) {
+                yourHP.string = String(0)
+                print("YOU LOSE")
+                ended = true
+            } else {
+                yourHP.string = String(hero.currentHP)
+                oppHP.string = String(enemy.currentHP)
+                print(hero.name + " used " + hero.performAbility(map[sender.title]!, enemy: enemy))
+                yourHP.string = String(hero.currentHP)
+                if (enemy.currentHP <= 0) {
+                    oppHP.string = String(0)
+                    print("YOU WON")
+                    ended = true
+                } else {
+                    oppHP.string = String(enemy.currentHP)
+                }
+            }
+        } else {
+            print(hero.name + " used " + hero.performAbility(map[sender.title]!, enemy: enemy))
+            if (enemy.currentHP <= 0) {
+                oppHP.string = String(0)
+                print("YOU WON")
+                ended = true
+            } else {
+                oppHP.string = String(enemy.currentHP)
+                yourHP.string = String(hero.currentHP)
+                print(enemy.name + " used " + enemy.enemyPerformAbility(hero))
+                oppHP.string = String(enemy.currentHP)
+                if (hero.currentHP <= 0) {
+                    yourHP.string = String(0)
+                    print("YOU LOSE")
+                    ended = true
+                } else {
+                    yourHP.string = String(hero.currentHP)
+                }
+            }
+            
+        }
+        if (ended) {
+            
+        }
+        
     }
     
     func getRanged() {
