@@ -46,6 +46,7 @@
 		7A97911819E631CD001FFC4D /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9790FE19E62E40001FFC4D /* libcocos2d.a */; };
 		7FDA6041C7605A12B3669DAA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EC57134FE973BC505C91E1 /* Pods.framework */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
+		87C3E0E11C79C90600FD0D1D /* LocationScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C3E0E01C79C90600FD0D1D /* LocationScene.swift */; };
 		87E0760F1C79150500A1199F /* CharacterInfoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E0760B1C79150500A1199F /* CharacterInfoScene.swift */; };
 		87E076101C79150500A1199F /* ClanInfoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E0760C1C79150500A1199F /* ClanInfoScene.swift */; };
 		87E076111C79150500A1199F /* NewPlayerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E0760D1C79150500A1199F /* NewPlayerScene.swift */; };
@@ -218,6 +219,7 @@
 		7AFCD5DD19E9BDC200BCCCDA /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Source/Bridging-Header.h"; sourceTree = "<group>"; };
 		7BF6AF9F1A425F9800FFF9BA /* JavaFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaFoundation.framework; path = "../../../../../../../Library/SBAndroid/Application Support/Developer/Shared/Xcode/Platforms/Android.platform/Developer/SDKs/SBAndroid.sdk/System/Library/Frameworks/JavaFoundation.framework"; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		87C3E0E01C79C90600FD0D1D /* LocationScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationScene.swift; path = Source/LocationScene.swift; sourceTree = "<group>"; };
 		87E0760B1C79150500A1199F /* CharacterInfoScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterInfoScene.swift; path = Source/CharacterInfoScene.swift; sourceTree = "<group>"; };
 		87E0760C1C79150500A1199F /* ClanInfoScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClanInfoScene.swift; path = Source/ClanInfoScene.swift; sourceTree = "<group>"; };
 		87E0760D1C79150500A1199F /* NewPlayerScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewPlayerScene.swift; path = Source/NewPlayerScene.swift; sourceTree = "<group>"; };
@@ -567,6 +569,7 @@
 				B734703C1C78F31A000BD26C /* Purrtect.swift */,
 				7A40362019DDEF0D007B6E8F /* Platforms */,
 				7A046D7519E84C36004C4763 /* MainScene.swift */,
+				87C3E0E01C79C90600FD0D1D /* LocationScene.swift */,
 				87E0760B1C79150500A1199F /* CharacterInfoScene.swift */,
 				87E0760C1C79150500A1199F /* ClanInfoScene.swift */,
 				87E0760D1C79150500A1199F /* NewPlayerScene.swift */,
@@ -1032,6 +1035,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B73470461C78F31A000BD26C /* Ability.swift in Sources */,
+				87C3E0E11C79C90600FD0D1D /* LocationScene.swift in Sources */,
 				B73470471C78F31A000BD26C /* ShurikenStorm.swift in Sources */,
 				B73470481C78F31A000BD26C /* KittyKlaws.swift in Sources */,
 				B73470491C78F31A000BD26C /* DeadlyStare.swift in Sources */,

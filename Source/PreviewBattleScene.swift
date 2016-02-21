@@ -61,16 +61,16 @@ class PreviewBattleScene: CCNode {
             switch (enemyAbility.abilityType) {
             case "Melee":
                 if (enemy.kittyType == "Ninja") {
-                    spriteEnemy.animationManager.runAnimationsForSequenceNamed("katanaAttack");
+                    spriteEnemy.animationManager.runAnimationsForSequenceNamed("katanaAttackReverse");
                 } else {
-                    spriteEnemy.animationManager.runAnimationsForSequenceNamed("CutlassAttack")
+                    spriteEnemy.animationManager.runAnimationsForSequenceNamed("cutlassAttackReverse")
                 }
                 break
             case "Ranged":
                 if (enemy.kittyType == "Ninja") {
-                    spriteEnemy.animationManager.runAnimationsForSequenceNamed("shurikenAttack");
+                    spriteEnemy.animationManager.runAnimationsForSequenceNamed("shurikenAttackReverse");
                 } else {
-                    spriteEnemy.animationManager.runAnimationsForSequenceNamed("gunAttack")
+                    spriteEnemy.animationManager.runAnimationsForSequenceNamed("gunAttackReverse")
                 }
                 break
             default :
@@ -151,16 +151,16 @@ class PreviewBattleScene: CCNode {
                 switch (enemyAbility.abilityType) {
                 case "Melee":
                     if (enemy.kittyType == "Ninja") {
-                        spriteEnemy.animationManager.runAnimationsForSequenceNamed("katanaAttack");
+                        spriteEnemy.animationManager.runAnimationsForSequenceNamed("katanaAttackReverse");
                     } else {
-                        spriteEnemy.animationManager.runAnimationsForSequenceNamed("CutlassAttack")
+                        spriteEnemy.animationManager.runAnimationsForSequenceNamed("cutlassAttackReverse")
                     }
                     break
                 case "Ranged":
                     if (enemy.kittyType == "Ninja") {
-                        spriteEnemy.animationManager.runAnimationsForSequenceNamed("shurikenAttack");
+                        spriteEnemy.animationManager.runAnimationsForSequenceNamed("shurikenAttackReverse");
                     } else {
-                        spriteEnemy.animationManager.runAnimationsForSequenceNamed("gunAttack")
+                        spriteEnemy.animationManager.runAnimationsForSequenceNamed("gunAttackReverse")
                     }
                     break
                 default :

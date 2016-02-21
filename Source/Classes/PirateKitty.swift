@@ -12,7 +12,7 @@ import Darwin
 class PirateKitty: Kitty {
     
     init(name : String, sprite : CCSprite) {
-        super.init(name : name, baseHP : 120.0, attack : 1.0, defense : 0.08, level : 1, xp : 0, amtKills : 0, sprite : sprite)
+        super.init(name : name, baseHP : 150.0, attack : 1.0, defense : 0.08, level : 1, xp : 0, amtKills : 0, sprite : sprite)
         abilitiesList = [Purrley(), Catluss(), AhoyMeowy(), CatastrophicCannonballs(),
             ShiverMeWhiskers(), FelineFerocity()];
         kittyType = "Pirate"
