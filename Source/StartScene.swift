@@ -30,12 +30,13 @@ class StartScene: CCNode {
                 if let userData = snapshot.value as? [String : AnyObject] {
                     if (userData["type"] as! String == "Ninja") {
                         hero = NinjaKitty(name: user, baseHP: userData["baseHP"] as! Double, attack: userData["attack"] as! Double, defense: userData["defense"] as! Double, level: userData["level"] as! Int, xp: userData["xp"] as! Int, amtKills: userData["amtKills"] as! Int, sprite: CCBReader.load("NinjaKitty") as! CCSprite)
-                        enemy = PirateKitty(name: "pirate", sprite: CCBReader.load("PirateKitty") as! CCSprite)
-                        
+                        enemy = PirateKitty(name: "Pirate", sprite: CCBReader.load("PirateKitty") as! CCSprite)
+                        hero.createEnemy()
                     } else {
                         hero = PirateKitty(name: user, baseHP: userData["baseHP"] as! Double, attack: userData["attack"] as! Double, defense: userData["defense"] as! Double, level: userData["level"] as! Int, xp: userData["xp"] as! Int, amtKills: userData["amtKills"] as! Int, sprite: CCBReader.load("PirateKitty") as! CCSprite)
                         print("hero created")
-                        enemy = NinjaKitty(name: "ninja", sprite: CCBReader.load("NinjaKitty") as! CCSprite)
+                        enemy = NinjaKitty(name: "Ninja", sprite: CCBReader.load("NinjaKitty") as! CCSprite)
+                        hero.createEnemy()
                         print("enemy created")
                     }
                 }

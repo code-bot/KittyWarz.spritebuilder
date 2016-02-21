@@ -19,13 +19,16 @@ class PreviewBattleScene: CCNode {
     weak var ranged : CCButton!
     weak var melee : CCButton!
     weak var defense : CCButton!
-    weak var scroll : CCNode!
+    weak var abilities : CCNode!
+    weak var info : CCNode!
+    weak var infoText : CCLabelTTF!
     weak var menu : CCNode!
     var spriteHero : CCSprite!
     var spriteEnemy : CCSprite!
     
     func didLoadFromCCB() {
         print("add child")
+        hero.createEnemy()
         spriteHero = hero.sprite
         spriteEnemy = enemy.sprite
         if (enemy.kittyType == "Ninja") {
@@ -42,17 +45,15 @@ class PreviewBattleScene: CCNode {
         oppLevel.string = String(enemy.level)
         yourHP.string = String(hero.baseHP)
         oppHP.string = String(enemy.baseHP)
-        
-        
-        print("hi")
+        infoText.string = hero.name + " challenges " + enemy.name
     }
     
     //spriteHero.runAnimationSequenceNamed...
     func useAbility(sender: CCButton!) {
-        print(sender)
         var map = hero.displayAbilities()
         let rand = Int(arc4random_uniform(UInt32(2)))
         var ended = false
+        var win = false
         var enemyAbility = Ability()
         var heroAbility = Ability()
         if (rand == 0) {
@@ -75,10 +76,11 @@ class PreviewBattleScene: CCNode {
             default :
                 break
             }
-            print(enemy.name + " used " + enemyAbility.name)
+            infoText.string = enemy.name + " used " + enemyAbility.name
             if (hero.currentHP <= 0) {
                 yourHP.string = String(0)
-                print("YOU LOSE")
+                infoText.string = infoText.string + "\n" + "YOU LOSE"
+                hero.lose()
                 ended = true
             } else {
                 yourHP.string = String(hero.currentHP)
@@ -103,11 +105,13 @@ class PreviewBattleScene: CCNode {
                     break
                 }
 
-                print(hero.name + " used " + heroAbility.name)
+                infoText.string = infoText.string + "\n" + hero.name + " used " + heroAbility.name
                 yourHP.string = String(hero.currentHP)
                 if (enemy.currentHP <= 0) {
                     oppHP.string = String(0)
-                    print("YOU WON")
+                    infoText.string = infoText.string + "\n" + "YOU WON"
+                    win = true
+                    hero.win()
                     ended = true
                 } else {
                     oppHP.string = String(enemy.currentHP)
@@ -133,10 +137,12 @@ class PreviewBattleScene: CCNode {
             default :
                 break
             }
-            print(hero.name + " used " + heroAbility.name)
+            infoText.string = hero.name + " used " + heroAbility.name
             if (enemy.currentHP <= 0) {
                 oppHP.string = String(0)
-                print("YOU WON")
+                infoText.string = infoText.string + "\n" + "YOU WON"
+                win = true
+                hero.win()
                 ended = true
             } else {
                 oppHP.string = String(enemy.currentHP)
@@ -160,11 +166,12 @@ class PreviewBattleScene: CCNode {
                 default :
                     break
                 }
-                print(enemy.name + " used " + enemyAbility.name)
+                infoText.string = infoText.string + "\n" + enemy.name + " used " + enemyAbility.name
                 oppHP.string = String(enemy.currentHP)
                 if (hero.currentHP <= 0) {
                     yourHP.string = String(0)
-                    print("YOU LOSE")
+                    infoText.string = infoText.string + "\n" + "YOU LOSE"
+                    hero.lose()
                     ended = true
                 } else {
                     yourHP.string = String(hero.currentHP)
@@ -173,13 +180,55 @@ class PreviewBattleScene: CCNode {
             
         }
         if (ended) {
-            
+            hero.sprite.removeFromParent()
+            enemy.sprite.removeFromParent()
+            abilities.removeAllChildren()
+            if (hero.kittyType == "Ninja") {
+                enemy = PirateKitty(name: "Pirate", sprite: CCBReader.load("PirateKitty") as! CCSprite)
+                let newNinja = [
+                    "type" : "Ninja",
+                    "attack" : hero.attack,
+                    "baseHP" : hero.baseHP,
+                    "defense" : hero.defense,
+                    "level" : hero.level,
+                    "xp" : hero.xp,
+                    "amtKills" : hero.amtKills
+                ]
+                myRootRef.childByAppendingPath("users").childByAppendingPath(hero.name).setValue(newNinja)
+                if (win) {
+                    myRootRef.childByAppendingPath("ninjasKillCount").observeSingleEventOfType(.Value, withBlock: {
+                        snapshot in
+                        myRootRef.childByAppendingPath("ninjasKillCount").setValue(snapshot.value as! Int + 1)
+                    })
+                    
+                }
+            } else {
+                enemy = NinjaKitty(name: "Ninja", sprite: CCBReader.load("NinjaKitty") as! CCSprite)
+                let newPirate = [
+                    "type" : "Pirate",
+                    "attack" : hero.attack,
+                    "baseHP" : hero.baseHP,
+                    "defense" : hero.defense,
+                    "level" : hero.level,
+                    "xp" : hero.xp,
+                    "amtKills" : hero.amtKills
+                ]
+                myRootRef.childByAppendingPath("users").childByAppendingPath(hero.name).setValue(newPirate)
+                if (win) {
+                    myRootRef.childByAppendingPath("piratesKillCount").observeSingleEventOfType(.Value, withBlock: {
+                        snapshot in
+                        myRootRef.childByAppendingPath("piratesKillCount").setValue(snapshot.value as! Int + 1)
+                    })
+                    
+                }
+            }
+            CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("CharacterInfoScene"))
         }
         
     }
     
     func getRanged() {
-        print("map")
+        abilities.removeAllChildren()
         let map = hero.displayRangedAbilities()
         var index = 0.0
         for ability in map.values {
@@ -189,15 +238,13 @@ class PreviewBattleScene: CCNode {
             button.position.x = 0.50
             button.position.y = CGFloat(Float(0.90 - (0.20 * index)))
             button.setTarget(self, selector: "useAbility:")
-            scroll.addChild(button)
+            abilities.addChild(button)
             index = index + 1.0
         }
-
-        print("done")
     }
     
     func getMelee() {
-        print("map")
+        abilities.removeAllChildren()
         let map = hero.displayMeleeAbilities()
         var index = 0.0
         for ability in map.values {
@@ -206,25 +253,13 @@ class PreviewBattleScene: CCNode {
             button.position.x = 0.50
             button.position.y = CGFloat(Float(0.90 - (0.20 * index)))
             button.setTarget(self, selector: "useAbility:")
-            scroll.addChild(button)
+            abilities.addChild(button)
             index = index + 1.0
         }
-//        scroll.removeFromParent()
-//        let scrollView = CCScrollView(contentNode: scroll)
-//        print("scrollview positioin stuff")
-//        //scrollView.positionType = CCPositionTypeNormalized
-//        scrollView.position.x = 20
-//        scrollView.position.y = 4
-//        //scrollView.contentSize.width = 0.79 //* menu.contentSize.width
-//        //scrollView.contentSize.height = 0.92 //* menu.contentSize.height
-//        print("add scrollview to menu")
-//        menu.addChild(scrollView)
-//        print(scrollView.position)
-        print("done")
     }
     
     func getDefense() {
-        print("map")
+        abilities.removeAllChildren()
         let map = hero.displayDefenseAbilities()
         var index = 0.0
         for ability in map.values {
@@ -233,9 +268,8 @@ class PreviewBattleScene: CCNode {
             button.position.x = 0.50
             button.position.y = CGFloat(Float(0.90 - (0.20 * index)))
             button.setTarget(self, selector: "useAbility:")
-            scroll.addChild(button)
+            abilities.addChild(button)
             index = index + 1.0
         }
-        print("done")
     }
 }
