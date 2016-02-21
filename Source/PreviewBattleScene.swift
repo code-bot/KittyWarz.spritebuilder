@@ -21,11 +21,19 @@ class PreviewBattleScene: CCNode {
     weak var defense : CCButton!
     weak var scroll : CCNode!
     weak var menu : CCNode!
+    var spriteHero : CCSprite!
+    var spriteEnemy : CCSprite!
     
     func didLoadFromCCB() {
         print("add child")
-        let spriteHero = hero.sprite
-        let spriteEnemy = enemy.sprite
+        spriteHero = hero.sprite
+        spriteEnemy = enemy.sprite
+        if (enemy.kittyType == "Ninja") {
+            (spriteEnemy.getChildByName("NinjaKitty", recursively: false) as! CCSprite).flipX = true
+        } else {
+            (spriteEnemy.getChildByName("PirateKitty", recursively: false) as! CCSprite).flipX = true
+        }
+        //(spriteEnemy.getChildByName("NinjaKitty", recursively: false).getChildByName("katana", recursively: false) as! CCSprite).flipX = true
         spriteHero.scale = 0.002 * Float(self.contentSize.height)
         spriteEnemy.scale = 0.002 * Float(self.contentSize.height)
         you.addChild(spriteHero)
@@ -45,8 +53,29 @@ class PreviewBattleScene: CCNode {
         var map = hero.displayAbilities()
         let rand = Int(arc4random_uniform(UInt32(2)))
         var ended = false
+        var enemyAbility = Ability()
+        var heroAbility = Ability()
         if (rand == 0) {
-            print(enemy.name + " used " + enemy.enemyPerformAbility(hero))
+            enemyAbility = enemy.enemyPerformAbility(hero)
+            switch (enemyAbility.abilityType) {
+            case "Melee":
+                if (enemy.kittyType == "Ninja") {
+                    spriteEnemy.animationManager.runAnimationsForSequenceNamed("katanaAttack");
+                } else {
+                    spriteEnemy.animationManager.runAnimationsForSequenceNamed("CutlassAttack")
+                }
+                break
+            case "Ranged":
+                if (enemy.kittyType == "Ninja") {
+                    spriteEnemy.animationManager.runAnimationsForSequenceNamed("shurikenAttack");
+                } else {
+                    spriteEnemy.animationManager.runAnimationsForSequenceNamed("gunAttack")
+                }
+                break
+            default :
+                break
+            }
+            print(enemy.name + " used " + enemyAbility.name)
             if (hero.currentHP <= 0) {
                 yourHP.string = String(0)
                 print("YOU LOSE")
@@ -54,7 +83,27 @@ class PreviewBattleScene: CCNode {
             } else {
                 yourHP.string = String(hero.currentHP)
                 oppHP.string = String(enemy.currentHP)
-                print(hero.name + " used " + hero.performAbility(map[sender.title]!, enemy: enemy))
+                heroAbility = hero.performAbility(map[sender.title]!, enemy: enemy)
+                switch (heroAbility.abilityType) {
+                case "Melee":
+                    if (hero.kittyType == "Ninja") {
+                        spriteHero.animationManager.runAnimationsForSequenceNamed("katanaAttack");
+                    } else {
+                        spriteHero.animationManager.runAnimationsForSequenceNamed("CutlassAttack")
+                    }
+                    break
+                case "Ranged":
+                    if (hero.kittyType == "Ninja") {
+                        spriteHero.animationManager.runAnimationsForSequenceNamed("shurikenAttack");
+                    } else {
+                        spriteHero.animationManager.runAnimationsForSequenceNamed("gunAttack")
+                    }
+                    break
+                default :
+                    break
+                }
+
+                print(hero.name + " used " + heroAbility.name)
                 yourHP.string = String(hero.currentHP)
                 if (enemy.currentHP <= 0) {
                     oppHP.string = String(0)
@@ -65,7 +114,26 @@ class PreviewBattleScene: CCNode {
                 }
             }
         } else {
-            print(hero.name + " used " + hero.performAbility(map[sender.title]!, enemy: enemy))
+            heroAbility = hero.performAbility(map[sender.title]!, enemy: enemy)
+            switch (heroAbility.abilityType) {
+            case "Melee":
+                if (hero.kittyType == "Ninja") {
+                    spriteHero.animationManager.runAnimationsForSequenceNamed("katanaAttack");
+                } else {
+                    spriteHero.animationManager.runAnimationsForSequenceNamed("CutlassAttack")
+                }
+                break
+            case "Ranged":
+                if (hero.kittyType == "Ninja") {
+                    spriteHero.animationManager.runAnimationsForSequenceNamed("shurikenAttack");
+                } else {
+                    spriteHero.animationManager.runAnimationsForSequenceNamed("gunAttack")
+                }
+                break
+            default :
+                break
+            }
+            print(hero.name + " used " + heroAbility.name)
             if (enemy.currentHP <= 0) {
                 oppHP.string = String(0)
                 print("YOU WON")
@@ -73,7 +141,26 @@ class PreviewBattleScene: CCNode {
             } else {
                 oppHP.string = String(enemy.currentHP)
                 yourHP.string = String(hero.currentHP)
-                print(enemy.name + " used " + enemy.enemyPerformAbility(hero))
+                enemyAbility = enemy.enemyPerformAbility(hero)
+                switch (enemyAbility.abilityType) {
+                case "Melee":
+                    if (enemy.kittyType == "Ninja") {
+                        spriteEnemy.animationManager.runAnimationsForSequenceNamed("katanaAttack");
+                    } else {
+                        spriteEnemy.animationManager.runAnimationsForSequenceNamed("CutlassAttack")
+                    }
+                    break
+                case "Ranged":
+                    if (enemy.kittyType == "Ninja") {
+                        spriteEnemy.animationManager.runAnimationsForSequenceNamed("shurikenAttack");
+                    } else {
+                        spriteEnemy.animationManager.runAnimationsForSequenceNamed("gunAttack")
+                    }
+                    break
+                default :
+                    break
+                }
+                print(enemy.name + " used " + enemyAbility.name)
                 oppHP.string = String(enemy.currentHP)
                 if (hero.currentHP <= 0) {
                     yourHP.string = String(0)

@@ -34,7 +34,9 @@ class StartScene: CCNode {
                         
                     } else {
                         hero = PirateKitty(name: user, baseHP: userData["baseHP"] as! Double, attack: userData["attack"] as! Double, defense: userData["defense"] as! Double, level: userData["level"] as! Int, xp: userData["xp"] as! Int, amtKills: userData["amtKills"] as! Int, sprite: CCBReader.load("PirateKitty") as! CCSprite)
-                        enemy = NinjaKitty(name: "pirate", sprite: CCBReader.load("NinjaKitty") as! CCSprite)
+                        print("hero created")
+                        enemy = NinjaKitty(name: "ninja", sprite: CCBReader.load("NinjaKitty") as! CCSprite)
+                        print("enemy created")
                     }
                 }
                 print(hero.sprite)
