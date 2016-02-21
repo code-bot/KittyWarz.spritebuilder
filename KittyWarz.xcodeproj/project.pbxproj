@@ -128,6 +128,7 @@
 		BC5399DB1A44DCC90063F482 /* JavaFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5399D61A44DCC90063F482 /* JavaFoundation.framework */; };
 		BC5399DC1A44DCC90063F482 /* JavaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5399D71A44DCC90063F482 /* JavaKit.framework */; };
 		BCD00A8C1A44E83400DA5AD0 /* CoreJava.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5399D41A44DCC90063F482 /* CoreJava.framework */; };
+		EF5549D01C79C6D500720F7C /* LocationScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5549CF1C79C6D500720F7C /* LocationScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -290,6 +291,7 @@
 		BC5399D71A44DCC90063F482 /* JavaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaKit.framework; path = "../../../../Library/Application Support/Developer/Shared/Xcode/Platforms/Android.platform/Developer/SDKs/SBAndroid.sdk/System/Library/Frameworks/JavaKit.framework"; sourceTree = "<group>"; };
 		D352B48019EC608A00829775 /* MetalShaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MetalShaders; path = Source/MetalShaders; sourceTree = "<group>"; };
 		E1F2CE322F3AE66B8F2B820D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EF5549CF1C79C6D500720F7C /* LocationScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationScene.swift; path = "../Downloads/KittyWarz.spritebuilder-master 5/LocationScene.swift"; sourceTree = "<group>"; };
 		F248AAB604A9033B4BEA9758 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -567,6 +569,7 @@
 				B734703C1C78F31A000BD26C /* Purrtect.swift */,
 				7A40362019DDEF0D007B6E8F /* Platforms */,
 				7A046D7519E84C36004C4763 /* MainScene.swift */,
+				EF5549CF1C79C6D500720F7C /* LocationScene.swift */,
 				87E0760B1C79150500A1199F /* CharacterInfoScene.swift */,
 				87E0760C1C79150500A1199F /* ClanInfoScene.swift */,
 				87E0760D1C79150500A1199F /* NewPlayerScene.swift */,
@@ -1032,6 +1035,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B73470461C78F31A000BD26C /* Ability.swift in Sources */,
+				EF5549D01C79C6D500720F7C /* LocationScene.swift in Sources */,
 				B73470471C78F31A000BD26C /* ShurikenStorm.swift in Sources */,
 				B73470481C78F31A000BD26C /* KittyKlaws.swift in Sources */,
 				B73470491C78F31A000BD26C /* DeadlyStare.swift in Sources */,
