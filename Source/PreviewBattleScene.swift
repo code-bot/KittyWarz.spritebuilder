@@ -28,9 +28,12 @@ class PreviewBattleScene: CCNode {
         print("add child")
         spriteHero = hero.sprite
         spriteEnemy = enemy.sprite
-        spriteEnemy.flipX = true
-        (spriteEnemy.getChildByName("NinjaKitty", recursively: false) as! CCSprite).flipX = true
-        (spriteEnemy.getChildByName("NinjaKitty", recursively: false).getChildByName("katana", recursively: false) as! CCSprite).flipX = true
+        if (enemy.kittyType == "Ninja") {
+            (spriteEnemy.getChildByName("NinjaKitty", recursively: false) as! CCSprite).flipX = true
+        } else {
+            (spriteEnemy.getChildByName("PirateKitty", recursively: false) as! CCSprite).flipX = true
+        }
+        //(spriteEnemy.getChildByName("NinjaKitty", recursively: false).getChildByName("katana", recursively: false) as! CCSprite).flipX = true
         spriteHero.scale = 0.002 * Float(self.contentSize.height)
         spriteEnemy.scale = 0.002 * Float(self.contentSize.height)
         you.addChild(spriteHero)
@@ -55,15 +58,22 @@ class PreviewBattleScene: CCNode {
         if (rand == 0) {
             enemyAbility = enemy.enemyPerformAbility(hero)
             switch (enemyAbility.abilityType) {
-                case "Melee":
-                    if (enemy.kittyType == "Ninja") {
-                        spriteEnemy.animationManager.runAnimationsForSequenceNamed("katanaAttack");
-                    } else {
-                        
-                    }
-                    break
-                default :
-                    break
+            case "Melee":
+                if (enemy.kittyType == "Ninja") {
+                    spriteEnemy.animationManager.runAnimationsForSequenceNamed("katanaAttack");
+                } else {
+                    spriteEnemy.animationManager.runAnimationsForSequenceNamed("CutlassAttack")
+                }
+                break
+            case "Ranged":
+                if (enemy.kittyType == "Ninja") {
+                    spriteEnemy.animationManager.runAnimationsForSequenceNamed("shurikenAttack");
+                } else {
+                    spriteEnemy.animationManager.runAnimationsForSequenceNamed("gunAttack")
+                }
+                break
+            default :
+                break
             }
             print(enemy.name + " used " + enemyAbility.name)
             if (hero.currentHP <= 0) {
@@ -75,10 +85,24 @@ class PreviewBattleScene: CCNode {
                 oppHP.string = String(enemy.currentHP)
                 heroAbility = hero.performAbility(map[sender.title]!, enemy: enemy)
                 switch (heroAbility.abilityType) {
-                    case "Melee": break
-                    default :
-                        break
+                case "Melee":
+                    if (hero.kittyType == "Ninja") {
+                        spriteHero.animationManager.runAnimationsForSequenceNamed("katanaAttack");
+                    } else {
+                        spriteHero.animationManager.runAnimationsForSequenceNamed("CutlassAttack")
+                    }
+                    break
+                case "Ranged":
+                    if (hero.kittyType == "Ninja") {
+                        spriteHero.animationManager.runAnimationsForSequenceNamed("shurikenAttack");
+                    } else {
+                        spriteHero.animationManager.runAnimationsForSequenceNamed("gunAttack")
+                    }
+                    break
+                default :
+                    break
                 }
+
                 print(hero.name + " used " + heroAbility.name)
                 yourHP.string = String(hero.currentHP)
                 if (enemy.currentHP <= 0) {
@@ -91,6 +115,24 @@ class PreviewBattleScene: CCNode {
             }
         } else {
             heroAbility = hero.performAbility(map[sender.title]!, enemy: enemy)
+            switch (heroAbility.abilityType) {
+            case "Melee":
+                if (hero.kittyType == "Ninja") {
+                    spriteHero.animationManager.runAnimationsForSequenceNamed("katanaAttack");
+                } else {
+                    spriteHero.animationManager.runAnimationsForSequenceNamed("CutlassAttack")
+                }
+                break
+            case "Ranged":
+                if (hero.kittyType == "Ninja") {
+                    spriteHero.animationManager.runAnimationsForSequenceNamed("shurikenAttack");
+                } else {
+                    spriteHero.animationManager.runAnimationsForSequenceNamed("gunAttack")
+                }
+                break
+            default :
+                break
+            }
             print(hero.name + " used " + heroAbility.name)
             if (enemy.currentHP <= 0) {
                 oppHP.string = String(0)
@@ -100,6 +142,24 @@ class PreviewBattleScene: CCNode {
                 oppHP.string = String(enemy.currentHP)
                 yourHP.string = String(hero.currentHP)
                 enemyAbility = enemy.enemyPerformAbility(hero)
+                switch (enemyAbility.abilityType) {
+                case "Melee":
+                    if (enemy.kittyType == "Ninja") {
+                        spriteEnemy.animationManager.runAnimationsForSequenceNamed("katanaAttack");
+                    } else {
+                        spriteEnemy.animationManager.runAnimationsForSequenceNamed("CutlassAttack")
+                    }
+                    break
+                case "Ranged":
+                    if (enemy.kittyType == "Ninja") {
+                        spriteEnemy.animationManager.runAnimationsForSequenceNamed("shurikenAttack");
+                    } else {
+                        spriteEnemy.animationManager.runAnimationsForSequenceNamed("gunAttack")
+                    }
+                    break
+                default :
+                    break
+                }
                 print(enemy.name + " used " + enemyAbility.name)
                 oppHP.string = String(enemy.currentHP)
                 if (hero.currentHP <= 0) {
