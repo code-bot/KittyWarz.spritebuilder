@@ -12,7 +12,7 @@ import Darwin
 class NinjaKitty: Kitty {
     
     init(name : String, sprite: CCSprite) {
-        super.init(name : name, baseHP : 110.0, attack : 1.2, defense : 0.05, level : 1, xp : 0, amtKills : 0, sprite : sprite)
+        super.init(name : name, baseHP : 110.0, attack : 1.2, defense : 0.08, level : 1, xp : 0, amtKills : 0, sprite : sprite)
         abilitiesList = [FurrySwipes(), DeadlyStare(), KittyKlaws(), KatanaSlash(), Purrtect(),
             ShurikenStorm()]
         kittyType = "Ninja"
@@ -27,32 +27,18 @@ class NinjaKitty: Kitty {
     }
     
     override func performAbility(a : Ability, enemy : Kitty) -> Ability {
-        if a.abilityType == "Defense" {
-            self.currentHP += a.amt
-            if (currentHP > baseHP) {
-                currentHP = baseHP
-            }
-            defense -= 0.01
-            if (defense < 0.04) {
-                defense = 0.06
-            }
-        } else {
-            let rand = Int(arc4random_uniform(UInt32(5)))
-            print(rand)
-            let otherRand = Int(arc4random_uniform(UInt32(2)))
-            var dmg = 0.0
-            if otherRand == 0 {
-                dmg = a.amt + Double(rand) + 1.0
-                
-            } else {
-                dmg = a.amt - Double(rand) - 1.0
-            }
-            print(dmg)
-            enemy.currentHP -= dmg
-            if (enemy.currentHP < 0) {
-                enemy.alive = false;
-            }
-            attack += 0.004
+        a.run(self, enemy: enemy)
+        if self.currentDefense < 0.02 || self.currentDefense > 0.50 {
+            self.currentDefense = 0.45
+        }
+        if enemy.currentDefense < 0.02 || enemy.currentDefense > 0.50 {
+            enemy.currentDefense = 0.45
+        }
+        if self.currentAttack > 2.00 || self.currentAttack < 0.50 {
+            self.currentAttack = 1.00
+        }
+        if enemy.currentAttack > 2.00 || enemy.currentAttack < 0.50 {
+            enemy.currentAttack = 1.00
         }
         return a
     }

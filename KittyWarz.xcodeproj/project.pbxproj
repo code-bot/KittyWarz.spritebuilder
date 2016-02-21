@@ -129,6 +129,8 @@
 		BC5399DB1A44DCC90063F482 /* JavaFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5399D61A44DCC90063F482 /* JavaFoundation.framework */; };
 		BC5399DC1A44DCC90063F482 /* JavaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5399D71A44DCC90063F482 /* JavaKit.framework */; };
 		BCD00A8C1A44E83400DA5AD0 /* CoreJava.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5399D41A44DCC90063F482 /* CoreJava.framework */; };
+		EF943F8D1C79D0BC00FCFA9C /* CatFight.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF943F8C1C79D0BC00FCFA9C /* CatFight.swift */; };
+		EF943F8F1C79D14800FCFA9C /* Yarrrrgn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF943F8E1C79D14800FCFA9C /* Yarrrrgn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -292,6 +294,8 @@
 		BC5399D71A44DCC90063F482 /* JavaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaKit.framework; path = "../../../../Library/Application Support/Developer/Shared/Xcode/Platforms/Android.platform/Developer/SDKs/SBAndroid.sdk/System/Library/Frameworks/JavaKit.framework"; sourceTree = "<group>"; };
 		D352B48019EC608A00829775 /* MetalShaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MetalShaders; path = Source/MetalShaders; sourceTree = "<group>"; };
 		E1F2CE322F3AE66B8F2B820D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EF943F8C1C79D0BC00FCFA9C /* CatFight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatFight.swift; sourceTree = "<group>"; };
+		EF943F8E1C79D14800FCFA9C /* Yarrrrgn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yarrrrgn.swift; sourceTree = "<group>"; };
 		F248AAB604A9033B4BEA9758 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -551,22 +555,24 @@
 				B73470401C78F31A000BD26C /* NinjaKitty.swift */,
 				B734703D1C78F31A000BD26C /* PirateKitty.swift */,
 				B734702A1C78F31A000BD26C /* Ability.swift */,
-				B734702B1C78F31A000BD26C /* ShurikenStorm.swift */,
-				B734702C1C78F31A000BD26C /* KittyKlaws.swift */,
-				B734702D1C78F31A000BD26C /* DeadlyStare.swift */,
-				B734702E1C78F31A000BD26C /* KatanaSlash.swift */,
-				B734702F1C78F31A000BD26C /* ShiverMeWhiskers.swift */,
-				B73470301C78F31A000BD26C /* AhoyMeowy.swift */,
-				B73470311C78F31A000BD26C /* CatastrophicCannonballs.swift */,
-				B73470321C78F31A000BD26C /* Purrley.swift */,
-				B73470331C78F31A000BD26C /* FelineFerocity.swift */,
 				B73470341C78F31A000BD26C /* FurrySwipes.swift */,
-				B73470371C78F31A000BD26C /* Catluss.swift */,
-				B73470381C78F31A000BD26C /* NinjaNap.swift */,
-				B73470391C78F31A000BD26C /* Meowstorm.swift */,
-				B734703A1C78F31A000BD26C /* Purricane.swift */,
-				B734703B1C78F31A000BD26C /* VitaminC.swift */,
+				B734702D1C78F31A000BD26C /* DeadlyStare.swift */,
+				B734702C1C78F31A000BD26C /* KittyKlaws.swift */,
+				B734702E1C78F31A000BD26C /* KatanaSlash.swift */,
+				B734702B1C78F31A000BD26C /* ShurikenStorm.swift */,
 				B734703C1C78F31A000BD26C /* Purrtect.swift */,
+				B73470331C78F31A000BD26C /* FelineFerocity.swift */,
+				B73470381C78F31A000BD26C /* NinjaNap.swift */,
+				B734703A1C78F31A000BD26C /* Purricane.swift */,
+				B73470321C78F31A000BD26C /* Purrley.swift */,
+				B73470371C78F31A000BD26C /* Catluss.swift */,
+				B73470301C78F31A000BD26C /* AhoyMeowy.swift */,
+				EF943F8C1C79D0BC00FCFA9C /* CatFight.swift */,
+				B73470311C78F31A000BD26C /* CatastrophicCannonballs.swift */,
+				B734702F1C78F31A000BD26C /* ShiverMeWhiskers.swift */,
+				EF943F8E1C79D14800FCFA9C /* Yarrrrgn.swift */,
+				B734703B1C78F31A000BD26C /* VitaminC.swift */,
+				B73470391C78F31A000BD26C /* Meowstorm.swift */,
 				7A40362019DDEF0D007B6E8F /* Platforms */,
 				7A046D7519E84C36004C4763 /* MainScene.swift */,
 				87C3E0E01C79C90600FD0D1D /* LocationScene.swift */,
@@ -1037,6 +1043,7 @@
 				B73470461C78F31A000BD26C /* Ability.swift in Sources */,
 				87C3E0E11C79C90600FD0D1D /* LocationScene.swift in Sources */,
 				B73470471C78F31A000BD26C /* ShurikenStorm.swift in Sources */,
+				EF943F8D1C79D0BC00FCFA9C /* CatFight.swift in Sources */,
 				B73470481C78F31A000BD26C /* KittyKlaws.swift in Sources */,
 				B73470491C78F31A000BD26C /* DeadlyStare.swift in Sources */,
 				B734704A1C78F31A000BD26C /* KatanaSlash.swift in Sources */,
@@ -1047,6 +1054,7 @@
 				B734704E1C78F31A000BD26C /* Purrley.swift in Sources */,
 				B734704F1C78F31A000BD26C /* FelineFerocity.swift in Sources */,
 				B73470501C78F31A000BD26C /* FurrySwipes.swift in Sources */,
+				EF943F8F1C79D14800FCFA9C /* Yarrrrgn.swift in Sources */,
 				B73470511C78F31A000BD26C /* LaunchMenu.swift in Sources */,
 				87E0760F1C79150500A1199F /* CharacterInfoScene.swift in Sources */,
 				B73470521C78F31A000BD26C /* NewPlayerController.swift in Sources */,

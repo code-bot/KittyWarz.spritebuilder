@@ -14,7 +14,9 @@ class Kitty {
     var name : String
     var currentHP : Double
     var baseHP : Double
+    var currentAttack: Double
     var attack : Double
+    var currentDefense : Double
     var defense : Double
     var level : Int
     var alive : Bool
@@ -34,10 +36,12 @@ class Kitty {
             self.xp = xp
             self.amtKills = amtKills
             currentHP = baseHP;
+            currentAttack = attack;
+            currentDefense = defense;
             alive = true;
             abilitiesList = [Purrtect(), ShurikenStorm(), KittyKlaws(), FurrySwipes(),
                 ShiverMeWhiskers(), AhoyMeowy(), CatastrophicCannonballs(), Purrley(), DeadlyStare(),
-                KatanaSlash(), Catluss(), FelineFerocity()]
+                KatanaSlash(), Catlass(), FelineFerocity()]
             kittyType = ""
             self.sprite = sprite
     }
@@ -58,7 +62,11 @@ class Kitty {
             levelUp()
         }
         currentHP = baseHP
+        currentAttack = attack
+        currentDefense = defense
         enemy.currentHP = enemy.baseHP
+        enemy.currentAttack = enemy.attack
+        enemy.currentDefense = enemy.defense
     }
     
     func lose() {
@@ -67,7 +75,11 @@ class Kitty {
             xp = 0
         }
         currentHP = baseHP
+        currentAttack = attack
+        currentDefense = defense
         enemy.currentHP = enemy.baseHP
+        enemy.currentAttack = enemy.attack
+        enemy.currentDefense = enemy.defense
         alive = true;
     }
     

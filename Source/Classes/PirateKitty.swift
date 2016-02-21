@@ -12,8 +12,8 @@ import Darwin
 class PirateKitty: Kitty {
     
     init(name : String, sprite : CCSprite) {
-        super.init(name : name, baseHP : 150.0, attack : 1.0, defense : 0.08, level : 1, xp : 0, amtKills : 0, sprite : sprite)
-        abilitiesList = [Purrley(), Catluss(), AhoyMeowy(), CatastrophicCannonballs(),
+        super.init(name : name, baseHP : 150.0, attack : 1.0, defense : 0.10, level : 1, xp : 0, amtKills : 0, sprite : sprite)
+        abilitiesList = [Purrley(), Catlass(), AhoyMeowy(), CatastrophicCannonballs(),
             ShiverMeWhiskers(), FelineFerocity()];
         kittyType = "Pirate"
     }
@@ -21,41 +21,44 @@ class PirateKitty: Kitty {
     override init(name : String, baseHP : Double, attack : Double, defense : Double,
         level: Int, xp : Int,  amtKills : Int, sprite : CCSprite) {
             super.init(name : name, baseHP : baseHP, attack : attack, defense : defense, level : level, xp : xp, amtKills : amtKills, sprite: sprite)
-            abilitiesList = [Purrley(), Catluss(), AhoyMeowy(), CatastrophicCannonballs(),
+            abilitiesList = [Purrley(), Catlass(), AhoyMeowy(), CatastrophicCannonballs(),
                 ShiverMeWhiskers(), FelineFerocity()];
             kittyType = "Pirate"
     }
     
     override func performAbility(a : Ability, enemy : Kitty) -> Ability {
-        if a.abilityType == "Defense" {
-            self.currentHP += a.amt
-            if (currentHP > baseHP) {
-                currentHP = baseHP
-            }
-            defense -= 0.01
-            if (defense < 0.04) {
-                defense = 0.06
-            }
-        } else {
-            let rand = Int(arc4random_uniform(UInt32(5)))
-            print(rand)
-            let otherRand = Int(arc4random_uniform(UInt32(2)))
-            var dmg = 0.0
-            if otherRand == 0 {
-                dmg = a.amt + Double(rand) + 1.0
-                
-            } else {
-                dmg = a.amt - Double(rand) - 1.0
-            }
-            print(dmg)
-            enemy.currentHP -= dmg
-            if (enemy.currentHP < 0) {
-                enemy.alive = false;
-            }
-            attack += 0.004
-        }
+        a.run(self, enemy: enemy)
         return a
     }
+    
+    //        if a.abilityType == "Defense" {
+    //            //self.currentHP += a.amt
+    //            if (currentHP > baseHP) {
+    //                currentHP = baseHP
+    //            }
+    //            defense -= 0.01
+    //            if (defense < 0.04) {
+    //                defense = 0.06
+    //            }
+    //        } else {
+    //            let rand = Int(arc4random_uniform(UInt32(5)))
+    //            print(rand)
+    //            let otherRand = Int(arc4random_uniform(UInt32(2)))
+    //            var dmg = 0.0
+    //            if otherRand == 0 {
+    //                dmg = a.amt + Double(rand) + 1.0
+    //
+    //            } else {
+    //                dmg = a.amt - Double(rand) - 1.0
+    //            }
+    //            print(dmg)
+    //            enemy.currentHP -= dmg
+    //            if (enemy.currentHP < 0) {
+    //                enemy.alive = false;
+    //            }
+    //            attack += 0.004
+    //        }
+    //        return a
     
     override func enemyPerformAbility(hero : Kitty) -> Ability {
         

@@ -12,16 +12,21 @@ class Ability {
     var abilityType = ""
     var typeOfKitty = ""
     var unlockLevel = 0
-    var amt = 0.0
+    //var amt = 0.0
     var name = ""
+    var msg = ""
     
-    init() {
-        let rand = Int(arc4random_uniform(UInt32(5)))
-        let otherRand = Int(arc4random_uniform(UInt32(1)))
-        if otherRand == 0 {
-            amt = amt + Double(rand) + 1
-        } else {
-            amt = amt + Double(rand) - 1
-        }
+//    init() {
+//        let rand = Int(arc4random_uniform(UInt32(5)))
+//        let otherRand = Int(arc4random_uniform(UInt32(1)))
+//        if otherRand == 0 {
+//            amt = amt + Double(rand) + 1
+//        } else {
+//            amt = amt + Double(rand) - 1
+//        }
+//    }
+    
+    func run(hero : Kitty, enemy : Kitty) {
+        print("this ability cannot be run")
     }
 }
