@@ -20,6 +20,7 @@ class PreviewBattleScene: CCNode {
     weak var melee : CCButton!
     weak var defense : CCButton!
     weak var scroll : CCNode!
+    weak var menu : CCNode!
     
     func didLoadFromCCB() {
         print("add child")
@@ -38,20 +39,73 @@ class PreviewBattleScene: CCNode {
         print("hi")
     }
     
+    //spriteHero.runAnimationSequenceNamed...
+    func useAbility(sender: CCButton!) {
+        var map = hero.displayRangedAbilities()
+        hero.performAbility(map[sender.title]!, enemy: enemy)
+        yourHP.string = String(hero.baseHP)
+        oppHP.string = String(enemy.baseHP)
+        enemy.ab
+        enemy.performAbility(<#T##a: Ability##Ability#>, enemy: <#T##Kitty#>)
+    }
+    
     func getRanged() {
-        let list = hero.displayRangedAbilities()
-        for ability in list {
-            let button = CCButton(title: ability.)
-            scroll.addChild(CCButton)
+        print("map")
+        let map = hero.displayRangedAbilities()
+        var index = 0.0
+        for ability in map.values {
+            let button = CCButton(title: ability.name)
+            button.positionType = CCPositionTypeNormalized
+            button.position.x = 0.50
+            button.position.y = CGFloat(Float(0.90 - (0.20 * index)))
+            button.setTarget(self, selector: "useAbility:")
+            scroll.addChild(button)
+            index = index + 1.0
         }
-        let scrollView = CCScrollView(contentNode: scroll)
+
+        print("done")
     }
     
     func getMelee() {
-        
+        print("map")
+        let map = hero.displayMeleeAbilities()
+        var index = 0.0
+        for ability in map.values {
+            let button = CCButton(title: ability.name)
+            button.positionType = CCPositionTypeNormalized
+            button.position.x = 0.50
+            button.position.y = CGFloat(Float(0.90 - (0.20 * index)))
+            button.setTarget(self, selector: "useAbility:")
+            scroll.addChild(button)
+            index = index + 1.0
+        }
+//        scroll.removeFromParent()
+//        let scrollView = CCScrollView(contentNode: scroll)
+//        print("scrollview positioin stuff")
+//        //scrollView.positionType = CCPositionTypeNormalized
+//        scrollView.position.x = 20
+//        scrollView.position.y = 4
+//        //scrollView.contentSize.width = 0.79 //* menu.contentSize.width
+//        //scrollView.contentSize.height = 0.92 //* menu.contentSize.height
+//        print("add scrollview to menu")
+//        menu.addChild(scrollView)
+//        print(scrollView.position)
+        print("done")
     }
     
     func getDefense() {
-        
+        print("map")
+        let map = hero.displayDefenseAbilities()
+        var index = 0.0
+        for ability in map.values {
+            let button = CCButton(title: ability.name)
+            button.positionType = CCPositionTypeNormalized
+            button.position.x = 0.50
+            button.position.y = CGFloat(Float(0.90 - (0.20 * index)))
+            button.setTarget(self, selector: "useAbility:")
+            scroll.addChild(button)
+            index = index + 1.0
+        }
+        print("done")
     }
 }

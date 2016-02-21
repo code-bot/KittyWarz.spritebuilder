@@ -16,5 +16,6 @@ class NinjaNap: Ability {
         unlockLevel = 10
         abilityType = "Defense"
         typeOfKitty = "NinjaKitty"
+        name = "Ninja Nap"
     }
 }

@@ -75,33 +75,44 @@ class PirateKitty: Kitty {
         }
     }
     
-    override func displayMeleeAbilities() -> [Ability] {
-        var meleeList = [Ability]();
+    override func displayMeleeAbilities() -> [String : Ability] {
+        var meleeList = [String : Ability]();
         for a in abilitiesList {
             if a.abilityType == "Melee" && a.unlockLevel <= level {
-                meleeList.append(a)
+                meleeList.updateValue(a, forKey: a.name)
             }
         }
         return meleeList;
     }
     
-    override func displayRangedAbilities() -> [Ability] {
-        var rangedList = [Ability]();
+    override func displayRangedAbilities() -> [String : Ability] {
+        var rangedList = [String : Ability]();
         for a in abilitiesList {
             if a.abilityType == "Ranged" && a.unlockLevel <= level {
-                rangedList.append(a)
+                rangedList.updateValue(a, forKey: a.name)
             }
         }
         return rangedList;
     }
     
-    override func displayDefenseAbilities() -> [Ability] {
-        var defenseList = [Ability]();
+    override func displayDefenseAbilities() -> [String : Ability] {
+        var defenseList = [String : Ability]();
         for a in abilitiesList {
             if a.abilityType == "Defense" && a.unlockLevel <= level {
-                defenseList.append(a)
+                defenseList.updateValue(a, forKey: a.name)
             }
         }
         return defenseList;
     }
+    
+    override func displayAbilities() -> [String : Ability] {
+        var list = [String : Ability]();
+        for a in abilitiesList {
+            if a.unlockLevel <= level {
+                list.updateValue(a, forKey: a.name)
+            }
+        }
+        return list
+    }
+
 }

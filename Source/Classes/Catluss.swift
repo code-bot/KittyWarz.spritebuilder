@@ -16,5 +16,6 @@ class Catluss: Ability {
         unlockLevel = 2
         abilityType = "Melee"
         typeOfKitty = "NinjaKitty"
+        name = "Catluss"
     }
 }

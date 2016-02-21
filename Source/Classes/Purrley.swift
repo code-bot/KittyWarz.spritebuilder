@@ -16,5 +16,6 @@ class Purrley: Ability {
         unlockLevel = 1
         abilityType = "Melee"
         typeOfKitty = "PirateKitty"
+        name = "Purrley"
     }
 }

@@ -80,19 +80,22 @@ class Kitty {
         //Create enemy
     }
     
-    func displayMeleeAbilities() -> [Ability] {
+    func displayMeleeAbilities() -> [String : Ability] {
         print("No abilities")
-        return []
+        return [String : Ability]()
     }
     
-    func displayRangedAbilities() -> [Ability] {
+    func displayRangedAbilities() -> [String : Ability] {
         print("No abilities")
-        return []
+        return [String : Ability]()
     }
     
-    func displayDefenseAbilities() -> [Ability] {
+    func displayDefenseAbilities() -> [String : Ability] {
         print("No abilities")
-        return []
+        return [String : Ability]()
     }
     
+    func displayAbilities() -> [String : Ability] {
+        return [String : Ability]()
+    }
 }

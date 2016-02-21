@@ -16,5 +16,6 @@ class FurrySwipes: Ability {
         unlockLevel = 1
         abilityType = "Melee"
         typeOfKitty = "NinjaKitty"
+        name = "Furry Swipes"
     }
 }
