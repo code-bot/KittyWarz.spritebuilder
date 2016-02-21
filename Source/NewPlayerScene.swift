@@ -12,10 +12,20 @@ import Firebase
 class NewPlayerScene: CCNode {
     weak var miscInfo: CCLabelTTF!
     weak var catName: CCTextField!
+    weak var ninja : CCSprite!
+    weak var pirate : CCSprite!
+    var framecount = 0
     
     func didLoadFromCCB() {
         miscInfo.string = ""
         miscInfo.color = CCColor.redColor()
+        ninja.scale = 0.60 * Float(self.contentSize.height)
+        pirate.scale = 0.55 * Float(self.contentSize.height)
+        //self.performSelector(Selector("functionName"), withObject: self, afterDelay: 1)
+    }
+    
+    func functionName() {
+        
     }
     
     func chooseNinja() {
@@ -109,6 +119,14 @@ class NewPlayerScene: CCNode {
         } else {
             miscInfo.string = "Please enter a name for your cat"
         }    
+    }
+    
+    override func update(delta: CCTime) {
+        framecount++
+        if (framecount >= 60) {
+            //code
+            framecount = 0
+        }
     }
 
 }
