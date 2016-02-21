@@ -51,10 +51,7 @@ class NewPlayerScene: CCNode {
                     
                     defaults.synchronize()
                     print("save on phone")
-                    
-                    hero = CCBReader.load("NinjaKitty") as! PirateKitty
-                    //as! NinjaKitty
-                    hero.setupKitty(self.catName.string, baseHP: userData!["baseHP"] as! Double, attack: userData!["attack"] as! Double, defense: userData!["defense"] as! Double, level: userData!["level"] as! Int, xp: userData!["xp"] as! Int, amtKills: userData!["amtKills"] as! Int)
+                    hero = NinjaKitty(name: self.catName.string, baseHP: userData!["baseHP"] as! Double, attack: userData!["attack"] as! Double, defense: userData!["defense"] as! Double, level: userData!["level"] as! Int, xp: userData!["xp"] as! Int, amtKills: userData!["amtKills"] as! Int, sprite : CCBReader.load("NinjaKitty") as! CCSprite)
                     CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("PreviewBattleScene"))
                 } else {
                     self.miscInfo.string = "Username taken"
@@ -91,7 +88,7 @@ class NewPlayerScene: CCNode {
                     ]
                     userData = newPirate
                     myRootRef.childByAppendingPath("users").childByAppendingPath(self.catName.string).setValue(newPirate)
-                    print("new ninja")
+                    print("new pirate")
                 }
                 if (!userExists) {
                     let defaults = NSUserDefaults.standardUserDefaults()
@@ -101,8 +98,7 @@ class NewPlayerScene: CCNode {
                     defaults.synchronize()
                     print("save on phone")
                     
-                    hero = CCBReader.load("PirateKitty") as! PirateKitty
-                    hero.setupKitty(self.catName.string, baseHP: userData!["baseHP"] as! Double, attack: userData!["attack"] as! Double, defense: userData!["defense"] as! Double, level: userData!["level"] as! Int, xp: userData!["xp"] as! Int, amtKills: userData!["amtKills"] as! Int)
+                    hero = PirateKitty(name: self.catName.string, baseHP: userData!["baseHP"] as! Double, attack: userData!["attack"] as! Double, defense: userData!["defense"] as! Double, level: userData!["level"] as! Int, xp: userData!["xp"] as! Int, amtKills: userData!["amtKills"] as! Int, sprite : CCBReader.load("PirateKitty") as! CCSprite)
                     CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("PreviewBattleScene"))
                 } else {
                     self.miscInfo.string = "Username taken"

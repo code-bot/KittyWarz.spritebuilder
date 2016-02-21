@@ -9,27 +9,24 @@
 import Foundation
 import Darwin
 
-class Kitty: CCSprite {
+class Kitty {
     
-    var nameOfKitty : String = ""
-    var currentHP : Double = 0
-    var baseHP : Double = 0
-    var attack : Double = 0
-    var defense : Double = 0
-    var level : Int = 0
-    var alive : Bool = false
-    var xp : Int = 0
-    var abilitiesList : [Ability] = []
-    var amtKills : Int = 0
-    var kittyType : String =  ""
+    var name : String
+    var currentHP : Double
+    var baseHP : Double
+    var attack : Double
+    var defense : Double
+    var level : Int
+    var alive : Bool
+    var xp : Int
+    var abilitiesList : [Ability]
+    var amtKills : Int
+    var kittyType : String
+    var sprite : CCSprite
     
-    func didLoadFromCCB() {
-        
-    }
-    
-    func setupKitty(name : String, baseHP : Double, attack : Double, defense : Double,
-        level: Int, xp : Int,  amtKills : Int) {
-            nameOfKitty = name
+    init(name : String, baseHP : Double, attack : Double, defense : Double,
+        level: Int, xp : Int,  amtKills : Int, sprite : CCSprite) {
+            self.name = name
             self.baseHP = baseHP
             self.attack = attack
             self.defense = defense
@@ -42,6 +39,7 @@ class Kitty: CCSprite {
                 ShiverMeWhiskers(), AhoyMeowy(), CatastrophicCannonballs(), Purrley(), DeadlyStare(),
                 KatanaSlash(), Catluss(), FelineFerocity()]
             kittyType = ""
+            self.sprite = sprite
     }
     
     func levelUp() {

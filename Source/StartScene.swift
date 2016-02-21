@@ -28,11 +28,9 @@ class StartScene: CCNode {
                 snapshot in
                 if let userData = snapshot.value as? [String : AnyObject] {
                     if (userData["type"] as! String == "Ninja") {
-                        hero = (NinjaKitty)(imageNamed: CCBReader.load("NinjaKitty"))
-                        hero.setupKitty(user, baseHP: userData["baseHP"] as! Double, attack: userData["attack"] as! Double, defense: userData["defense"] as! Double, level: userData["level"] as! Int, xp: userData["xp"] as! Int, amtKills: userData["amtKills"] as! Int)
+                        hero = NinjaKitty(name: user, baseHP: userData["baseHP"] as! Double, attack: userData["attack"] as! Double, defense: userData["defense"] as! Double, level: userData["level"] as! Int, xp: userData["xp"] as! Int, amtKills: userData["amtKills"] as! Int, sprite: CCBReader.load("NinjaKitty") as! CCSprite)
                     } else {
-                        hero = (PirateKitty)(imageNamed: CCBReader.load("PirateKitty"))
-                        hero.setupKitty(user, baseHP: userData["baseHP"] as! Double, attack: userData["attack"] as! Double, defense: userData["defense"] as! Double, level: userData["level"] as! Int, xp: userData["xp"] as! Int, amtKills: userData["amtKills"] as! Int)
+                        hero = PirateKitty(name: user, baseHP: userData["baseHP"] as! Double, attack: userData["attack"] as! Double, defense: userData["defense"] as! Double, level: userData["level"] as! Int, xp: userData["xp"] as! Int, amtKills: userData["amtKills"] as! Int, sprite: CCBReader.load("PirateKitty") as! CCSprite)
                     }
                 }
             })
