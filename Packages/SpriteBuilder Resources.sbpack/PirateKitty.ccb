@@ -16,7 +16,7 @@
 	<key>currentResolution</key>
 	<integer>0</integer>
 	<key>currentSequenceId</key>
-	<integer>3</integer>
+	<integer>2</integer>
 	<key>docDimensionsType</key>
 	<integer>1</integer>
 	<key>fileType</key>
@@ -2472,7 +2472,7 @@
 						<array>
 							<real>1</real>
 							<real>1</real>
-							<false/>
+							<true/>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2498,7 +2498,7 @@
 						<string>FloatXY</string>
 						<key>value</key>
 						<array>
-							<real>-10</real>
+							<real>0.0</real>
 							<real>0.0</real>
 						</array>
 					</dict>

@@ -40,7 +40,6 @@ class StartScene: CCNode {
                         print("enemy created")
                     }
                 }
-                print(hero.sprite)
             })
         }
         print("done")

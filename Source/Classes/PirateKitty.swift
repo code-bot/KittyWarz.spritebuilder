@@ -26,6 +26,17 @@ class PirateKitty: Kitty {
             kittyType = "Pirate"
     }
     
+    override func resetStats() {
+        baseHP = 150.0
+        attack = 1.0
+        defense = 0.10
+        level = 1
+        xp = 0
+        amtKills = 0
+        currentHP = baseHP
+    }
+
+    
     override func performAbility(a : Ability, enemy : Kitty) -> Ability {
         a.run(self, enemy: enemy)
         return a

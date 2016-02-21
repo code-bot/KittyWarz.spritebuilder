@@ -20,7 +20,11 @@ class CharacterInfoScene: CCNode {
     var test8 : CCLabelTTF!
     
     func didLoadFromCCB() {
-        sprite.addChild(hero.sprite)
+        let heroSprite = hero.sprite
+        heroSprite.contentSizeType = CCSizeTypeNormalized
+        heroSprite.contentSize.width = 33.33
+        heroSprite.contentSize.height = 50.00
+        sprite.addChild(heroSprite)
         if (hero.kittyType == "Ninja") {
             hero.sprite.animationManager.runAnimationsForSequenceNamed("katanaAttack")
         } else {

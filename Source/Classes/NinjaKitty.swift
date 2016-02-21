@@ -26,6 +26,17 @@ class NinjaKitty: Kitty {
             kittyType = "Ninja"
     }
     
+    override func resetStats() {
+        baseHP = 110.0
+        attack = 1.2
+        defense = 0.08
+        level = 1
+        xp = 0
+        amtKills = 0
+        currentHP = baseHP
+    }
+
+    
     override func performAbility(a : Ability, enemy : Kitty) -> Ability {
         a.run(self, enemy: enemy)
         if self.currentDefense < 0.02 || self.currentDefense > 0.50 {

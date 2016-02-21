@@ -42,6 +42,7 @@ class PreviewBattleScene: CCNode {
         //(spriteEnemy.getChildByName("NinjaKitty", recursively: false).getChildByName("katana", recursively: false) as! CCSprite).flipX = true
         spriteHero.scale = 0.002 * Float(self.contentSize.height)
         spriteEnemy.scale = 0.002 * Float(self.contentSize.height)
+        spriteEnemy.animationManager.runAnimationsForSequenceNamed("default")
         you.addChild(spriteHero)
         opponent.addChild(spriteEnemy)
         yourLevel.string = String(hero.level)
@@ -227,28 +228,29 @@ class PreviewBattleScene: CCNode {
         if (win) {
             hero.win()
             print("win")
-            spriteEnemy.animationManager.runAnimationsForSequenceNamed("dying")
-            spriteHero.animationManager.runAnimationsForSequenceNamed("dying")
-            myRootRef.childByAppendingPath("piratesKillCount").observeSingleEventOfType(.Value, withBlock: {
-                snapshot in
-                myRootRef.childByAppendingPath("piratesKillCount").setValue(snapshot.value as! Int + 1)
-            })
+//            spriteEnemy.animationManager.runAnimationsForSequenceNamed("dying")
+//            spriteHero.animationManager.runAnimationsForSequenceNamed("dying")
+            if (hero.kittyType == "Ninja") {
+                myRootRef.childByAppendingPath("ninjasKillCount").observeSingleEventOfType(.Value, withBlock: {
+                    snapshot in
+                    myRootRef.childByAppendingPath("ninjasKillCount").setValue(snapshot.value as! Int + 1)
+                })
+            } else {
+                myRootRef.childByAppendingPath("piratesKillCount").observeSingleEventOfType(.Value, withBlock: {
+                    snapshot in
+                    myRootRef.childByAppendingPath("piratesKillCount").setValue(snapshot.value as! Int + 1)
+                })
+            }
+            
         } else {
             hero.lose()
             print("lose")
-            spriteHero.animationManager.runAnimationsForSequenceNamed("dying")
+            //spriteHero.animationManager.runAnimationsForSequenceNamed("dying")
         }
+        enemy.resetStats()
+        spriteHero.scale = 1
+        spriteEnemy.scale = 1
         if (hero.kittyType == "Ninja") {
-            enemy = PirateKitty(name: "Pirate", sprite: CCBReader.load("PirateKitty") as! CCSprite)
-            //
-//            func resetStats() {
-//                baseHP = 150.0
-//                attack = 1.0
-//                defense = 0.08
-//                level = 1
-//                xp = 0
-//                amtKills = 0
-//            }
             let newNinja = [
                 "type" : "Ninja",
                 "attack" : hero.attack,
@@ -261,7 +263,6 @@ class PreviewBattleScene: CCNode {
             myRootRef.childByAppendingPath("users").childByAppendingPath(hero.name).setValue(newNinja)
             
         } else {
-            enemy = NinjaKitty(name: "Ninja", sprite: CCBReader.load("NinjaKitty") as! CCSprite)
             let newPirate = [
                 "type" : "Pirate",
                 "attack" : hero.attack,

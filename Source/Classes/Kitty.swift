@@ -46,6 +46,10 @@ class Kitty {
             self.sprite = sprite
     }
     
+    func resetStats() {
+        //reset stats
+    }
+    
     func levelUp() {
         xp -= 100
         level++
