@@ -16,5 +16,6 @@ class VitaminC: Ability {
         unlockLevel = 10
         abilityType = "Defense"
         typeOfKitty = "PirateKitty"
+        name = "Vitamin C"
     }
 }

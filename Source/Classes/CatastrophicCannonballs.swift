@@ -16,6 +16,6 @@ class CatastrophicCannonballs: Ability {
         unlockLevel = 6
         abilityType = "Ranged"
         typeOfKitty = "PirateKitty"
-        
+        name = "Catastrophic Cannonballs"
     }
 }

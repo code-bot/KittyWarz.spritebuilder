@@ -16,5 +16,6 @@ class FelineFerocity: Ability {
         unlockLevel = 9
         abilityType = "Melee"
         typeOfKitty = "NinjaKitty"
+        name = "Feline Ferocity"
     }
 }

@@ -26,7 +26,7 @@ class PirateKitty: Kitty {
             kittyType = "Pirate"
     }
     
-    override func performAbility(a : Ability, enemy : Kitty) {
+    override func performAbility(a : Ability, enemy : Kitty) -> String{
         if a.abilityType == "Defense" {
             self.currentHP += a.amt
             if (currentHP > baseHP) {
@@ -39,28 +39,20 @@ class PirateKitty: Kitty {
         } else {
             enemy.currentHP -= a.amt
             if (enemy.currentHP < 0) {
-                enemy.alive = false
+                enemy.alive = false;
             }
             attack += 0.004
         }
+        return a.name
     }
     
-    
-    
-    override func enemyPerformAbility(hero : Kitty) {
-        var enemyAbilityList = [FurrySwipes(), DeadlyStare(), KittyKlaws(), KatanaSlash(), Purrtect(),
-            ShurikenStorm()];
-        var count = 0;
-        for a in enemyAbilityList {
-            if self.level < a.unlockLevel {
-                enemyAbilityList.removeAtIndex(count)
-            }
-            count++
-        }
+    override func enemyPerformAbility(hero : Kitty) -> String {
+        
+        var enemyAbilityList = (self.displayAbilities().values).reverse()
         let rand = Int(arc4random_uniform(UInt32(enemyAbilityList.count)))
         let a = enemyAbilityList[rand]
         //randomly pick ability
-        performAbility(a, enemy : hero)
+        return performAbility(a, enemy : hero)
     }
     
     override func createEnemy() {
@@ -75,33 +67,44 @@ class PirateKitty: Kitty {
         }
     }
     
-    override func displayMeleeAbilities() -> [Ability] {
-        var meleeList = [Ability]();
+    override func displayMeleeAbilities() -> [String : Ability] {
+        var meleeList = [String : Ability]();
         for a in abilitiesList {
             if a.abilityType == "Melee" && a.unlockLevel <= level {
-                meleeList.append(a)
+                meleeList.updateValue(a, forKey: a.name)
             }
         }
         return meleeList;
     }
     
-    override func displayRangedAbilities() -> [Ability] {
-        var rangedList = [Ability]();
+    override func displayRangedAbilities() -> [String : Ability] {
+        var rangedList = [String : Ability]();
         for a in abilitiesList {
             if a.abilityType == "Ranged" && a.unlockLevel <= level {
-                rangedList.append(a)
+                rangedList.updateValue(a, forKey: a.name)
             }
         }
         return rangedList;
     }
     
-    override func displayDefenseAbilities() -> [Ability] {
-        var defenseList = [Ability]();
+    override func displayDefenseAbilities() -> [String : Ability] {
+        var defenseList = [String : Ability]();
         for a in abilitiesList {
             if a.abilityType == "Defense" && a.unlockLevel <= level {
-                defenseList.append(a)
+                defenseList.updateValue(a, forKey: a.name)
             }
         }
         return defenseList;
     }
+    
+    override func displayAbilities() -> [String : Ability] {
+        var list = [String : Ability]();
+        for a in abilitiesList {
+            if a.unlockLevel <= level {
+                list.updateValue(a, forKey: a.name)
+            }
+        }
+        return list
+    }
+
 }

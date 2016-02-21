@@ -16,5 +16,6 @@ class Purricane: Ability {
         unlockLevel = 12
         abilityType = "Ranged"
         typeOfKitty = "NinjaKitty"
+        name = "Purricane"
     }
 }

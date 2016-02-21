@@ -16,5 +16,6 @@ class Purrtect: Ability {
         unlockLevel = 7
         abilityType = "Defense"
         typeOfKitty = "NinjaKitty"
+        name = "Purrtect"
     }
 }

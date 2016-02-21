@@ -16,5 +16,6 @@ class Meowstorm: Ability {
         unlockLevel = 12
         abilityType = "Ranged"
         typeOfKitty = "PirateKitty"
+        name = "Meowstorm"
     }
 }
