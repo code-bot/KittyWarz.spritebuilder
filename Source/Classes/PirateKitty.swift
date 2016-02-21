@@ -37,7 +37,18 @@ class PirateKitty: Kitty {
                 defense = 0.06
             }
         } else {
-            enemy.currentHP -= a.amt
+            let rand = Int(arc4random_uniform(UInt32(5)))
+            print(rand)
+            let otherRand = Int(arc4random_uniform(UInt32(2)))
+            var dmg = 0.0
+            if otherRand == 0 {
+                dmg = a.amt + Double(rand) + 1.0
+                
+            } else {
+                dmg = a.amt - Double(rand) - 1.0
+            }
+            print(dmg)
+            enemy.currentHP -= dmg
             if (enemy.currentHP < 0) {
                 enemy.alive = false;
             }
