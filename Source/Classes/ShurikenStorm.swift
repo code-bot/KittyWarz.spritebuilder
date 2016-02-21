@@ -16,6 +16,6 @@ class ShurikenStorm: Ability {
         unlockLevel = 9
         abilityType = "Ranged"
         typeOfKitty = "NinjaKitty"
-        
+        name = "Shuriken Storm"
     }
 }

@@ -16,5 +16,6 @@ class AhoyMeowy: Ability {
         unlockLevel = 4
         abilityType = "Defense"
         typeOfKitty = "PirateKitty"
+        name = "Ahoy Meowy"
     }
 }

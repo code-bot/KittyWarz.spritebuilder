@@ -16,5 +16,6 @@ class KatanaSlash: Ability {
         unlockLevel = 6
         abilityType = "Melee"
         typeOfKitty = "NinjaKitty"
+        name = "Katana Slash"
     }
 }

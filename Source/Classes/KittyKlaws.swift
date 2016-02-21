@@ -16,5 +16,6 @@ class KittyKlaws: Ability {
         unlockLevel = 4
         abilityType = "Defense"
         typeOfKitty = "NinjaKitty"
+        name = "Kitty Klaws"
     }
 }

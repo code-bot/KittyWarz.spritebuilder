@@ -16,5 +16,6 @@ class ShiverMeWhiskers: Ability {
         unlockLevel = 7
         abilityType = "Defense"
         typeOfKitty = "PirateKitty"
+        name = "Shiver Me Whiskers"
     }
 }

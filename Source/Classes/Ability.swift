@@ -13,4 +13,5 @@ class Ability {
     var typeOfKitty = ""
     var unlockLevel = 0
     var amt = 0.0
+    var name = ""
 }

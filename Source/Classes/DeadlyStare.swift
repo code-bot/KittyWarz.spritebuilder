@@ -16,5 +16,6 @@ class DeadlyStare: Ability {
         unlockLevel = 2
         abilityType = "Ranged"
         typeOfKitty = "NinjaKitty"
+        name = "Deadly Stare"
     }
 }

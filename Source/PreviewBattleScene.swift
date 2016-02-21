@@ -40,6 +40,11 @@ class PreviewBattleScene: CCNode {
     
     func getRanged() {
         let list = hero.displayRangedAbilities()
+        for ability in list {
+            let button = CCButton(title: ability.)
+            scroll.addChild(CCButton)
+        }
+        let scrollView = CCScrollView(contentNode: scroll)
     }
     
     func getMelee() {
