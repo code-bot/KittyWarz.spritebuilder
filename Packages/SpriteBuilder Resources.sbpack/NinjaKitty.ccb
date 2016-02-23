@@ -2196,11 +2196,11 @@
 			<key>length</key>
 			<real>1</real>
 			<key>name</key>
-			<string>Rainbow</string>
+			<string>dying</string>
 			<key>offset</key>
-			<real>0.010938167572021484</real>
+			<real>0.412109375</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>1</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
@@ -2340,7 +2340,7 @@
 			<key>length</key>
 			<real>10</real>
 			<key>name</key>
-			<string>dying</string>
+			<string>default</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
