@@ -46,6 +46,8 @@
 		7A97911819E631CD001FFC4D /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9790FE19E62E40001FFC4D /* libcocos2d.a */; };
 		7FDA6041C7605A12B3669DAA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EC57134FE973BC505C91E1 /* Pods.framework */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
+		874B2C081C7BDE4B0096F24E /* CatFight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874B2C061C7BDE4B0096F24E /* CatFight.swift */; };
+		874B2C091C7BDE4B0096F24E /* Yarrrrgn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874B2C071C7BDE4B0096F24E /* Yarrrrgn.swift */; };
 		87C3E0E11C79C90600FD0D1D /* LocationScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C3E0E01C79C90600FD0D1D /* LocationScene.swift */; };
 		87E0760F1C79150500A1199F /* CharacterInfoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E0760B1C79150500A1199F /* CharacterInfoScene.swift */; };
 		87E076101C79150500A1199F /* ClanInfoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E0760C1C79150500A1199F /* ClanInfoScene.swift */; };
@@ -91,8 +93,6 @@
 		B734704E1C78F31A000BD26C /* Purrley.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73470321C78F31A000BD26C /* Purrley.swift */; };
 		B734704F1C78F31A000BD26C /* FelineFerocity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73470331C78F31A000BD26C /* FelineFerocity.swift */; };
 		B73470501C78F31A000BD26C /* FurrySwipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73470341C78F31A000BD26C /* FurrySwipes.swift */; };
-		B73470511C78F31A000BD26C /* LaunchMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73470351C78F31A000BD26C /* LaunchMenu.swift */; };
-		B73470521C78F31A000BD26C /* NewPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73470361C78F31A000BD26C /* NewPlayerController.swift */; };
 		B73470531C78F31A000BD26C /* Catluss.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73470371C78F31A000BD26C /* Catluss.swift */; };
 		B73470541C78F31A000BD26C /* NinjaNap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73470381C78F31A000BD26C /* NinjaNap.swift */; };
 		B73470551C78F31A000BD26C /* Meowstorm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73470391C78F31A000BD26C /* Meowstorm.swift */; };
@@ -100,10 +100,7 @@
 		B73470571C78F31A000BD26C /* VitaminC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B734703B1C78F31A000BD26C /* VitaminC.swift */; };
 		B73470581C78F31A000BD26C /* Purrtect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B734703C1C78F31A000BD26C /* Purrtect.swift */; };
 		B73470591C78F31A000BD26C /* PirateKitty.swift in Sources */ = {isa = PBXBuildFile; fileRef = B734703D1C78F31A000BD26C /* PirateKitty.swift */; };
-		B734705A1C78F31A000BD26C /* BattlePreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B734703E1C78F31A000BD26C /* BattlePreviewController.swift */; };
-		B734705B1C78F31A000BD26C /* CharInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B734703F1C78F31A000BD26C /* CharInfoController.swift */; };
 		B734705C1C78F31A000BD26C /* NinjaKitty.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73470401C78F31A000BD26C /* NinjaKitty.swift */; };
-		B734705D1C78F31A000BD26C /* ClanInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73470411C78F31A000BD26C /* ClanInfoController.swift */; };
 		B734705E1C78F31A000BD26C /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = B73470421C78F31A000BD26C /* Info.plist */; };
 		B734705F1C78F31A000BD26C /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73470431C78F31A000BD26C /* MapController.swift */; };
 		B73470611C78F31A000BD26C /* Kitty.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73470451C78F31A000BD26C /* Kitty.swift */; };
@@ -129,8 +126,6 @@
 		BC5399DB1A44DCC90063F482 /* JavaFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5399D61A44DCC90063F482 /* JavaFoundation.framework */; };
 		BC5399DC1A44DCC90063F482 /* JavaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5399D71A44DCC90063F482 /* JavaKit.framework */; };
 		BCD00A8C1A44E83400DA5AD0 /* CoreJava.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5399D41A44DCC90063F482 /* CoreJava.framework */; };
-		EF943F8D1C79D0BC00FCFA9C /* CatFight.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF943F8C1C79D0BC00FCFA9C /* CatFight.swift */; };
-		EF943F8F1C79D14800FCFA9C /* Yarrrrgn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF943F8E1C79D14800FCFA9C /* Yarrrrgn.swift */; };
 		EF943F911C79EFBC00FCFA9C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF943F901C79EFBC00FCFA9C /* MapKit.framework */; };
 		EF943F931C79EFC700FCFA9C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF943F921C79EFC700FCFA9C /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
@@ -223,6 +218,8 @@
 		7AFCD5DD19E9BDC200BCCCDA /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Source/Bridging-Header.h"; sourceTree = "<group>"; };
 		7BF6AF9F1A425F9800FFF9BA /* JavaFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaFoundation.framework; path = "../../../../../../../Library/SBAndroid/Application Support/Developer/Shared/Xcode/Platforms/Android.platform/Developer/SDKs/SBAndroid.sdk/System/Library/Frameworks/JavaFoundation.framework"; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		874B2C061C7BDE4B0096F24E /* CatFight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CatFight.swift; path = Source/Classes/CatFight.swift; sourceTree = "<group>"; };
+		874B2C071C7BDE4B0096F24E /* Yarrrrgn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Yarrrrgn.swift; path = Source/Classes/Yarrrrgn.swift; sourceTree = "<group>"; };
 		87C3E0E01C79C90600FD0D1D /* LocationScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationScene.swift; path = Source/LocationScene.swift; sourceTree = "<group>"; };
 		87E0760B1C79150500A1199F /* CharacterInfoScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterInfoScene.swift; path = Source/CharacterInfoScene.swift; sourceTree = "<group>"; };
 		87E0760C1C79150500A1199F /* ClanInfoScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClanInfoScene.swift; path = Source/ClanInfoScene.swift; sourceTree = "<group>"; };
@@ -251,8 +248,6 @@
 		B73470321C78F31A000BD26C /* Purrley.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Purrley.swift; path = Source/Classes/Purrley.swift; sourceTree = "<group>"; };
 		B73470331C78F31A000BD26C /* FelineFerocity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FelineFerocity.swift; path = Source/Classes/FelineFerocity.swift; sourceTree = "<group>"; };
 		B73470341C78F31A000BD26C /* FurrySwipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FurrySwipes.swift; path = Source/Classes/FurrySwipes.swift; sourceTree = "<group>"; };
-		B73470351C78F31A000BD26C /* LaunchMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LaunchMenu.swift; path = Source/Classes/LaunchMenu.swift; sourceTree = "<group>"; };
-		B73470361C78F31A000BD26C /* NewPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewPlayerController.swift; path = Source/Classes/NewPlayerController.swift; sourceTree = "<group>"; };
 		B73470371C78F31A000BD26C /* Catluss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Catluss.swift; path = Source/Classes/Catluss.swift; sourceTree = "<group>"; };
 		B73470381C78F31A000BD26C /* NinjaNap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NinjaNap.swift; path = Source/Classes/NinjaNap.swift; sourceTree = "<group>"; };
 		B73470391C78F31A000BD26C /* Meowstorm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Meowstorm.swift; path = Source/Classes/Meowstorm.swift; sourceTree = "<group>"; };
@@ -260,10 +255,7 @@
 		B734703B1C78F31A000BD26C /* VitaminC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VitaminC.swift; path = Source/Classes/VitaminC.swift; sourceTree = "<group>"; };
 		B734703C1C78F31A000BD26C /* Purrtect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Purrtect.swift; path = Source/Classes/Purrtect.swift; sourceTree = "<group>"; };
 		B734703D1C78F31A000BD26C /* PirateKitty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PirateKitty.swift; path = Source/Classes/PirateKitty.swift; sourceTree = "<group>"; };
-		B734703E1C78F31A000BD26C /* BattlePreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BattlePreviewController.swift; path = Source/Classes/BattlePreviewController.swift; sourceTree = "<group>"; };
-		B734703F1C78F31A000BD26C /* CharInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharInfoController.swift; path = Source/Classes/CharInfoController.swift; sourceTree = "<group>"; };
 		B73470401C78F31A000BD26C /* NinjaKitty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NinjaKitty.swift; path = Source/Classes/NinjaKitty.swift; sourceTree = "<group>"; };
-		B73470411C78F31A000BD26C /* ClanInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClanInfoController.swift; path = Source/Classes/ClanInfoController.swift; sourceTree = "<group>"; };
 		B73470421C78F31A000BD26C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Classes/Info.plist; sourceTree = "<group>"; };
 		B73470431C78F31A000BD26C /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapController.swift; path = Source/Classes/MapController.swift; sourceTree = "<group>"; };
 		B73470451C78F31A000BD26C /* Kitty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Kitty.swift; path = Source/Classes/Kitty.swift; sourceTree = "<group>"; };
@@ -296,8 +288,6 @@
 		BC5399D71A44DCC90063F482 /* JavaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaKit.framework; path = "../../../../Library/Application Support/Developer/Shared/Xcode/Platforms/Android.platform/Developer/SDKs/SBAndroid.sdk/System/Library/Frameworks/JavaKit.framework"; sourceTree = "<group>"; };
 		D352B48019EC608A00829775 /* MetalShaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MetalShaders; path = Source/MetalShaders; sourceTree = "<group>"; };
 		E1F2CE322F3AE66B8F2B820D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		EF943F8C1C79D0BC00FCFA9C /* CatFight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatFight.swift; sourceTree = "<group>"; };
-		EF943F8E1C79D14800FCFA9C /* Yarrrrgn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yarrrrgn.swift; sourceTree = "<group>"; };
 		EF943F901C79EFBC00FCFA9C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EF943F921C79EFC700FCFA9C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F248AAB604A9033B4BEA9758 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -542,18 +532,6 @@
 			name = libs;
 			sourceTree = "<group>";
 		};
-		B73470621C78F337000BD26C /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				B73470351C78F31A000BD26C /* LaunchMenu.swift */,
-				B73470361C78F31A000BD26C /* NewPlayerController.swift */,
-				B734703E1C78F31A000BD26C /* BattlePreviewController.swift */,
-				B734703F1C78F31A000BD26C /* CharInfoController.swift */,
-				B73470411C78F31A000BD26C /* ClanInfoController.swift */,
-			);
-			name = Classes;
-			sourceTree = "<group>";
-		};
 		B737893C1807616C0076A88C /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -573,10 +551,10 @@
 				B73470321C78F31A000BD26C /* Purrley.swift */,
 				B73470371C78F31A000BD26C /* Catluss.swift */,
 				B73470301C78F31A000BD26C /* AhoyMeowy.swift */,
-				EF943F8C1C79D0BC00FCFA9C /* CatFight.swift */,
 				B73470311C78F31A000BD26C /* CatastrophicCannonballs.swift */,
+				874B2C061C7BDE4B0096F24E /* CatFight.swift */,
+				874B2C071C7BDE4B0096F24E /* Yarrrrgn.swift */,
 				B734702F1C78F31A000BD26C /* ShiverMeWhiskers.swift */,
-				EF943F8E1C79D14800FCFA9C /* Yarrrrgn.swift */,
 				B734703B1C78F31A000BD26C /* VitaminC.swift */,
 				B73470391C78F31A000BD26C /* Meowstorm.swift */,
 				7A40362019DDEF0D007B6E8F /* Platforms */,
@@ -616,7 +594,6 @@
 		B77F1B2517B978D7009739AE = {
 			isa = PBXGroup;
 			children = (
-				B73470621C78F337000BD26C /* Classes */,
 				B73470421C78F31A000BD26C /* Info.plist */,
 				B73470431C78F31A000BD26C /* MapController.swift */,
 				B737893C1807616C0076A88C /* Source */,
@@ -1049,9 +1026,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B73470461C78F31A000BD26C /* Ability.swift in Sources */,
+				874B2C091C7BDE4B0096F24E /* Yarrrrgn.swift in Sources */,
 				87C3E0E11C79C90600FD0D1D /* LocationScene.swift in Sources */,
 				B73470471C78F31A000BD26C /* ShurikenStorm.swift in Sources */,
-				EF943F8D1C79D0BC00FCFA9C /* CatFight.swift in Sources */,
 				B73470481C78F31A000BD26C /* KittyKlaws.swift in Sources */,
 				B73470491C78F31A000BD26C /* DeadlyStare.swift in Sources */,
 				B734704A1C78F31A000BD26C /* KatanaSlash.swift in Sources */,
@@ -1062,22 +1039,17 @@
 				B734704E1C78F31A000BD26C /* Purrley.swift in Sources */,
 				B734704F1C78F31A000BD26C /* FelineFerocity.swift in Sources */,
 				B73470501C78F31A000BD26C /* FurrySwipes.swift in Sources */,
-				EF943F8F1C79D14800FCFA9C /* Yarrrrgn.swift in Sources */,
-				B73470511C78F31A000BD26C /* LaunchMenu.swift in Sources */,
 				87E0760F1C79150500A1199F /* CharacterInfoScene.swift in Sources */,
-				B73470521C78F31A000BD26C /* NewPlayerController.swift in Sources */,
 				B73470531C78F31A000BD26C /* Catluss.swift in Sources */,
 				B73470541C78F31A000BD26C /* NinjaNap.swift in Sources */,
 				B73470551C78F31A000BD26C /* Meowstorm.swift in Sources */,
 				B73470561C78F31A000BD26C /* Purricane.swift in Sources */,
 				B73470571C78F31A000BD26C /* VitaminC.swift in Sources */,
+				874B2C081C7BDE4B0096F24E /* CatFight.swift in Sources */,
 				B73470581C78F31A000BD26C /* Purrtect.swift in Sources */,
 				B73470591C78F31A000BD26C /* PirateKitty.swift in Sources */,
 				87E076121C79150500A1199F /* PreviewBattleScene.swift in Sources */,
-				B734705A1C78F31A000BD26C /* BattlePreviewController.swift in Sources */,
-				B734705B1C78F31A000BD26C /* CharInfoController.swift in Sources */,
 				B734705C1C78F31A000BD26C /* NinjaKitty.swift in Sources */,
-				B734705D1C78F31A000BD26C /* ClanInfoController.swift in Sources */,
 				B734705E1C78F31A000BD26C /* Info.plist in Sources */,
 				B734705F1C78F31A000BD26C /* MapController.swift in Sources */,
 				B73470611C78F31A000BD26C /* Kitty.swift in Sources */,
